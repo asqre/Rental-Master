@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import Section from "../components/section/Section";
+import Section from "../section/Section";
 
 const Home = () => {
   return (
