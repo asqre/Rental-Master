@@ -73,11 +73,11 @@ const Navbar = ({ setIsModalOpen }) => {
   return (
     <>
       <nav
-        className={`bg-white p-4 w-full z-50 shadow-lg fixed top-0 ${
-          isDropdownOpen ? "pr-[15px]" : "pr-[15px] lg:pr-0"
+        className={`bg-white p-4 w-full z-50 shadow-lg fixed top-0 pr-[15px] ${
+          isDropdownOpen ? "" : " lg:pr-0"
         } `}
       >
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
+        <div className="flex justify-between items-center max-w-6xl mx-auto">
           <Logo />
 
           <ul className="hidden lg:flex justify-center space-x-8">
@@ -123,7 +123,7 @@ const Navbar = ({ setIsModalOpen }) => {
             ))}
           </ul>
 
-          <div className="hidden lg:flex items-center space-x-4 mr-4">
+          <div className="hidden lg:flex mr-5">
             <CButton2 href="/" name="Log in" />
           </div>
 
