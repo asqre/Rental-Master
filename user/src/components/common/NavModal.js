@@ -11,7 +11,7 @@ const NavModal = ({ isVisible, onClose, children }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-[#00000066]  flex justify-center top-[64px]"
+      className="fixed inset-0 z-50 bg-[#00000066] hidden lg:flex justify-center top-[64px] "
       id="wrapped"
       onClick={handleClose}
     >

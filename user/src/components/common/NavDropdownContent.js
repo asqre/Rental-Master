@@ -32,7 +32,7 @@ const NavDropdownContent = ({ activeDropdown }) => {
   }
 
   return (
-    <div className="px-[5%] sm:px-[15%] flex flex-row justify-between items-start space-x-4">
+    <div className="px-[5%] lg:px-[5%] xl:px-[15%] flex flex-row justify-between items-start space-x-4">
       <div className="grid grid-cols-2 gap-4">
         {dropDownItems.map((item, index) => (
           <NavDropdownItem
