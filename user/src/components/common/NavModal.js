@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useEffect, useCallback } from "react";
 
 const NavModal = ({ isVisible, onClose, children }) => {
-  if (!isVisible) return null;
+  const handleClose = useCallback(() => {
+    onClose();
+  }, [onClose]);
 
-  const handleClose = (e) => {
-    if (e.target.id === "wrapped") {
-      onClose();
+  useEffect(() => {
+    const wrapped = document.getElementById("wrapped");
+
+    if (wrapped) {
+      wrapped.addEventListener("click", handleClose);
     }
-  };
+
+    return () => {
+      if (wrapped) {
+        wrapped.removeEventListener("click", handleClose);
+      }
+    };
+  }, [isVisible]);
+
+  if (!isVisible) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-[#00000066] hidden lg:flex justify-center top-[64px] "
+      className="fixed inset-0 z-50 bg-[#00000066] hidden lg:flex justify-center top-[64px]"
       id="wrapped"
-      onClick={handleClose}
     >
-      <div className="flex flex-col w-[100%] max-h-[90vh] ">
+      <div className="flex flex-col w-[100%] max-h-[90vh]">
         <div
           className="pt-7 pb-16"
           style={{
