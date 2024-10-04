@@ -2,22 +2,22 @@ export const aboutItems = [
   {
     title: "Our mission",
     description:
-      "We're pushing the boundaries of AI to solve real-world problems.",
+      "We aim to provide hassle-free and affordable vehicle rentals for everyone.",
     link: "#mission",
   },
   {
-    title: "Our team",
-    description: "Meet the experts behind our groundbreaking research.",
-    link: "#team",
+    title: "Our fleet",
+    description: "Explore our wide range of bikes and cars available for rent.",
+    link: "#fleet",
   },
   {
-    title: "Our work",
-    description: "Discover the innovative projects we're working on right now.",
-    link: "#work",
+    title: "Our services",
+    description: "Flexible rental plans for daily, weekly, or long-term needs.",
+    link: "#services",
   },
   {
     title: "Our values",
-    description: "Learn about the principles that guide our work and culture.",
+    description: "We prioritize customer satisfaction and vehicle safety.",
     link: "#values",
   },
 ];
@@ -25,60 +25,60 @@ export const aboutItems = [
 export const aboutPosts = [
   {
     id: 1,
-    title: "Empowering YouTube creators with generative AI",
+    title: "New Luxury Car Rentals Now Available",
     date: "18 September 2024",
     imageSrc:
-      "https://lh3.googleusercontent.com/63ROjLq4VNqk3RDA5vl1mYS1i5xvcgU8-augVWQY5OZCtVsm_e4YX8rR4_DLUlQiTmMHT6qx3p9shUtPGUHy_4SA64RDeMghvk0eDKT6Fqh6-P3d4A=w264-h156-n-nu-rw",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKiI35WxU6YVxZKwO17pkLGRvf6STPwNqeTgwIUSolUotWsxwx_jYzOop7eFHjlDGcUwg&usqp=CAU",
     href: "#post1",
   },
   {
     id: 2,
-    title: "How we're using AI to build the future of gaming",
+    title: "Explore Our Range of Electric Bikes",
     date: "12 September 2024",
     imageSrc:
-      "https://lh3.googleusercontent.com/Q8qBc1kzbYeksHRjsSuR7HEvezKsw3n1fxYlOqLf2sslqDOqYXJOhxyjznZ4cyq1fwNhpyMTMXW0RRrgHweVg6NaCEPnt3ujcFAIe0bVXK_sHka7cLo=w264-h156-n-nu-rw",
+      "https://content.jdmagicbox.com/comp/def_content/bike-on-rent/qgejx3xs4u-bike-on-rent-9-ivxw4.jpg",
     href: "#post2",
   },
 ];
 
 export const courseItems = [
   {
-    title: "View all technologies",
-    description: "Solving the world’s most complex challenges.",
-    link: "#web-development",
+    title: "Car Rentals",
+    description: "Choose from a variety of cars for all your travel needs.",
+    link: "#car-rentals",
   },
   {
-    title: "Project Astra",
-    description: "A universal AI agent that is helpful in everyday life",
-    link: "#data-science",
+    title: "Bike Rentals",
+    description: "Affordable bike rentals for daily commuting or weekend rides.",
+    link: "#bike-rentals",
   },
   {
-    title: "SynthID",
-    description: "Identifying AI-generated content",
-    link: "#artificial-intelligence",
+    title: "Long-term Rentals",
+    description: "Special discounts for long-term vehicle rental plans.",
+    link: "#long-term-rentals",
   },
   {
-    title: "Gemini",
-    description: "The most general and capable AI models we've ever built",
-    link: "#design",
+    title: "Corporate Rentals",
+    description: "Flexible plans for corporate clients and business needs.",
+    link: "#corporate-rentals",
   },
 ];
 
 export const coursePosts = [
   {
     id: 1,
-    title: "The Complete Web Development Course",
+    title: "Top 5 Road Trip Cars Available for Rent",
     date: "18 September 2024",
     imageSrc:
-      "https://lh3.googleusercontent.com/Q8qBc1kzbYeksHRjsSuR7HEvezKsw3n1fxYlOqLf2sslqDOqYXJOhxyjznZ4cyq1fwNhpyMTMXW0RRrgHweVg6NaCEPnt3ujcFAIe0bVXK_sHka7cLo=w264-h156-n-nu-rw",
+      "https://www.unclutchgoa.com/wp-content/uploads/unclutchgoa-gellery-3-1.jpg",
     href: "#post1",
   },
   {
     id: 2,
-    title: "PHP Tips, Tricks, and Techniques",
+    title: "Affordable City Bikes for Rent",
     date: "12 September 2024",
     imageSrc:
-      "https://lh3.googleusercontent.com/4amJbS1Q5bh_CoBHPAc4NEn0Q13izqrskMETkJl3h2Jdku08GryCCjW6BM59OKj1-Q7-8ZFCWlgu7tIMzjRBIXImy8wlgTOxYgJ88fQvYJTye07C=w264-h156-n-nu-rw",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkH4uO31S12vKTKn8lf2ERBeKqZ0meBiTaBVRW_woQcm4QKzc-ocU03cqcmIVN0gieHDU&usqp=CAU",
     href: "#post2",
   },
 ];
@@ -87,41 +87,41 @@ export const certificationItems = [
   {
     title: "Discover",
     description:
-      "Discover our latest breakthroughs and see how we’re shaping the future",
-    link: "#web-development",
+      "Check out our latest rental options for cars and bikes.",
+    link: "#discover",
   },
   {
     title: "Events",
-    description: "Meet our team and learn more about our research.",
-    link: "#data-science",
+    description: "Join us at our community events and test out our fleet.",
+    link: "#events",
   },
   {
     title: "Blog",
-    description: "Discover our latest AI breakthroughs, projects, and updates.",
-    link: "#artificial-intelligence",
+    description: "Stay updated with our latest offers and vehicle tips.",
+    link: "#blog",
   },
   {
     title: "The Podcast",
-    description: "Uncover the extraordinary ways AI is transforming our world",
-    link: "#design",
+    description: "Hear stories from our customers and their rental experiences.",
+    link: "#podcast",
   },
 ];
 
 export const certificationPosts = [
   {
     id: 1,
-    title: "The Complete Web Development Course",
+    title: "Rent the Perfect Car for Your Next Adventure",
     date: "18 September 2024",
     imageSrc:
-      "https://lh3.googleusercontent.com/Q8qBc1kzbYeksHRjsSuR7HEvezKsw3n1fxYlOqLf2sslqDOqYXJOhxyjznZ4cyq1fwNhpyMTMXW0RRrgHweVg6NaCEPnt3ujcFAIe0bVXK_sHka7cLo=w264-h156-n-nu-rw",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrsps0gNk_qfwaIEh3viDgdP-aGrBQM7hoqLNvApXtU9yVMxAt5OXMS2KmpOdXQEHBB6E&usqp=CAU",
     href: "#post1",
   },
   {
     id: 2,
-    title: "PHP Tips, Tricks, and Techniques",
+    title: "Bike Rentals Made Easy: Here's How",
     date: "12 September 2024",
     imageSrc:
-      "https://lh3.googleusercontent.com/63ROjLq4VNqk3RDA5vl1mYS1i5xvcgU8-augVWQY5OZCtVsm_e4YX8rR4_DLUlQiTmMHT6qx3p9shUtPGUHy_4SA64RDeMghvk0eDKT6Fqh6-P3d4A=w264-h156-n-nu-rw",
+      "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20240807031901_CURVVXT1.png&w=234&h=156&q=75&c=1",
     href: "#post2",
   },
 ];

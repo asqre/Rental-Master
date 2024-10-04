@@ -25,11 +25,11 @@ const Navbar = ({ setIsModalOpen }) => {
   };
 
   const navLinks = [
-    { label: "About", to: "about", hasDropdown: true },
-    { label: "Courses", to: "courses", hasDropdown: true },
-    { label: "Discover", to: "discover", hasDropdown: false },
-    { label: "Certification", to: "certification", hasDropdown: true },
-  ];
+    { label: "About Us", to: "about", hasDropdown: true },
+    { label: "Our Fleet", to: "courses", hasDropdown: true },
+    { label: "Services", to: "discover", hasDropdown: false },
+    { label: "Rental Plans", to: "certification", hasDropdown: true },
+  ];  
 
   const handleDropdownClick = (link) => {
     if (link.hasDropdown) {
