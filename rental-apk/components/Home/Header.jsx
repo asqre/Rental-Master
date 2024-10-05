@@ -49,22 +49,23 @@ export default function Header() {
               color: "#fff",
             }}
           >
-            {user?.fullName}
+            {user?.fullName || "Guest"}
           </Text>
         </View>
       </View>
-      {/* search Bar */}
+
+      {/* Search Bar */}
       <View
         style={{
           display: "flex",
           flexDirection: "row",
-          gap: 10,
           alignItems: "center",
           backgroundColor: "#fff",
           padding: 10,
           marginVertical: 10,
           marginTop: 15,
           borderRadius: 8,
+          gap: 10,
         }}
       >
         <Ionicons name="search" size={24} color={Colors.PRIMARY} />
@@ -73,6 +74,7 @@ export default function Header() {
           style={{
             fontFamily: "outfit",
             fontSize: 16,
+            flex: 1,
           }}
         />
       </View>
