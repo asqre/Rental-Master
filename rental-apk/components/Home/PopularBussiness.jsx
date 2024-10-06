@@ -29,7 +29,7 @@ export default function PopularBussiness() {
     <View>
       <View
         style={{
-          paddingLeft: 20,
+          padding: 20,
           marginBottom: 10,
           display: "flex",
           flexDirection: "row",
