@@ -1,10 +1,13 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Colors } from "../../constants/Colors";
+import { useRouter } from "expo-router";
 
 export default function PopularBussinessCard({ bussiness }) {
+  const router = useRouter();
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => router.push("/businessdetail/" + bussiness?.id)}
       style={{
         padding: 10,
         backgroundColor: "#fff",
@@ -36,13 +39,15 @@ export default function PopularBussinessCard({ bussiness }) {
           {bussiness?.address}
         </Text>
 
-        <View style={{
+        <View
+          style={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
             marginTop: 5,
-        }}>
+          }}
+        >
           <View style={{ display: "flex", flexDirection: "row", gap: 5 }}>
             <Image
               source={require("./../../assets/images/star.png")}
@@ -55,14 +60,16 @@ export default function PopularBussinessCard({ bussiness }) {
             style={{
               fontFamily: "outfit",
               fontSize: 12,
-              color: '#fff',
+              color: "#fff",
               padding: 3,
               backgroundColor: Colors.PRIMARY,
               borderRadius: 5,
             }}
-          >{bussiness?.category}</Text>
+          >
+            {bussiness?.category}
+          </Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
