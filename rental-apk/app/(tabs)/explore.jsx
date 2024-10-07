@@ -31,6 +31,7 @@ export default function explore() {
     <View
       style={{
         padding: 20,
+        paddingTop:45
       }}
     >
       <Text

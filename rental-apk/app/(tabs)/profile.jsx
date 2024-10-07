@@ -8,6 +8,7 @@ export default function profile() {
     <View
       style={{
         padding: 20,
+        paddingTop: 45,
       }}
     >
       <Text

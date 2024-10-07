@@ -16,6 +16,7 @@ export default function Intro({ business }) {
           justifyContent: "space-between",
           width: "100%",
           padding: 20,
+          paddingTop: 45,
         }}
       >
         <TouchableOpacity onPress={() => router.back()}>
