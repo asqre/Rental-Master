@@ -124,7 +124,7 @@ const Navbar = ({ setIsModalOpen }) => {
           </ul>
 
           <div className="hidden lg:flex mr-5">
-            <CButton2 href="/" name="Log in" />
+            <CButton2 href="/login" name="Log in" />
           </div>
 
           <div className="lg:hidden">
