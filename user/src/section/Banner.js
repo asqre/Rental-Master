@@ -1,6 +1,7 @@
 import React from "react";
 import { useData } from "../context/data";
 import Slider from "react-slick";
+import DateTimePicker from "../components/common/DateTimePicker";
 
 const Banner = () => {
   const { bannerImages } = useData();
@@ -73,6 +74,7 @@ const Banner = () => {
           }}
         >
           <h5 className="secondary-text">Search your next ride</h5>
+          <DateTimePicker label="Pickup" />
         </div>
       </div>
     </div>
