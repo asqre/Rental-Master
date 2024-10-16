@@ -1,12 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
-  padding:0;
-  box-sizing:border-box;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --color-primary: #1a73e8;
+  --color-secondary: #5f6368; 
+  --color-tertiary: #202124;
+  --color-background: #ffffff; 
+  --color-gray: #f8f9fa; 
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-tertiary);
+  line-height: 1.5;
+}
+
+.primary-text {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.secondary-text {
+  color: var(--color-secondary);
+  font-weight: 400;
+}
+
+.tertiary-text {
+  color: var(--color-tertiary);
+  font-size: 0.9em;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0f6bc2;
+  transform: scale(1.05);
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #4c4f51;
+  transform: scale(1.05);
+}
+
+.btn-secondary:focus {
+  outline: none;
+}
+
+
+@layer base {
+  h1 {
+    font-size: 36px;
+    line-height: 49px;
+    font-weight: 700;
+    text-align: left;
+
+    @screen sm {
+      font-size: 56px !important;
+      line-height: 74px !important;
+    }
+
+    @screen lg {
+      font-size: 76px !important;
+      line-height: 100px !important;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 49px;
+    font-weight: 700;
+    text-align: left;
+
+    @screen sm {
+      font-size: 50px;
+      line-height: 64px;
+    }
+
+    @screen lg {
+      font-size: 64px;
+      line-height: 80px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: left;
+
+    @screen sm {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @screen lg {
+      font-size: 64px;
+      line-height: 72px;
+    }
+  }
+
+  h4 {
+    font-size: 42px;
+    line-height: 51px;
+    font-weight: 700;
+    text-align: left;
+
+    @screen sm {
+      font-size: 61px;
+      line-height: 72px;
+    }
+
+    @screen lg {
+      font-size: 80px;
+      line-height: 96px;
+    }
+  }
+
+  h5 {
+    font-weight: 700;
+    text-align: left;
+
+    @screen sm {
+      font-size: 42px;
+      line-height: 51px;
+      text-align: center;
+    }
+
+    @screen lg {
+      font-size: 80px;
+      line-height: 96px;
+    }
+  }
+
+  h6 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: #071C35;
+    text-align: left;
+
+    @screen sm {
+      font-size: 20px;
+      line-height: 40px;
+    }
+
+    @screen lg {
+      font-size: 24px;
+      line-height: 46px;
+    }
+  }
 }
