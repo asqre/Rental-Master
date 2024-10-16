@@ -9,6 +9,7 @@ import { generateTimeOptions } from "../../utils";
 
 const customDateInput = ({ value, onClick, onChange }, ref) => (
   <Input
+    placeholder="Date"
     autoComplete="off"
     background="white"
     value={value}

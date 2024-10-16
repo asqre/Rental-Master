@@ -64,7 +64,7 @@ const SelectField = (props) => {
       {isOpen && (
         <div
           ref={dropdownRef}
-          className="absolute z-50 mt-1 w-full origin-top-right rounded-md bg-white max-h-60 overflow-y-auto custom-scrollbar shadow-lg"
+          className="absolute z-50 mt-1 w-full origin-top-right rounded-md bg-[#2D3748] max-h-[240.3px] overflow-y-auto custom-scrollbar shadow-lg"
           style={{
             top: "100%",
             left: 0,
@@ -76,7 +76,7 @@ const SelectField = (props) => {
               type="button"
               onClick={onOptionClicked(item)}
               key={item.value}
-              className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-[#86D8FF] hover:text-white focus:outline-none"
+              className="block w-full text-left px-4 py-2 text-sm text-[#E2E8F0] hover:bg-[#63B3ED] hover:text-black focus:outline-none"
             >
               {item.label}
             </button>
