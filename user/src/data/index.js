@@ -125,3 +125,31 @@ export const certificationPosts = [
     href: "#post2",
   },
 ];
+
+export const featureCardData =[
+  {
+    id:1,
+    img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon1.svg",
+    alt: "car",
+    description:"Unlimited km to drive"
+  },
+  {
+    id:2,
+    img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon_2.svg",
+    alt: "building",
+    description:"100+ Location in 16 cities"
+  },
+  {
+    id:3,
+    img: "https://mychoize.com/mychoize-live/current/revamap_img/benifit_icon_3.svg",
+    alt: "world",
+    description:"Anywhere delivery"
+  },
+  {
+    id:4,
+    img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon_4.svg",
+    alt: "security",
+    description:"Privacy & freedom"
+  },
+
+]

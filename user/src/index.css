@@ -16,6 +16,7 @@
   --color-secondary: #3c3883; 
   --color-tertiary: #3C38831F;
   --color-background: #ffffff; 
+  --color-backgroundGray:#f9f9f9;
   --color-gray: #8c84a4; 
 }
 
@@ -38,6 +39,14 @@ body {
 .tertiary-text {
   color: var(--color-tertiary);
   font-size: 0.9em;
+}
+
+.primary-bg{
+  background-color: var(--color-background);
+}
+
+.secondary-bg{
+  background-color: var(--color-backgroundGray);
 }
 
 .btn {
@@ -177,5 +186,23 @@ body {
       font-size: 24px;
       line-height: 46px;
     }
+  }
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 35px;
+  color:var(--color-primary);
+  text-align: left;
+
+  @screen sm {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  @screen lg {
+    font-size: 40px;
+    line-height: 46px;
   }
 }
