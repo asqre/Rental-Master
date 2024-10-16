@@ -36,6 +36,45 @@ const Banner = () => {
       ) : (
         <div className="h-[300px] md:h-[762px] bg-slate-400" />
       )}
+
+      <div
+        className="absolute top-[7rem]"
+        style={{
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      >
+        <div className="">
+          <h1
+            className="primary-text"
+            style={{
+              color: "#FFFFFF",
+            }}
+          >
+            Rent Your Favorite Cars
+          </h1>
+          <h6
+            className="teritiary-text"
+            style={{
+              color: "#F3BF47",
+            }}
+          >
+            Discover the best deals on Cars at our convenient location.
+          </h6>
+          <button className="btn btn-primary">Explore Cars</button>
+        </div>
+
+        <div
+          className="absolute w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col mt-6"
+          style={{
+            padding: "1.75rem 1.4rem 0 1.4rem",
+            boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
+            transition: "all 0.2s",
+          }}
+        >
+          <h5 className="secondary-text">Search your next ride</h5>
+        </div>
+      </div>
     </div>
   );
 };
