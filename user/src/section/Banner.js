@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useData } from "../context/data";
 import Slider from "react-slick";
 import DatePicker from "../components/datePicker/DatePicker";
 
 const Banner = () => {
   const { bannerImages } = useData();
+  const [pickUpTime, setPickUpTime] = useState({
+    date: null,
+    time: null,
+  });
 
   const settings = {
     dots: false,
@@ -17,6 +21,14 @@ const Banner = () => {
     pauseOnHover: false,
     pauseOnFocus: false,
     adaptiveHeight: false,
+  };
+
+  const handleDateChange = (date) => {
+    setPickUpTime({ ...pickUpTime, date });
+  };
+
+  const handleTimeChange = (time) => {
+    setPickUpTime({ ...pickUpTime, time });
   };
 
   return (
@@ -74,7 +86,12 @@ const Banner = () => {
           }}
         >
           <h5 className="secondary-text">Search your next ride</h5>
-          <DatePicker />
+          <DatePicker
+            selectedDate={pickUpTime.date}
+            selectedTime={pickUpTime.time}
+            onDateChange={handleDateChange}
+            onTimeChange={handleTimeChange}
+          />
         </div>
       </div>
     </div>

@@ -28,7 +28,13 @@ const CustomInput = forwardRef(customDateInput);
 
 const icon = <CalendarIcon fontSize="sm" />;
 
-const DatePicker = ({ selectedDate, onChange, ...props }) => {
+const DatePicker = ({
+  selectedDate,
+  selectedTime,
+  onDateChange,
+  onTimeChange,
+  ...props
+}) => {
   const times = generateTimeOptions();
   const isDateSelectable = (date) => {
     const today = new Date();
@@ -37,7 +43,6 @@ const DatePicker = ({ selectedDate, onChange, ...props }) => {
     return date >= startOfMonth && date <= endOfMonth;
   };
 
-  const onSelectChange = () => {};
   return (
     <div className="flex flex-col gap-3 mt-[12px] w-full">
       <h6>Pickup</h6>
@@ -46,7 +51,7 @@ const DatePicker = ({ selectedDate, onChange, ...props }) => {
           <InputGroup className="dark-theme">
             <ReactDatePicker
               selected={selectedDate}
-              onChange={onChange}
+              onChange={onDateChange}
               className="react-datepicker__input-text"
               customInput={<CustomInput />}
               dateFormat="MM/dd/yyyy"
@@ -60,8 +65,8 @@ const DatePicker = ({ selectedDate, onChange, ...props }) => {
           <SelectField
             label="Time"
             items={times}
-            onChange={onSelectChange}
-            id="time"
+            onChange={onTimeChange}
+            selectedValue={selectedTime}
           />
         </div>
       </div>

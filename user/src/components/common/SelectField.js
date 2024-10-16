@@ -3,7 +3,7 @@ import { MdOutlineAccessTime } from "react-icons/md";
 
 const SelectField = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(props.value || null);
+  const [selectedOption, setSelectedOption] = useState(props.selectedValue || null);
   const selectRef = useRef(null);
   const dropdownRef = useRef(null);
 
@@ -28,14 +28,14 @@ const SelectField = (props) => {
     };
   }, []);
 
-  const handleToggle = (e) => {
+  const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const onOptionClicked = (item) => () => {
     setSelectedOption(item.label);
     setIsOpen(false);
-    props.onChange(props.id, item.value);
+    props.onChange(item.value); 
   };
 
   return (
