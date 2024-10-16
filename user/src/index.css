@@ -16,12 +16,12 @@
   --color-secondary: #3c3883; 
   --color-tertiary: #3C38831F;
   --color-background: #ffffff; 
-  --color-gray: #f8f9fa; 
+  --color-gray: #8c84a4; 
 }
 
 body {
   background-color: var(--color-background);
-  color: var(--color-tertiary);
+  color: var(--color-gray);
   line-height: 1.5;
 }
 
