@@ -176,10 +176,8 @@ body {
   h6 {
     font-weight: 400;
     font-size: 16px;
-    line-height: 35px;
-    color: var(--color-primary);
-    text-align: left;
-
+    color: var(--color-secondary);
+/* 
     @screen sm {
       font-size: 20px;
       line-height: 40px;
@@ -188,7 +186,7 @@ body {
     @screen lg {
       font-size: 24px;
       line-height: 46px;
-    }
+    } */
   }
 }
 

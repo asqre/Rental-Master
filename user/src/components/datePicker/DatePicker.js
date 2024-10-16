@@ -4,6 +4,8 @@ import { InputGroup, Input, InputRightElement } from "@chakra-ui/react";
 import { CalendarIcon } from "@chakra-ui/icons";
 import "react-datepicker/dist/react-datepicker.css";
 import "./chakra-react-datepicker.css";
+import SelectField from "../common/SelectField";
+import { generateTimeOptions } from "../../utils";
 
 const customDateInput = ({ value, onClick, onChange }, ref) => (
   <Input
@@ -22,6 +24,7 @@ const CustomInput = forwardRef(customDateInput);
 const icon = <CalendarIcon fontSize="sm" />;
 
 const DatePicker = ({ selectedDate, onChange, ...props }) => {
+  const times = generateTimeOptions();
   const isDateSelectable = (date) => {
     const today = new Date();
     const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
@@ -29,19 +32,35 @@ const DatePicker = ({ selectedDate, onChange, ...props }) => {
     return date >= startOfMonth && date <= endOfMonth;
   };
 
+  const onSelectChange = () => {};
   return (
-    <InputGroup className="dark-theme">
-      <ReactDatePicker
-        selected={selectedDate}
-        onChange={onChange}
-        className="react-datepicker__input-text"
-        customInput={<CustomInput />}
-        dateFormat="MM/dd/yyyy"
-        filterDate={isDateSelectable}
-        {...props}
-      />
-      <InputRightElement color="gray.500" children={icon} />
-    </InputGroup>
+    <div className="flex flex-col gap-3 mt-[12px] w-full">
+      <h6>Pickup</h6>
+      <div className="flex flex-row justify-between">
+        <div className="w-[45%]">
+          <InputGroup className="dark-theme">
+            <ReactDatePicker
+              selected={selectedDate}
+              onChange={onChange}
+              className="react-datepicker__input-text"
+              customInput={<CustomInput />}
+              dateFormat="MM/dd/yyyy"
+              filterDate={isDateSelectable}
+              {...props}
+            />
+            <InputRightElement color="gray.500" children={icon} />
+          </InputGroup>
+        </div>
+        <div className="w-[45%]">
+          <SelectField
+            label="Time"
+            items={times}
+            onChange={onSelectChange}
+            id="time"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
