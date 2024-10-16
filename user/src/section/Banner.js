@@ -78,20 +78,33 @@ const Banner = () => {
         </div>
 
         <div
-          className="absolute w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col mt-6"
+          className="absolute w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col mt-6 justify-between"
           style={{
-            padding: "1.75rem 1.4rem 0 1.4rem",
+            padding: "1.75rem 1.4rem 1.75rem 1.4rem",
             boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
             transition: "all 0.2s",
           }}
         >
           <h5 className="secondary-text">Search your next ride</h5>
-          <DatePicker
-            selectedDate={pickUpTime.date}
-            selectedTime={pickUpTime.time}
-            onDateChange={handleDateChange}
-            onTimeChange={handleTimeChange}
-          />
+          <div className="flex flex-col gap-2 mt-[-35px]">
+            <DatePicker
+              pickerName="Pickup"
+              selectedDate={pickUpTime.date}
+              selectedTime={pickUpTime.time}
+              onDateChange={handleDateChange}
+              onTimeChange={handleTimeChange}
+            />
+
+            <DatePicker
+              pickerName="Dropoff"
+              selectedDate={pickUpTime.date}
+              selectedTime={pickUpTime.time}
+              onDateChange={handleDateChange}
+              onTimeChange={handleTimeChange}
+            />
+          </div>
+
+          <button className="btn btn-secondary">Search</button>
         </div>
       </div>
     </div>
