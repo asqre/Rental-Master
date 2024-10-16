@@ -15,6 +15,10 @@ const customDateInput = ({ value, onClick, onChange }, ref) => (
     ref={ref}
     onClick={onClick}
     onChange={onChange}
+    _focus={{
+      borderColor: "#e5e7eb",
+      boxShadow: "none",
+    }}
   />
 );
 customDateInput.displayName = "DateInput";

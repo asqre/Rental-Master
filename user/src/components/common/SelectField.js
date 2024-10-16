@@ -43,7 +43,7 @@ const SelectField = (props) => {
       <div
         className="relative inline-flex w-full bg-white rounded-lg border border-[#CCCCCC] focus-within:border-2 focus-within:border-[#5BC9FE] h-[40px]"
         style={{
-          border: isOpen ? "2px solid #5BC9FE" : "1px solid #CCCCCC",
+          border: "1px solid #e5e7eb",
         }}
       >
         <div
@@ -57,7 +57,7 @@ const SelectField = (props) => {
           className="absolute right-3 top-1/2 transform -translate-y-1/2 h-6 w-6 flex justify-center items-center cursor-pointer"
           onClick={handleToggle}
         >
-          <MdOutlineAccessTime style={{ color: "#5BC9FE" }} />
+          <MdOutlineAccessTime style={{ color: "gray" }} />
         </div>
       </div>
 
