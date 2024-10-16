@@ -47,7 +47,7 @@ const DatePicker = ({
     <div className="flex flex-col gap-3 mt-[12px] w-full">
       <h6>Pickup</h6>
       <div className="flex flex-row justify-between">
-        <div className="w-[45%]">
+        <div className="w-[48%]">
           <InputGroup className="dark-theme">
             <ReactDatePicker
               selected={selectedDate}
