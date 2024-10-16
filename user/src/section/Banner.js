@@ -19,7 +19,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative mb-6 md:0">
+    <div className="relative mb-6 md:0 overflow-hidden">
       {Array.isArray(bannerImages) && bannerImages.length > 0 ? (
         <Slider {...settings}>
           {bannerImages?.map((img) => (
