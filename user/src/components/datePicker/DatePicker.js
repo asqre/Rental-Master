@@ -57,6 +57,7 @@ const DatePicker = ({
               customInput={<CustomInput />}
               dateFormat="MM/dd/yyyy"
               filterDate={isDateSelectable}
+              popperPlacement="bottom-start"
               {...props}
             />
             <InputRightElement color="gray.500" children={icon} />

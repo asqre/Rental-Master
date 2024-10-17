@@ -216,7 +216,16 @@ body {
 }
 
 .react-datepicker-popper {
-  left: 45px !important;
+  z-index: 9999 !important;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] {
+  margin-top: 0 !important;
+  transform: translate3d(0, -100%, 0) !important;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+  display: none;
 }
 
 /* Scrollbar */
