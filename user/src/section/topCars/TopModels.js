@@ -73,7 +73,8 @@ const TopModels = () => {
   };
 
   return (
-    <section className="flex mx-auto">
+    <section className="flex flex-col mx-auto gap-5">
+      <h3 className="text-center">Best Selling Models</h3>
       <div className="w-[85%] sm:w-[50%] md:w-[85%] lg:w-[60%] xl:w-[50%] 2xl:w-[85%] m-auto">
         <Slider {...settings}>
           {topCarModels.map((model, index) => {
