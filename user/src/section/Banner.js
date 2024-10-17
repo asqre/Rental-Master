@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import { useData } from "../context/data";
 import Slider from "react-slick";
 import DatePicker from "../components/datePicker/DatePicker";
+import toast from "react-hot-toast";
 
 const Banner = () => {
   const { bannerImages } = useData();
-  const [pickUpTime, setPickUpTime] = useState({
-    date: null,
-    time: null,
+  const [isLoading, setIsLoading] = useState(false);
+  const [searchRide, setSearchRide] = useState({
+    pickUpTime: {
+      date: null,
+      time: null,
+    },
+    dropOffTime: {
+      date: null,
+      time: null,
+    },
   });
 
   const settings = {
@@ -23,12 +31,64 @@ const Banner = () => {
     adaptiveHeight: false,
   };
 
-  const handleDateChange = (date) => {
-    setPickUpTime({ ...pickUpTime, date });
+  const handleDateChange = (type, date) => {
+    setSearchRide((prev) => ({
+      ...prev,
+      [type]: {
+        ...prev[type],
+        date,
+      },
+    }));
   };
 
-  const handleTimeChange = (time) => {
-    setPickUpTime({ ...pickUpTime, time });
+  const handleTimeChange = (type, time) => {
+    setSearchRide((prev) => ({
+      ...prev,
+      [type]: {
+        ...prev[type],
+        time,
+      },
+    }));
+  };
+
+  const handleSearch = () => {
+    try {
+      setIsLoading(true);
+      const { pickUpTime, dropOffTime } = searchRide;
+
+      if (
+        !pickUpTime.date ||
+        !pickUpTime.time ||
+        !dropOffTime.date ||
+        !dropOffTime.time
+      ) {
+        toast.error("Please select both pickup and dropoff date and time.");
+        return;
+      }
+
+      const formattedPickUpDate = pickUpTime.date.toDateString();
+      const pickUpDateTime = new Date(
+        `${formattedPickUpDate} ${pickUpTime.time}`
+      );
+
+      const formattedDropOffDate = dropOffTime.date.toDateString();
+      const dropOffDateTime = new Date(
+        `${formattedDropOffDate} ${dropOffTime.time}`
+      );
+
+      if (dropOffDateTime <= pickUpDateTime) {
+        toast.error("Dropoff time must be after pickup time.");
+        return;
+      }
+
+      console.log("Pickup time:", pickUpDateTime);
+      console.log("Dropoff time:", dropOffDateTime);
+    } catch (error) {
+      console.error("Error while searching for rides", error);
+      toast.error("An error occurred while searching for rides.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -90,22 +150,24 @@ const Banner = () => {
         <div className="flex flex-col gap-2 mt-[-35px]">
           <DatePicker
             pickerName="Pickup"
-            selectedDate={pickUpTime.date}
-            selectedTime={pickUpTime.time}
-            onDateChange={handleDateChange}
-            onTimeChange={handleTimeChange}
+            selectedDate={searchRide.pickUpTime.date}
+            selectedTime={searchRide.pickUpTime.time}
+            onDateChange={(date) => handleDateChange("pickUpTime", date)}
+            onTimeChange={(time) => handleTimeChange("pickUpTime", time)}
           />
 
           <DatePicker
             pickerName="Dropoff"
-            selectedDate={pickUpTime.date}
-            selectedTime={pickUpTime.time}
-            onDateChange={handleDateChange}
-            onTimeChange={handleTimeChange}
+            selectedDate={searchRide.dropOffTime.date}
+            selectedTime={searchRide.dropOffTime.time}
+            onDateChange={(date) => handleDateChange("dropOffTime", date)}
+            onTimeChange={(time) => handleTimeChange("dropOffTime", time)}
           />
         </div>
 
-        <button className="btn btn-secondary">Search</button>
+        <button className="btn btn-secondary" onClick={handleSearch}>
+          Search
+        </button>
       </div>
     </div>
   );
