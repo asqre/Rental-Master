@@ -1,3 +1,36 @@
+export const topCarModels = [
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "https://www.mychoize.com/fleets/mahindra-scorpio",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "https://www.mychoize.com/fleets/mahindra-tuv-300",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "https://www.mychoize.com/fleets/hyundai-creta",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "https://www.mychoize.com/fleets/toyota-innova-crysta",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "https://www.mychoize.com/fleets/maruti-ciaz",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+];
+
 export const aboutItems = [
   {
     title: "Our mission",
@@ -49,7 +82,8 @@ export const courseItems = [
   },
   {
     title: "Bike Rentals",
-    description: "Affordable bike rentals for daily commuting or weekend rides.",
+    description:
+      "Affordable bike rentals for daily commuting or weekend rides.",
     link: "#bike-rentals",
   },
   {
@@ -86,8 +120,7 @@ export const coursePosts = [
 export const certificationItems = [
   {
     title: "Discover",
-    description:
-      "Check out our latest rental options for cars and bikes.",
+    description: "Check out our latest rental options for cars and bikes.",
     link: "#discover",
   },
   {
@@ -102,7 +135,8 @@ export const certificationItems = [
   },
   {
     title: "The Podcast",
-    description: "Hear stories from our customers and their rental experiences.",
+    description:
+      "Hear stories from our customers and their rental experiences.",
     link: "#podcast",
   },
 ];
@@ -126,30 +160,29 @@ export const certificationPosts = [
   },
 ];
 
-export const featureCardData =[
+export const featureCardData = [
   {
-    id:1,
+    id: 1,
     img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon1.svg",
     alt: "car",
-    description:"Unlimited km to drive"
+    description: "Unlimited km to drive",
   },
   {
-    id:2,
+    id: 2,
     img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon_2.svg",
     alt: "building",
-    description:"100+ Location in 16 cities"
+    description: "100+ Location in 16 cities",
   },
   {
-    id:3,
+    id: 3,
     img: "https://mychoize.com/mychoize-live/current/revamap_img/benifit_icon_3.svg",
     alt: "world",
-    description:"Anywhere delivery"
+    description: "Anywhere delivery",
   },
   {
-    id:4,
+    id: 4,
     img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon_4.svg",
     alt: "security",
-    description:"Privacy & freedom"
+    description: "Privacy & freedom",
   },
-
-]
+];

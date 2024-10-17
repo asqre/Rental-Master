@@ -191,43 +191,6 @@ body {
 }
 
 
-/* Date Picker CSS */
-.react-datepicker__day.react-datepicker__day--selected {
-  background-color: var(--blue600) !important; 
-  color: white !important;
-}
-
-.react-datepicker__day.react-datepicker__day--selected:hover {
-  background-color: var(--blue700) !important; 
-  color: white !important; 
-}
-
-.react-datepicker__day.react-datepicker__day--today {
-  font-weight: normal;
-  color: var(--chakra-colors-black) !important;
-  background-color: var(--blue600) !important;
-}
-
-.dark-theme .react-datepicker__current-month {
-  font-size: inherit !important;
-  font-weight: 600;
-  text-align: center !important;
-  line-height: 1.5 !important;
-}
-
-.react-datepicker-popper {
-  z-index: 9999 !important;
-}
-
-.react-datepicker-popper[data-placement^="bottom"] {
-  margin-top: 0 !important;
-  transform: translate3d(0, -100%, 0) !important;
-}
-
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
-  display: none;
-}
-
 /* Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;

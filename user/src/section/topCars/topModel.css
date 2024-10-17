@@ -1,0 +1,15 @@
+.slick-next::before {
+    color: red;
+}
+
+.slick-prev::before {
+    color: red;
+}
+
+.slick-dots li.slick-active button:before {
+    color:orange !important;
+}
+
+.slick-slide > div {
+    margin: 0 10px;
+}
