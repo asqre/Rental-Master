@@ -98,7 +98,7 @@ body {
       line-height: 74px !important;
     }
 
-    @screen lg {
+    @screen xl {
       font-size: 76px !important;
       line-height: 100px !important;
     }

@@ -53,18 +53,21 @@ const Banner = () => {
       <div
         className="absolute top-[7rem]"
         style={{
-          left: "50%",
-          transform: "translateX(-50%)",
+          left: "20%",
+          transform: "translateX(-20%)",
         }}
       >
-        <div className="">
+        <div>
           <h1
             className="primary-text"
             style={{
               color: "#FFFFFF",
+              textTransform: "uppercase",
             }}
           >
-            Rent Your Favorite Cars
+            Rent Your
+            <br />
+            <span className="text-[#F3BF47]">Favorite Cars</span>
           </h1>
           <h6
             className="teritiary-text"
@@ -74,38 +77,39 @@ const Banner = () => {
           >
             Discover the best deals on Cars at our convenient location.
           </h6>
-          <button className="btn btn-primary">Explore Cars</button>
+          <button className="btn btn-primary mt-5">Explore Cars</button>
+        </div>
+      </div>
+
+      <div
+        className="lg:absolute top-[7rem] w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col mt-6 justify-between"
+        style={{
+          padding: "1.75rem 1.4rem 1.75rem 1.4rem",
+          boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
+          transition: "all 0.2s",
+          right: "10%",
+        }}
+      >
+        <h5 className="secondary-text">Search your next ride</h5>
+        <div className="flex flex-col gap-2 mt-[-35px]">
+          <DatePicker
+            pickerName="Pickup"
+            selectedDate={pickUpTime.date}
+            selectedTime={pickUpTime.time}
+            onDateChange={handleDateChange}
+            onTimeChange={handleTimeChange}
+          />
+
+          <DatePicker
+            pickerName="Dropoff"
+            selectedDate={pickUpTime.date}
+            selectedTime={pickUpTime.time}
+            onDateChange={handleDateChange}
+            onTimeChange={handleTimeChange}
+          />
         </div>
 
-        <div
-          className="absolute w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col mt-6 justify-between"
-          style={{
-            padding: "1.75rem 1.4rem 1.75rem 1.4rem",
-            boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
-            transition: "all 0.2s",
-          }}
-        >
-          <h5 className="secondary-text">Search your next ride</h5>
-          <div className="flex flex-col gap-2 mt-[-35px]">
-            <DatePicker
-              pickerName="Pickup"
-              selectedDate={pickUpTime.date}
-              selectedTime={pickUpTime.time}
-              onDateChange={handleDateChange}
-              onTimeChange={handleTimeChange}
-            />
-
-            <DatePicker
-              pickerName="Dropoff"
-              selectedDate={pickUpTime.date}
-              selectedTime={pickUpTime.time}
-              onDateChange={handleDateChange}
-              onTimeChange={handleTimeChange}
-            />
-          </div>
-
-          <button className="btn btn-secondary">Search</button>
-        </div>
+        <button className="btn btn-secondary">Search</button>
       </div>
     </div>
   );
