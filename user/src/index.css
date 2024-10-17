@@ -94,7 +94,7 @@ body {
     text-align: left;
 
     @screen sm {
-      font-size: 56px !important;
+      font-size: 46px !important;
       line-height: 74px !important;
     }
 

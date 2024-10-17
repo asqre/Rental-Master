@@ -51,11 +51,7 @@ const Banner = () => {
       )}
 
       <div
-        className="absolute top-[7rem]"
-        style={{
-          left: "20%",
-          transform: "translateX(-20%)",
-        }}
+        className="absolute top-[10rem] md:left-[5%] lg:left-[10%]"
       >
         <div>
           <h1
@@ -82,12 +78,11 @@ const Banner = () => {
       </div>
 
       <div
-        className="lg:absolute top-[7rem] w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col mt-6 justify-between"
+        className="md:absolute md:right-[5%] lg:right-[10%] top-[10rem] w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col justify-between"
         style={{
           padding: "1.75rem 1.4rem 1.75rem 1.4rem",
           boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
           transition: "all 0.2s",
-          right: "10%",
         }}
       >
         <h5 className="secondary-text">Search your next ride</h5>
