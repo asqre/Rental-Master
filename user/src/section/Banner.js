@@ -51,11 +51,12 @@ const Banner = () => {
       )}
 
       <div
-        className="absolute top-[10rem] md:left-[5%] lg:left-[10%]"
+        className="absolute top-[2rem] md:top-[10rem] md:left-[5%] lg:left-[10%] flex flex-col text-center items-center
+                  md:items-start md:text-left w-full md:w-auto"
       >
         <div>
           <h1
-            className="primary-text"
+            className="primary-text text-center md:text-left"
             style={{
               color: "#FFFFFF",
               textTransform: "uppercase",
