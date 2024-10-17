@@ -79,7 +79,7 @@ const Banner = () => {
       </div>
 
       <div
-        className="md:absolute md:right-[5%] lg:right-[10%] top-[10rem] w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col justify-between"
+        className="mx-auto md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col justify-between"
         style={{
           padding: "1.75rem 1.4rem 1.75rem 1.4rem",
           boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
