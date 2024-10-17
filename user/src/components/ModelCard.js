@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const ModelCard = (props) => {
   return (
-    <div className="flex flex-col border rounded-2xl w-[304px] h-[312px]">
+    <div className="flex flex-col border rounded-2xl w-[290px] h-[298px] sm:w-[304px] sm:h-[312px]">
       <div className="h-[70%] w-full">
         <img
           src={props.img}
