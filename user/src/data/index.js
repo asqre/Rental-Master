@@ -141,7 +141,7 @@ export const featureCardData =[
   },
   {
     id:3,
-    img: "https://mychoize.com/mychoize-live/current/revamap_img/benifit_icon_3.svg",
+    img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon_3.svg",
     alt: "world",
     description:"Anywhere delivery"
   },
