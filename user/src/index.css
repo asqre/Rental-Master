@@ -215,6 +215,10 @@ body {
   line-height: 1.5 !important;
 }
 
+.react-datepicker-popper {
+  left: 45px !important;
+}
+
 /* Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
