@@ -98,11 +98,11 @@ body {
     text-align: left;
 
     @screen sm {
-      font-size: 56px !important;
+      font-size: 46px !important;
       line-height: 74px !important;
     }
 
-    @screen lg {
+    @screen xl {
       font-size: 76px !important;
       line-height: 100px !important;
     }
@@ -112,7 +112,6 @@ body {
     font-size: 36px;
     line-height: 49px;
     font-weight: 700;
-    text-align: left;
 
     @screen sm {
       font-size: 50px;
@@ -127,10 +126,9 @@ body {
   }
 
   h3 {
-    font-size: 36px;
+    font-size: 28px;
     line-height: 50px;
     font-weight: 700;
-    text-align: left;
     color: var(--color-secondary);
 
     @screen sm {
@@ -180,10 +178,8 @@ body {
   h6 {
     font-weight: 400;
     font-size: 16px;
-    line-height: 35px;
-    color: var(--color-primary);
-    text-align: left;
-
+    color: var(--color-secondary);
+/* 
     @screen sm {
       font-size: 20px;
       line-height: 40px;
@@ -192,33 +188,31 @@ body {
     @screen lg {
       font-size: 24px;
       line-height: 46px;
-    }
+    } */
   }
 }
 
 
-/* Date Picker CSS */
-.react-datepicker__day.react-datepicker__day--selected {
-  background-color: var(--blue600) !important; 
-  color: white !important;
+/* Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  /* display: none; */
 }
 
-.react-datepicker__day.react-datepicker__day--selected:hover {
-  background-color: var(--blue700) !important; 
-  color: white !important; 
+.custom-scrollbar:hover::-webkit-scrollbar {
+  display: block; 
 }
 
-.react-datepicker__day.react-datepicker__day--today {
-  font-weight: normal;
-  color: var(--chakra-colors-black) !important;
-  background-color: var(--blue600) !important;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+  background-clip: content-box;
 }
 
-.dark-theme .react-datepicker__current-month {
-  font-size: inherit !important;
-  font-weight: 600;
-  text-align: center !important;
-  line-height: 1.5 !important;
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ECECEC;
+  border-radius: 8px;
 }
 
 .heading {
@@ -238,3 +232,4 @@ body {
     line-height: 46px;
   }
 }
+

@@ -1,3 +1,36 @@
+export const topCarModels = [
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "https://www.mychoize.com/fleets/mahindra-scorpio",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "https://www.mychoize.com/fleets/mahindra-tuv-300",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "https://www.mychoize.com/fleets/hyundai-creta",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "https://www.mychoize.com/fleets/toyota-innova-crysta",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "https://www.mychoize.com/fleets/maruti-ciaz",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+];
+
 export const aboutItems = [
   {
     title: "Our mission",
@@ -141,8 +174,8 @@ export const featureCardData = [
     description: "100+ Location in 16 cities",
   },
   {
-    id: 3,
-    img: "https://www.mychoize.com/mychoize-live/current/revamap_img/benifit_icon_3.svg",
+    id:3,
+    img: "https://mychoize.com/mychoize-live/current/revamap_img/benifit_icon_3.svg",
     alt: "world",
     description: "Anywhere delivery",
   },

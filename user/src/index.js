@@ -8,6 +8,7 @@ import { DataProvider } from "./context/data";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <React.StrictMode>
       <DataProvider>
         <ChakraProvider>
+          <Toaster /> 
           <App />
         </ChakraProvider>
       </DataProvider>
