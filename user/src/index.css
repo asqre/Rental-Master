@@ -26,29 +26,6 @@ body {
   line-height: 1.5;
 }
 
-.primary-text {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-.secondary-text {
-  color: var(--color-secondary);
-  font-weight: 400;
-}
-
-.tertiary-text {
-  color: var(--color-tertiary);
-  font-size: 0.9em;
-}
-
-.primary-bg{
-  background-color: var(--color-background);
-}
-
-.secondary-bg{
-  background-color: var(--color-backgroundGray);
-}
-
 .btn {
   padding: 10px 15px;
   border-radius: 5px;

@@ -116,7 +116,7 @@ const Banner = () => {
       >
         <div>
           <h1
-            className="primary-text text-center md:text-left"
+            className="text-center md:text-left"
             style={{
               color: "#FFFFFF",
               textTransform: "uppercase",
@@ -146,7 +146,7 @@ const Banner = () => {
           transition: "all 0.2s",
         }}
       >
-        <h5 className="secondary-text">Search your next ride</h5>
+        <h5>Search your next ride</h5>
         <div className="flex flex-col gap-2 mt-[-35px]">
           <DatePicker
             pickerName="Pickup"

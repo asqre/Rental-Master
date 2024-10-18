@@ -4,7 +4,7 @@ import { featureCardData } from "../data";
 
 function FeatureBenefits() {
   return (
-    <div className="flex flex-col justify-center items-center my-20 secondary-bg py-20 gap-10">
+    <div className="flex flex-col justify-center items-center my-20 bg-backgroundGray py-20 gap-10">
       <h3 className="heading">
         Features &amp; Benefits of Renting a Self-Drive Car
       </h3>
