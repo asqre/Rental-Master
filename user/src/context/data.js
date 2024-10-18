@@ -8,13 +8,13 @@ const DataContext = createContext();
 const DataProvider = ({ children }) => {
   const [dataLoading, setDataLoading] = useState(true);
   const [bannerImages, setBannerImages] = useState([]);
+  const [companyName, setCompanyName] = useState("Rental Master");
 
   const getBannerImages = async () => {
     setDataLoading(true);
     try {
       const imageRef = ref(storage, "banner-images/");
-      console.log("Getting banner images");
-      
+
       const result = await listAll(imageRef);
       const urlPromises = result.items.map((imageRef) =>
         getDownloadURL(imageRef)
@@ -36,6 +36,7 @@ const DataProvider = ({ children }) => {
   const dataValue = {
     dataLoading,
     bannerImages,
+    companyName,
   };
 
   return (

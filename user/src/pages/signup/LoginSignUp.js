@@ -129,24 +129,14 @@ const LoginSignUp = () => {
               <br />
               <span
                 className="text-[#5B91E8] underline cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.royalbrothers.com/terms-and-conditions",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open("/terms-and-conditions", "_blank")}
               >
                 Terms & Conditions
               </span>
               <span> and </span>
               <span
                 className="text-[#5B91E8] underline cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.royalbrothers.com/terms-and-conditions",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open("/privacy-policy", "_blank")}
               >
                 Privacy Policy
               </span>
@@ -207,24 +197,14 @@ const LoginSignUp = () => {
               <br />
               <span
                 className="text-[#5B91E8] underline cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.royalbrothers.com/terms-and-conditions",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open("/terms-and-conditions", "_blank")}
               >
                 Terms & Conditions
               </span>
               <span> and </span>
               <span
                 className="text-[#5B91E8] underline cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.royalbrothers.com/terms-and-conditions",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open("/privacy-policy", "_blank")}
               >
                 Privacy Policy
               </span>
