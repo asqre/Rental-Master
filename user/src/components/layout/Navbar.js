@@ -194,7 +194,7 @@ const Navbar = ({ setIsModalOpen }) => {
                   </ul>
                 )}
                 <div className="flex justify-center items-center p-4 mb-20">
-                  <CButton2 href="/" name="Log in" />
+                  <CButton2 to="/login" name="Log in" />
                 </div>
               </div>
             </div>
