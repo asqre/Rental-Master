@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const CButton2 = ({ href, name }) => {
+const CButton2 = ({ to, name }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={to}
       className="px-6 py-1 bg-[#19B5FE] rounded-lg text-white"
       style={{
         lineHeight: "1.5",
@@ -12,7 +13,7 @@ const CButton2 = ({ href, name }) => {
       }}
     >
       {name}
-    </a>
+    </Link>
   );
 };
 
