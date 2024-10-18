@@ -81,9 +81,10 @@ const LoginSignUp = () => {
   };
 
   const handleNewUserChange = (e) => {
+    const { id, value } = e.target;
     setNewUser({
       ...newUser,
-      [e.target.name]: e.target.value,
+      [id]: id === "name" ? value.toUpperCase() : value,
     });
   };
 
