@@ -42,7 +42,7 @@ const TestimonialSlider = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check for mobile viewport
+ 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -76,7 +76,7 @@ const TestimonialSlider = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
-  // Reset currentIndex when switching between mobile and desktop
+  
   useEffect(() => {
     setCurrentIndex(0);
   }, [isMobile]);
@@ -108,7 +108,7 @@ const TestimonialSlider = () => {
         </div>
       </div>
 
-      {/* Navigation buttons */}
+
       <button 
         onClick={prevSlide}
         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 bg-white rounded-full p-1 md:p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
@@ -125,16 +125,16 @@ const TestimonialSlider = () => {
         <IoChevronForward className="w-4 h-4 md:w-6 md:h-6" />
       </button>
 
-      {/* Optional: Add dots indicator for mobile */}
+ 
       <div className="flex justify-center mt-4 gap-2 md:hidden">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`h-2 rounded-full transition-all ${
+            className={` h-2 rounded-full transition-all ${
               index === currentIndex 
-                ? 'w-4 bg-blue-500' 
-                : 'w-2 bg-gray-300'
+                ? 'w-2 bg-blue-500' 
+                : 'w-2 bg-gray'
             }`}
             aria-label={`Go to testimonial ${index + 1}`}
           />

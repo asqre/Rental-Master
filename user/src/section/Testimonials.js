@@ -5,9 +5,9 @@ const TestimonialSection = () => {
   return (
     <div className="bg-gray-50 py-8 md:py-12 lg:py-20">
       <div className="w-[90%] md:w-[85%] lg:w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Changed from flex to grid for better responsive control */}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center min-h-[40vh]">
-          {/* Left side content */}
+      
           <div className="space-y-6 md:space-y-8">
             <div className="space-y-4 md:space-y-8 text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary leading-tight">
@@ -20,7 +20,7 @@ const TestimonialSection = () => {
             </div>
           </div>
 
-          {/* Right side carousel */}
+       
           <div className="w-full">
             <TestimonialSlider />
           </div>
