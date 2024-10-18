@@ -20,6 +20,7 @@ const customDateInput = ({ value, onClick, onChange }, ref) => (
       borderColor: "#e5e7eb",
       boxShadow: "none",
     }}
+    readOnly
   />
 );
 customDateInput.displayName = "DateInput";
