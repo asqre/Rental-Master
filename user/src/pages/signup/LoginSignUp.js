@@ -17,22 +17,15 @@ const LoginSignUp = () => {
   const [error, setError] = useState();
 
   const [existingUser, setExistingUser] = useState({
-    phoneNumber: "",
-    password: "",
+    loginPhoneNumber: "",
+    loginPassword: "",
   });
 
   const [newUser, setNewUser] = useState({
     name: "",
     email: "",
-    password: "",
-    phoneNumber: "",
-  });
-
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-    phoneno: "",
+    registerPassword: "",
+    registerPhoneNumber: "",
   });
 
   const validateEmail = (email) => {
@@ -50,10 +43,13 @@ const LoginSignUp = () => {
 
   const validateFields = useCallback((user, isLogin) => {
     if (isLogin) {
-      if (!user.phoneNumber || !validatePhoneNumber(user.phoneNumber)) {
+      if (
+        !user.loginPhoneNumber ||
+        !validatePhoneNumber(user.loginPhoneNumber)
+      ) {
         return "Phone number must be 10 digits";
       }
-      if (!user.password || !validatePassword(user.password)) {
+      if (!user.loginPassword || !validatePassword(user.loginPassword)) {
         return "Password must be at least 6 characters long";
       }
     } else {
@@ -63,10 +59,13 @@ const LoginSignUp = () => {
       if (!user.email || !validateEmail(user.email)) {
         return "Invalid email address";
       }
-      if (!user.phoneNumber || !validatePhoneNumber(user.phoneNumber)) {
+      if (
+        !user.registerPhoneNumber ||
+        !validatePhoneNumber(user.registerPhoneNumber)
+      ) {
         return "Phone number must be 10 digits";
       }
-      if (!user.password || !validatePassword(user.password)) {
+      if (!user.registerPassword || !validatePassword(user.registerPassword)) {
         return "Password must be at least 6 characters long";
       }
     }
@@ -162,7 +161,7 @@ const LoginSignUp = () => {
               leading="+91"
               type="number"
               onKeyDown={handleKeyDown}
-              id="phoneNumber"
+              id="loginPhoneNumber"
               value={existingUser.phoneNumber}
               onChange={handleExistingUserChange}
             />
@@ -173,7 +172,7 @@ const LoginSignUp = () => {
               leading={<IoMdLock />}
               type="password"
               onKeyDown={handleKeyDown}
-              id="password"
+              id="loginPassword"
               value={existingUser.password}
               onChange={handleExistingUserChange}
             />
@@ -232,18 +231,18 @@ const LoginSignUp = () => {
               leading="+91"
               type="number"
               onKeyDown={handleKeyDown}
-              id="phoneNumber"
+              id="registerPhoneNumber"
               value={newUser.phoneNumber}
               onChange={handleNewUserChange}
             />
 
             <LoginInputField
-              label="password"
+              label="Password"
               placeholder="Password"
               leading={<FaUnlock />}
               type="password"
               onKeyDown={handleKeyDown}
-              id="password"
+              id="registerPassword"
               value={newUser.password}
               onChange={handleNewUserChange}
             />
