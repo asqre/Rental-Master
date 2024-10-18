@@ -8,6 +8,7 @@ import { FaRegFaceGrin } from "react-icons/fa6";
 import LoginInputField from "../../components/common/LoginInputField";
 import { IoMdLock } from "react-icons/io";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const LoginSignUp = () => {
   const navigate = useNavigate();
@@ -73,26 +74,48 @@ const LoginSignUp = () => {
   }, []);
 
   const loginSubmit = useCallback(
-    (e) => {
+    async (e) => {
       e.preventDefault();
       const error = validateFields(existingUser, true);
       if (error) {
         toast.error(error);
-      } else {
+        return;
+      }
+
+      try {
+        const res = await axios.post("/api/login", {
+          phoneNumber: existingUser.loginPhoneNumber,
+          password: existingUser.loginPassword,
+        });
         navigate("/");
+      } catch (error) {
+        console.log(error);
+        toast.error("Invalid credentials");
       }
     },
     [existingUser, validateFields, navigate]
   );
 
   const registerSubmit = useCallback(
-    (e) => {
+    async (e) => {
       e.preventDefault();
       const error = validateFields(newUser, false);
       if (error) {
         toast.error(error);
-      } else {
+        return;
+      }
+
+      try {
+        const res = await axios.post("/api/register", {
+          name: newUser.name,
+          email: newUser.email,
+          password: newUser.registerPassword,
+          phoneNumber: newUser.registerPhoneNumber,
+        });
         navigate("/");
+      } catch (error) {
+        console.log(error);
+        toast.error("Failed to register. Please try again");
       }
     },
     [newUser, validateFields, navigate]
