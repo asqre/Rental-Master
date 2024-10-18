@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../../components/layout/Layout";
@@ -7,12 +7,14 @@ import { FaUnlock } from "react-icons/fa6";
 import { FaRegFaceGrin } from "react-icons/fa6";
 import LoginInputField from "../../components/common/LoginInputField";
 import { IoMdLock } from "react-icons/io";
+import toast from "react-hot-toast";
 
 const LoginSignUp = () => {
   const navigate = useNavigate();
   const loginTab = useRef(null);
   const registerTab = useRef(null);
   const switcherTab = useRef(null);
+  const [error, setError] = useState();
 
   const [existingUser, setExistingUser] = useState({
     phoneNumber: "",
@@ -33,15 +35,69 @@ const LoginSignUp = () => {
     phoneno: "",
   });
 
-  const loginSubmit = (e) => {
-    e.preventDefault();
-    navigate("/");
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
-  const registerSubmit = (e) => {
-    e.preventDefault();
-    navigate("/");
+  const validatePhoneNumber = (phoneNumber) => {
+    return phoneNumber.length === 10 && /^\d+$/.test(phoneNumber);
   };
+
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
+
+  const validateFields = useCallback((user, isLogin) => {
+    if (isLogin) {
+      if (!user.phoneNumber || !validatePhoneNumber(user.phoneNumber)) {
+        return "Phone number must be 10 digits";
+      }
+      if (!user.password || !validatePassword(user.password)) {
+        return "Password must be at least 6 characters long";
+      }
+    } else {
+      if (!user.name) {
+        return "Name is required";
+      }
+      if (!user.email || !validateEmail(user.email)) {
+        return "Invalid email address";
+      }
+      if (!user.phoneNumber || !validatePhoneNumber(user.phoneNumber)) {
+        return "Phone number must be 10 digits";
+      }
+      if (!user.password || !validatePassword(user.password)) {
+        return "Password must be at least 6 characters long";
+      }
+    }
+    return null;
+  }, []);
+
+  const loginSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const error = validateFields(existingUser, true);
+      if (error) {
+        toast.error(error);
+      } else {
+        navigate("/");
+      }
+    },
+    [existingUser, validateFields, navigate]
+  );
+
+  const registerSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const error = validateFields(newUser, false);
+      if (error) {
+        toast.error(error);
+      } else {
+        navigate("/");
+      }
+    },
+    [newUser, validateFields, navigate]
+  );
 
   const switchTabs = (e, tab) => {
     if (tab === "login") {
