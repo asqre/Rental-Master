@@ -49,6 +49,10 @@ body {
   background-color: var(--color-backgroundGray);
 }
 
+.text{
+  color: #8c84a4;
+}
+
 .btn {
   padding: 10px 15px;
   border-radius: 5px;

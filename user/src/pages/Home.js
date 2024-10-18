@@ -4,6 +4,8 @@ import Section from "../section/Section";
 import Banner from "../section/Banner";
 import RoadMap from "../section/RoadMap";
 import FeatureBenefits from "../section/FeatureBenefits";
+import WhyUs from "../section/WhyUs";
+import TestimonialSection from "../section/Testimonials";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         {/* <Section /> */}
         <RoadMap />
         <FeatureBenefits />
+        <WhyUs />
+        <TestimonialSection />
       </Layout>
     </>
   );
