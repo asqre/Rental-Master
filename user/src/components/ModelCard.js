@@ -9,7 +9,7 @@ const ModelCard = (props) => {
         <img
           src={props.img}
           alt={props.name}
-          className="object-contain rounded-2xl"
+          className="object-contain rounded-t-2xl"
         />
       </div>
 
