@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
-import FaceIcon from "@mui/icons-material/Face";
 import Layout from "../layout/Layout";
 import avatarImg from "./../../assets/image.png";
+import { MdOutlineMail } from "react-icons/md";
+import { FaUnlock } from "react-icons/fa6";
+import { FaRegFaceGrin } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa";
 
 const LoginSignUp = () => {
   const navigate = useNavigate();
@@ -90,7 +90,7 @@ const LoginSignUp = () => {
           </div>
           <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
             <div className="loginEmail">
-              <MailOutlineIcon />
+              <MdOutlineMail />
               <input
                 type="email"
                 placeholder="Email"
@@ -100,7 +100,7 @@ const LoginSignUp = () => {
               />
             </div>
             <div className="loginPassword">
-              <LockOpenIcon />
+              <FaUnlock />
               <input
                 type="password"
                 placeholder="Password"
@@ -119,7 +119,7 @@ const LoginSignUp = () => {
             onSubmit={registerSubmit}
           >
             <div className="signUpName">
-              <FaceIcon />
+              <FaRegFaceGrin />
               <input
                 type="text"
                 placeholder="Name"
@@ -130,7 +130,7 @@ const LoginSignUp = () => {
               />
             </div>
             <div className="signUpEmail">
-              <MailOutlineIcon />
+              <MdOutlineMail />
               <input
                 type="email"
                 placeholder="Email"
@@ -141,7 +141,7 @@ const LoginSignUp = () => {
               />
             </div>
             <div className="signUpPhone">
-              <LocalPhoneIcon />
+              <FaPhone />
               <input
                 type="text"
                 placeholder="Phone no."
@@ -152,7 +152,7 @@ const LoginSignUp = () => {
               />
             </div>
             <div className="signUpPassword">
-              <LockOpenIcon />
+              <FaUnlock />
               <input
                 type="password"
                 placeholder="Password"
