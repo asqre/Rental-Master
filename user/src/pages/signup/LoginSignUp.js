@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import Layout from "../layout/Layout";
+import Layout from "../../components/layout/Layout";
 import { MdOutlineMail } from "react-icons/md";
 import { FaUnlock } from "react-icons/fa6";
 import { FaRegFaceGrin } from "react-icons/fa6";
-import LoginInputField from "../common/LoginInputField";
+import LoginInputField from "../../components/common/LoginInputField";
 import { IoMdLock } from "react-icons/io";
 
 const LoginSignUp = () => {
