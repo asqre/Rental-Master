@@ -11,7 +11,10 @@ const LoginInputField = (props) => {
   return (
     <div className="relative h-[50px]">
       {props.leading && (
-        <div className="leading-[10px] absolute top-1/2 transform -translate-y-1/2 text-[#9e9e9e] text-[16px] left-[10px]">
+        <div
+          className="leading-[10px] absolute top-1/2 transform -translate-y-1/2 text-[#9e9e9e] text-[16px] left-[10px] 
+        w-7 h-7 flex items-center justify-center"
+        >
           {props.leading}
         </div>
       )}
