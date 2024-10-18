@@ -121,8 +121,36 @@ const LoginSignUp = () => {
               value={existingUser.password}
               onChange={handleExistingUserChange}
             />
-            <Link to="/password/forgot">Forget Password ?</Link>
+            <Link to="">Forget Password ?</Link>
             <input type="submit" value="Login" className="loginBtn" />
+
+            <div className="text-[12px] text-[#9EA0A0] text-center">
+              <span>By clicking through, I agree with the</span>
+              <br />
+              <span
+                className="text-[#5B91E8] underline cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.royalbrothers.com/terms-and-conditions",
+                    "_blank"
+                  )
+                }
+              >
+                Terms & Conditions
+              </span>
+              <span> and </span>
+              <span
+                className="text-[#5B91E8] underline cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.royalbrothers.com/terms-and-conditions",
+                    "_blank"
+                  )
+                }
+              >
+                Privacy Policy
+              </span>
+            </div>
           </form>
           <form
             className="signUpForm"
@@ -173,7 +201,34 @@ const LoginSignUp = () => {
               value={newUser.password}
               onChange={handleNewUserChange}
             />
-            <input type="submit" value="Register" className="signUpBtn" />
+            <input type="submit" value="Register" className="signUpBtn mt-5" />
+            <div className="text-[12px] text-[#9EA0A0] text-center">
+              <span>By clicking through, I agree with the</span>
+              <br />
+              <span
+                className="text-[#5B91E8] underline cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.royalbrothers.com/terms-and-conditions",
+                    "_blank"
+                  )
+                }
+              >
+                Terms & Conditions
+              </span>
+              <span> and </span>
+              <span
+                className="text-[#5B91E8] underline cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.royalbrothers.com/terms-and-conditions",
+                    "_blank"
+                  )
+                }
+              >
+                Privacy Policy
+              </span>
+            </div>
           </form>
         </div>
       </div>
