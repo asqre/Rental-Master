@@ -2,11 +2,11 @@ import React, { useRef, useState } from "react";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../layout/Layout";
-import avatarImg from "./../../assets/image.png";
 import { MdOutlineMail } from "react-icons/md";
 import { FaUnlock } from "react-icons/fa6";
 import { FaRegFaceGrin } from "react-icons/fa6";
-import { FaPhone } from "react-icons/fa";
+import LoginInputField from "../common/LoginInputField";
+import { IoMdLock } from "react-icons/io";
 
 const LoginSignUp = () => {
   const navigate = useNavigate();
@@ -14,8 +14,17 @@ const LoginSignUp = () => {
   const registerTab = useRef(null);
   const switcherTab = useRef(null);
 
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [existingUser, setExistingUser] = useState({
+    phoneNumber: "",
+    password: "",
+  });
+
+  const [newUser, setNewUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+  });
 
   const [user, setUser] = useState({
     name: "",
@@ -24,10 +33,6 @@ const LoginSignUp = () => {
     phoneno: "",
   });
 
-  const { name, email, password, phoneno } = user;
-  const [avatar, setAvatar] = useState();
-  const [avatarPreview, setAvatarPreview] = useState(avatarImg);
-
   const loginSubmit = (e) => {
     e.preventDefault();
     navigate("/");
@@ -35,29 +40,7 @@ const LoginSignUp = () => {
 
   const registerSubmit = (e) => {
     e.preventDefault();
-    const myForm = {
-      name: name,
-      email: email,
-      password: password,
-      phone: phoneno,
-      avatar: avatar,
-    };
     navigate("/");
-  };
-
-  const registerDataChange = (e) => {
-    if (e.target.name === "avatar") {
-      const reader = new FileReader();
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setAvatarPreview(reader.result);
-          setAvatar(reader.result);
-        }
-      };
-      reader.readAsDataURL(e.target.files[0]);
-    } else {
-      setUser({ ...user, [e.target.name]: e.target.value });
-    }
   };
 
   const switchTabs = (e, tab) => {
@@ -77,6 +60,33 @@ const LoginSignUp = () => {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      const isRegisterFormActive =
+        registerTab.current.classList.contains("shiftToNeutralForm");
+
+      if (!isRegisterFormActive) {
+        loginSubmit(e);
+      } else {
+        registerSubmit(e);
+      }
+    }
+  };
+
+  const handleExistingUserChange = (e) => {
+    setExistingUser({
+      ...existingUser,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleNewUserChange = (e) => {
+    setNewUser({
+      ...newUser,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <Layout>
       <div className="LoginSignUpContainer">
@@ -89,26 +99,27 @@ const LoginSignUp = () => {
             <button ref={switcherTab}></button>
           </div>
           <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
-            <div className="loginEmail">
-              <MdOutlineMail />
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                value={loginEmail}
-                onChange={(e) => setLoginEmail(e.target.value)}
-              />
-            </div>
-            <div className="loginPassword">
-              <FaUnlock />
-              <input
-                type="password"
-                placeholder="Password"
-                required
-                value={loginPassword}
-                onChange={(e) => setLoginPassword(e.target.value)}
-              />
-            </div>
+            <LoginInputField
+              label="Phone No."
+              placeholder="Phone Number"
+              leading="+91"
+              type="number"
+              onKeyDown={handleKeyDown}
+              id="phoneNumber"
+              value={existingUser.phoneNumber}
+              onChange={handleExistingUserChange}
+            />
+
+            <LoginInputField
+              label="Password"
+              placeholder="Password"
+              leading={<IoMdLock />}
+              type="password"
+              onKeyDown={handleKeyDown}
+              id="password"
+              value={existingUser.password}
+              onChange={handleExistingUserChange}
+            />
             <Link to="/password/forgot">Forget Password ?</Link>
             <input type="submit" value="Login" className="loginBtn" />
           </form>
@@ -118,60 +129,49 @@ const LoginSignUp = () => {
             encType="multipart/form-data"
             onSubmit={registerSubmit}
           >
-            <div className="signUpName">
-              <FaRegFaceGrin />
-              <input
-                type="text"
-                placeholder="Name"
-                required
-                name="name"
-                value={name}
-                onChange={registerDataChange}
-              />
-            </div>
-            <div className="signUpEmail">
-              <MdOutlineMail />
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                name="email"
-                value={email}
-                onChange={registerDataChange}
-              />
-            </div>
-            <div className="signUpPhone">
-              <FaPhone />
-              <input
-                type="text"
-                placeholder="Phone no."
-                required
-                name="phoneno"
-                value={phoneno}
-                onChange={registerDataChange}
-              />
-            </div>
-            <div className="signUpPassword">
-              <FaUnlock />
-              <input
-                type="password"
-                placeholder="Password"
-                required
-                name="password"
-                value={password}
-                onChange={registerDataChange}
-              />
-            </div>
+            <LoginInputField
+              label="Name"
+              placeholder="Name as per Aadhar"
+              leading={<FaRegFaceGrin />}
+              type="text"
+              onKeyDown={handleKeyDown}
+              id="name"
+              value={newUser.name}
+              onChange={handleNewUserChange}
+            />
 
-            <div id="registerImage">
-              <img src={avatarPreview} alt="Avatar Preview" />
-              <input
-                type="file"
-                name="avatar"
-                accept="image/*"
-                onChange={registerDataChange}
-              />
-            </div>
+            <LoginInputField
+              label="Email"
+              placeholder="Email"
+              leading={<MdOutlineMail />}
+              type="text"
+              onKeyDown={handleKeyDown}
+              id="email"
+              value={newUser.email}
+              onChange={handleNewUserChange}
+            />
+
+            <LoginInputField
+              label="Phone"
+              placeholder="Phone Number"
+              leading="+91"
+              type="number"
+              onKeyDown={handleKeyDown}
+              id="phoneNumber"
+              value={newUser.phoneNumber}
+              onChange={handleNewUserChange}
+            />
+
+            <LoginInputField
+              label="password"
+              placeholder="Password"
+              leading={<FaUnlock />}
+              type="password"
+              onKeyDown={handleKeyDown}
+              id="password"
+              value={newUser.password}
+              onChange={handleNewUserChange}
+            />
             <input type="submit" value="Register" className="signUpBtn" />
           </form>
         </div>
