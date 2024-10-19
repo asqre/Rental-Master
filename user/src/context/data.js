@@ -6,11 +6,14 @@ import { ref, listAll, getDownloadURL } from "firebase/storage";
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [city, setCity] = useState(() => {
+    const storedCity = localStorage.getItem("city");
+    return storedCity ? storedCity : null;
+  });
+  const [isModalOpen, setIsModalOpen] = useState(!city);
   const [dataLoading, setDataLoading] = useState(true);
   const [bannerImages, setBannerImages] = useState([]);
   const [companyName, setCompanyName] = useState("Rental Master");
-  const [selectedCity, setSelectedCity] = useState(null);
 
   const getBannerImages = async () => {
     setDataLoading(true);
@@ -35,14 +38,22 @@ const DataProvider = ({ children }) => {
     getBannerImages();
   }, []);
 
+  useEffect(() => {
+    if (city) {
+      localStorage.setItem("city", city);
+    } else {
+      localStorage.removeItem("city");
+    }
+  }, [city]);
+
   const dataValue = {
     dataLoading,
     bannerImages,
     companyName,
     isModalOpen,
     setIsModalOpen,
-    selectedCity,
-    setSelectedCity,
+    city,
+    setCity,
   };
 
   return (

@@ -1,9 +1,16 @@
 import React from "react";
+import { useData } from "../../context/data";
 
 const CityCard = ({ cityName, imageUrl, cityUrl }) => {
+  const { setCity, setIsModalOpen } = useData();
+
   return (
     <a
       href={cityUrl}
+      onClick={() => {
+        setIsModalOpen(false);
+        setCity(cityName);
+      }}
       className="w-full h-full relative block overflow-hidden rounded-lg transition-transform duration-300 transform hover:scale-105"
       itemProp="url"
     >

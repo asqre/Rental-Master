@@ -2,12 +2,12 @@ import React from "react";
 import { useData } from "../../context/data";
 
 const LocationModal = ({ isVisible, onClose, children }) => {
-  const { selectedCity } = useData();
+  const { city } = useData();
 
   if (!isVisible) return null;
 
   const handleClose = (e) => {
-    if (e.target.id === "locationWrapper" && !!selectedCity) {
+    if (e.target.id === "locationWrapper" && !!city) {
       onClose();
     }
   };
@@ -28,7 +28,7 @@ const LocationModal = ({ isVisible, onClose, children }) => {
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
             }}
           >
-            {selectedCity && (
+            {city && (
               <button
                 className="absolute top-2 right-2 sm:top-4 sm:right-4 text-xl font-bold p-2"
                 style={{

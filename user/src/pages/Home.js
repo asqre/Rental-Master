@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout";
 import Banner from "../section/Banner";
 import RoadMap from "../section/RoadMap";
@@ -12,8 +12,14 @@ import LocationModalContent from "../components/modalContent/LocationModalConten
 import { useData } from "../context/data";
 
 const Home = () => {
-  const { setIsModalOpen } = useData();
-  const [isLocationModalOpen, setIsLocationModalOpen] = useState(true);
+  const { setIsModalOpen, city } = useData();
+
+  const [isLocationModalOpen, setIsLocationModalOpen] = useState(!city);
+
+  useEffect(() => {
+    setIsLocationModalOpen(!city);
+    setIsModalOpen(!city);
+  }, [city]);
 
   const handleCloseLocationModal = () => {
     setIsLocationModalOpen(false);
