@@ -129,7 +129,6 @@ body {
     font-size: 28px;
     line-height: 50px;
     font-weight: 700;
-    color: var(--color-secondary);
 
     @screen sm {
       font-size: 50px;
@@ -147,7 +146,6 @@ body {
     line-height: 51px;
     font-weight: 700;
     text-align: left;
-    color: var(--color-tertiary);
 
     @screen sm {
       font-size: 61px;
@@ -161,10 +159,9 @@ body {
   }
 
   h5 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 35px;
-    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
 
     /* @screen sm {
       line-height: 51px;
@@ -177,8 +174,8 @@ body {
 
   h6 {
     font-weight: 400;
-    font-size: 16px;
-    color: var(--color-secondary);
+    font-size: 14px;
+    line-height: 20px;
 /* 
     @screen sm {
       font-size: 20px;

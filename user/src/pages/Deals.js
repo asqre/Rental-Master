@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../components/layout/Layout";
 import TabButton from "../components/common/TabButton";
+import CardDeals from "../components/common/CardDeals";
+import { dailyOffersData } from "../data";
 
 const Deals = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,6 +23,22 @@ const Deals = () => {
             onClick={() => setActiveTab(1)}
             label="Monthly Offers"
           />
+        </div>
+
+        <div className="mt-10">
+          {activeTab === 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {dailyOffersData.map((offer, index) => (
+                <CardDeals key={index} offer={offer} />
+              ))}
+            </div>
+          )}
+
+          {activeTab === 1 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Monthly Offers */}
+            </div>
+          )}
         </div>
       </div>
     </Layout>

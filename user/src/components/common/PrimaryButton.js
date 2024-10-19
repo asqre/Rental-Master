@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const PrimaryButton = (props) => {
   return (
@@ -12,6 +13,11 @@ const PrimaryButton = (props) => {
       }}
     >
       {props.name}
+      {props.trailingIcon && (
+        <span className="ml-2">
+          <FaArrowRightLong />
+        </span>
+      )}
     </Link>
   );
 };

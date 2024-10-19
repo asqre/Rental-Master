@@ -208,7 +208,7 @@ const LoginSignUp = () => {
                 className="text-[#5B91E8] underline cursor-pointer"
                 onClick={() => window.open("/terms-and-conditions", "_blank")}
               >
-                Terms & Conditions
+                Terms &amp; Conditions
               </span>
               <span> and </span>
               <span
@@ -276,7 +276,7 @@ const LoginSignUp = () => {
                 className="text-[#5B91E8] underline cursor-pointer"
                 onClick={() => window.open("/terms-and-conditions", "_blank")}
               >
-                Terms & Conditions
+                Terms &amp; Conditions
               </span>
               <span> and </span>
               <span
