@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/layout/Layout";
 import TabButton from "../components/common/TabButton";
 import CardDeals from "../components/common/CardDeals";
-import { dailyOffersData } from "../data";
+import { dailyOffersData, monthlyOffersData } from "../data";
 
 const Deals = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -25,9 +25,9 @@ const Deals = () => {
           />
         </div>
 
-        <div className="mt-10">
+        <div className="my-10">
           {activeTab === 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
               {dailyOffersData.map((offer, index) => (
                 <CardDeals key={index} offer={offer} />
               ))}
@@ -35,8 +35,10 @@ const Deals = () => {
           )}
 
           {activeTab === 1 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Monthly Offers */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
+              {monthlyOffersData.map((offer, index) => (
+                <CardDeals key={index} offer={offer} />
+              ))}
             </div>
           )}
         </div>
