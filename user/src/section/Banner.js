@@ -150,8 +150,8 @@ const Banner = () => {
         }}
       >
         <div className="flex w-full h-[50px] items-center justify-center">
-          <div
-            className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tl-[0.6667rem] px-2 ${
+          <h6
+            className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tl-[0.6667rem] ${
               selectedTab === "daily"
                 ? "bg-primary text-white"
                 : "bg-tertiary text-primary"
@@ -159,9 +159,9 @@ const Banner = () => {
             onClick={() => setSelectedTab("daily")}
           >
             Daily Rentals
-          </div>
-          <div
-            className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tr-[0.6667rem] px-2 ${
+          </h6>
+          <h6
+            className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tr-[0.6667rem] ${
               selectedTab === "monthly"
                 ? "bg-primary text-white"
                 : "bg-tertiary text-primary"
@@ -169,7 +169,7 @@ const Banner = () => {
             onClick={() => setSelectedTab("monthly")}
           >
             Monthly Subscriptions
-          </div>
+          </h6>
         </div>
         <div
           className="rounded-b-[0.6667rem] bg-white flex flex-col justify-between h-full"
