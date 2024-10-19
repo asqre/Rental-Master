@@ -144,7 +144,7 @@ const Banner = () => {
       </div>
 
       <div
-        className="mx-auto md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px]"
+        className="mx-auto mt-5 md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px]"
         style={{
           boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
           transition: "all 0.2s",
@@ -180,7 +180,7 @@ const Banner = () => {
             padding: "1.75rem 1.4rem 1.75rem 1.4rem",
           }}
         >
-          <h5>Search your next ride</h5>
+          <h5 className="text-primary">Search your next ride</h5>
           <div className="flex flex-col gap-2 mt-[-35px]">
             {selectedTab === "monthly" ? (
               <>
