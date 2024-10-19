@@ -7,7 +7,7 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [city, setCity] = useState(() => {
-    const storedCity = localStorage.getItem("city");
+    const storedCity = sessionStorage.getItem("city");
     return storedCity ? storedCity : null;
   });
   const [isModalOpen, setIsModalOpen] = useState(!city);
@@ -40,9 +40,9 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     if (city) {
-      localStorage.setItem("city", city);
+      sessionStorage.setItem("city", city);
     } else {
-      localStorage.removeItem("city");
+      sessionStorage.removeItem("city");
     }
   }, [city]);
 

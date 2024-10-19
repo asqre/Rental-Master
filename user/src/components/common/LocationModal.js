@@ -14,33 +14,30 @@ const LocationModal = ({ isVisible, onClose, children }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-center items-center p-4"
+      className="fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-center items-center"
       id="locationWrapper"
       onClick={handleClose}
     >
-      <div className="w-full max-w-lg max-h-[90vh] md:max-h-[95vh] flex items-center">
-        <div className="w-full max-w-lg h-full mx-auto flex flex-col">
-          <div
-            className="p-4 sm:p-5 relative h-full overflow-auto custom-scrollbar"
-            style={{
-              backgroundColor: "#F8F8F8",
-              borderRadius: "15px",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            {city && (
-              <button
-                className="absolute top-2 right-2 sm:top-4 sm:right-4 text-xl font-bold p-2"
-                style={{
-                  color: "#BDBDBD",
-                }}
-                onClick={onClose}
-              >
-                X
-              </button>
-            )}
-            <div className="mt-8 sm:mt-6">{children}</div>
-          </div>
+      <div className="w-[100vw] h-[100vh] max-w-xl flex items-center">
+        <div
+          className="p-4 sm:p-5 relative w-[100vw] sm:w-[80vw] h-[100vh] sm:h-[80vh] overflow-auto custom-scrollbar"
+          style={{
+            backgroundColor: "#F8F8F8",
+            borderRadius: "15px",
+          }}
+        >
+          {city && (
+            <button
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 flex items-center justify-center text-lg w-8 h-8 rounded-full bg-[#ddd]"
+              style={{
+                color: "#000000",
+              }}
+              onClick={onClose}
+            >
+              X
+            </button>
+          )}
+          <div className="mt-8 sm:mt-6">{children}</div>
         </div>
       </div>
     </div>
