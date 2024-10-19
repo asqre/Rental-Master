@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import DatePicker from "../components/datePicker/DatePicker";
 import toast from "react-hot-toast";
 import PrimaryButton from "../components/common/PrimaryButton";
+import Button from "../components/common/Button";
 
 const Banner = () => {
   const { bannerImages } = useData();
@@ -168,16 +169,7 @@ const Banner = () => {
           />
         </div>
 
-        <button
-          className="border-2 border-primary rounded-[45px] bg-primary text-white hover:bg-white hover:text-primary text-[14px] flex justify-center items-center"
-          onClick={handleSearch}
-          style={{
-            padding: "7px 20px",
-            transition: "all 0.35s",
-          }}
-        >
-          Search
-        </button>
+        <Button onClick={handleSearch} name="Search" />
       </div>
     </div>
   );
