@@ -143,7 +143,8 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="mx-auto md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px] h-[350px]"
+      <div
+        className="mx-auto md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px]"
         style={{
           boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
           transition: "all 0.2s",
@@ -172,7 +173,9 @@ const Banner = () => {
           </h6>
         </div>
         <div
-          className="rounded-b-[0.6667rem] bg-white flex flex-col justify-between h-full"
+          className={`rounded-b-[0.6667rem] bg-white flex flex-col justify-between ${
+            selectedTab === "daily" ? "h-[350px]" : "h-[250px]"
+          }`}
           style={{
             padding: "1.75rem 1.4rem 1.75rem 1.4rem",
           }}
