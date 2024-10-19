@@ -6,7 +6,6 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaUnlock } from "react-icons/fa6";
 import { FaRegFaceGrin } from "react-icons/fa6";
 import LoginInputField from "../../components/common/LoginInputField";
-import { IoMdLock } from "react-icons/io";
 import toast from "react-hot-toast";
 import axios from "axios";
 
@@ -192,7 +191,7 @@ const LoginSignUp = () => {
             <LoginInputField
               label="Password"
               placeholder="Password"
-              leading={<IoMdLock />}
+              leading={<FaUnlock />}
               type="password"
               onKeyDown={handleKeyDown}
               id="loginPassword"
