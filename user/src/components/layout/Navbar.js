@@ -4,10 +4,12 @@ import Logo from "../common/Logo";
 import { Drawer, ThemeProvider, createTheme } from "@mui/material";
 import DrawerList from "./DrawerList";
 import PrimaryButton from "../common/PrimaryButton";
+import { useData } from "../../context/data";
 
 const theme = createTheme();
 
 const Navbar = () => {
+  const { isModalOpen } = useData();
   const [isOpen, setIsOpen] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("");
 
@@ -37,7 +39,9 @@ const Navbar = () => {
   return (
     <ThemeProvider theme={theme}>
       <nav
-        className={`bg-white p-4 w-full z-50 shadow-lg fixed top-0 pr-[15px]`}
+        className={`bg-white p-4 w-full z-50 shadow-lg fixed top-0 pr-[15px]
+          ${isModalOpen ? "lg:pr-[15px]" : "lg:pr-0"}
+          `}
       >
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <Logo />
