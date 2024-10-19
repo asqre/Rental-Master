@@ -9,6 +9,7 @@ import Button from "../components/common/Button";
 const Banner = () => {
   const { bannerImages } = useData();
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("daily");
   const [searchRide, setSearchRide] = useState({
     pickUpTime: {
       date: null,
@@ -142,34 +143,71 @@ const Banner = () => {
         </div>
       </div>
 
-      <div
-        className="mx-auto md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px] h-[350px] rounded-[0.6667rem] bg-white flex flex-col justify-between"
-        style={{
-          padding: "1.75rem 1.4rem 1.75rem 1.4rem",
-          boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
-          transition: "all 0.2s",
-        }}
-      >
-        <h5>Search your next ride</h5>
-        <div className="flex flex-col gap-2 mt-[-35px]">
-          <DatePicker
-            pickerName="Pickup"
-            selectedDate={searchRide.pickUpTime.date}
-            selectedTime={searchRide.pickUpTime.time}
-            onDateChange={(date) => handleDateChange("pickUpTime", date)}
-            onTimeChange={(time) => handleTimeChange("pickUpTime", time)}
-          />
-
-          <DatePicker
-            pickerName="Dropoff"
-            selectedDate={searchRide.dropOffTime.date}
-            selectedTime={searchRide.dropOffTime.time}
-            onDateChange={(date) => handleDateChange("dropOffTime", date)}
-            onTimeChange={(time) => handleTimeChange("dropOffTime", time)}
-          />
+      <div className="mx-auto md:mx-0 md:absolute md:right-[5%] lg:right-[10%] md:top-[10rem] w-[360px] h-[350px]">
+        <div className="flex w-full h-[50px] items-center justify-center">
+          <div
+            className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tl-[0.6667rem] px-2 ${
+              selectedTab === "daily"
+                ? "bg-primary text-white"
+                : "bg-tertiary text-primary"
+            }`}
+            onClick={() => setSelectedTab("daily")}
+          >
+            Daily Rentals
+          </div>
+          <div
+            className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tr-[0.6667rem] px-2 ${
+              selectedTab === "monthly"
+                ? "bg-primary text-white"
+                : "bg-tertiary text-primary"
+            }`}
+            onClick={() => setSelectedTab("monthly")}
+          >
+            Monthly Subscriptions
+          </div>
         </div>
+        <div
+          className="rounded-b-[0.6667rem] bg-white flex flex-col justify-between h-full"
+          style={{
+            padding: "1.75rem 1.4rem 1.75rem 1.4rem",
+            boxShadow: "rgba(26,26,29,0.3) 0px 15px 46px -10px",
+            transition: "all 0.2s",
+          }}
+        >
+          <h5>Search your next ride</h5>
+          <div className="flex flex-col gap-2 mt-[-35px]">
+            {selectedTab === "monthly" ? (
+              <>
+                <DatePicker
+                  pickerName="Pickup"
+                  selectedDate={searchRide.pickUpTime.date}
+                  selectedTime={searchRide.pickUpTime.time}
+                  onDateChange={(date) => handleDateChange("pickUpTime", date)}
+                  onTimeChange={(time) => handleTimeChange("pickUpTime", time)}
+                />
+              </>
+            ) : (
+              <>
+                <DatePicker
+                  pickerName="Pickup"
+                  selectedDate={searchRide.pickUpTime.date}
+                  selectedTime={searchRide.pickUpTime.time}
+                  onDateChange={(date) => handleDateChange("pickUpTime", date)}
+                  onTimeChange={(time) => handleTimeChange("pickUpTime", time)}
+                />
+                <DatePicker
+                  pickerName="Dropoff"
+                  selectedDate={searchRide.dropOffTime.date}
+                  selectedTime={searchRide.dropOffTime.time}
+                  onDateChange={(date) => handleDateChange("dropOffTime", date)}
+                  onTimeChange={(time) => handleTimeChange("dropOffTime", time)}
+                />
+              </>
+            )}
+          </div>
 
-        <Button onClick={handleSearch} name="Search" />
+          <Button onClick={handleSearch} name="Search" />
+        </div>
       </div>
     </div>
   );
