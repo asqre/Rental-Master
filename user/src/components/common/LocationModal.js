@@ -18,27 +18,16 @@ const LocationModal = ({ isVisible, onClose, children }) => {
       id="locationWrapper"
       onClick={handleClose}
     >
-      <div className="w-[100vw] h-[100vh] max-w-xl flex items-center">
-        <div
-          className="p-4 sm:p-5 relative w-[100vw] sm:w-[80vw] h-[100vh] sm:h-[80vh]"
-          style={{
-            backgroundColor: "#F8F8F8",
-            borderRadius: "15px",
-          }}
-        >
-          {city && (
-            <button
-              className="absolute top-2 right-2 sm:top-4 sm:right-4 flex items-center justify-center text-lg w-8 h-8 rounded-full bg-[#ddd]"
-              style={{
-                color: "#000000",
-              }}
-              onClick={onClose}
-            >
-              X
-            </button>
-          )}
-          <div className="mt-8 sm:mt-6">{children}</div>
-        </div>
+      <div className="relative bg-[#F8F8F8] w-full max-w-xl h-full max-h-[100vh] sm:max-h-[80vh] rounded-lg overflow-hidden flex flex-col">
+        {city && (
+          <button
+            className="absolute top-2 right-2 sm:top-4 sm:right-4 flex items-center justify-center text-lg w-8 h-8 rounded-full bg-[#ddd] text-black"
+            onClick={onClose}
+          >
+            X
+          </button>
+        )}
+        <div className="my-5 flex-grow overflow-hidden">{children}</div>
       </div>
     </div>
   );
