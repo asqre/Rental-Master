@@ -8,8 +8,8 @@ const Deals = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <Layout>
-      <div className="flex flex-col m-auto items-center justify-center">
-        <h4 className="">Car Rental Deals & Offers</h4>
+      <div className="flex flex-col m-auto gap-5 items-center justify-center my-[5vh]">
+        <h4 className="text-primary">Car Rental Deals &amp; Offers</h4>
 
         <div className="flex space-x-4">
           <TabButton

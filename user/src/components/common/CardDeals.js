@@ -55,7 +55,7 @@ const CardDeals = ({ offer }) => {
           <p>{offer.description}</p>
 
           <h5 className="text-[15px] font-normal text-primary">
-            Terms & Conditions
+            Terms &amp; Conditions
           </h5>
 
           <div className="max-h-60 overflow-y-auto px-4 py-2 border border-gray-200 rounded-md custom-scrollbar">
