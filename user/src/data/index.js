@@ -288,7 +288,6 @@ export const dailyOffersData = [
   },
 ];
 
-
 export const monthlyOffersData = [
   {
     id: 1,
@@ -339,5 +338,38 @@ export const monthlyOffersData = [
       "Applicable for monthly rentals only.",
       "Cannot be combined with other offers.",
     ],
+  },
+];
+
+export const cities = [
+  {
+    cityName: "Agra",
+    imageUrl:
+      "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/039/original/Agra_new.jpg?1558599458",
+    cityUrl: "https://www.royalbrothers.com/agra/bike-rentals",
+  },
+  {
+    cityName: "Bangalore",
+    imageUrl:
+      "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/001/original/Bangalore_1cf1aa53741a94edc3532f7b2b583c52.jpg?1558599565",
+    cityUrl: "https://www.royalbrothers.com/bangalore/bike-rentals",
+  },
+  {
+    cityName: "Calicut",
+    imageUrl:
+      "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/098/original/Calicut-city-icon.jpg?1567059129",
+    cityUrl: "https://www.royalbrothers.com/goa/bike-rentals",
+  },
+  {
+    cityName: "Chandigarh",
+    imageUrl:
+      "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/024/original/Chandigarh_72374d6c6de8b70d5b4ea5c05c59ba32.jpg?1558599669",
+    cityUrl: "https://www.royalbrothers.com/mumbai/bike-rentals",
+  },
+  {
+    cityName: "Ahmedabad",
+    imageUrl:
+      "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/023/original/Ahmedabad_b8d1eb5783c996a077aff887d35e4168.jpg?1558599488",
+    cityUrl: "https://www.royalbrothers.com/pune/bike-rentals",
   },
 ];
