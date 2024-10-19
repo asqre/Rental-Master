@@ -2,31 +2,31 @@ export const topCarModels = [
   {
     name: "Scorpio",
     model: "Mahindra",
-    url: "https://www.mychoize.com/fleets/mahindra-scorpio",
+    // url: "https://www.mychoize.com/fleets/mahindra-scorpio",
     img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
   },
   {
     name: "TUV 300",
     model: "Mahindra",
-    url: "https://www.mychoize.com/fleets/mahindra-tuv-300",
+    // url: "https://www.mychoize.com/fleets/mahindra-tuv-300",
     img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
   },
   {
     name: "Creta",
     model: "Hyundai",
-    url: "https://www.mychoize.com/fleets/hyundai-creta",
+    // url: "https://www.mychoize.com/fleets/hyundai-creta",
     img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
   },
   {
     name: "Toyota",
     model: "Innova Crysta",
-    url: "https://www.mychoize.com/fleets/toyota-innova-crysta",
+    // url: "https://www.mychoize.com/fleets/toyota-innova-crysta",
     img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
   },
   {
     name: "Ciaz",
     model: "Maruti",
-    url: "https://www.mychoize.com/fleets/maruti-ciaz",
+    // url: "https://www.mychoize.com/fleets/maruti-ciaz",
     img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
   },
 ];

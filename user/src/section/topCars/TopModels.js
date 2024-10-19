@@ -79,7 +79,7 @@ const TopModels = () => {
         padding: "5rem 0",
       }}
     >
-      <h3 className="text-center">Best Rental Cars</h3>
+      <h3 className="text-center">Top Rented Cars</h3>
       <div className="w-[85%] sm:w-[50%] md:w-[85%] lg:w-[60%] xl:w-[50%] 2xl:w-[85%] m-auto">
         <Slider {...settings}>
           {topCarModels.map((model, index) => {
