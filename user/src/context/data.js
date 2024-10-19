@@ -6,6 +6,7 @@ import { ref, listAll, getDownloadURL } from "firebase/storage";
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [dataLoading, setDataLoading] = useState(true);
   const [bannerImages, setBannerImages] = useState([]);
   const [companyName, setCompanyName] = useState("Rental Master");
@@ -37,6 +38,8 @@ const DataProvider = ({ children }) => {
     dataLoading,
     bannerImages,
     companyName,
+    isModalOpen,
+    setIsModalOpen,
   };
 
   return (

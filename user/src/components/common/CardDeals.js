@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import PrimaryButton from "./PrimaryButton";
 import Modal from "../common/Modal";
+import { useData } from "../../context/data";
 
 const CardDeals = ({ offer }) => {
   const [showModal, setShowModal] = useState(false);
+  const { setIsModalOpen } = useData();
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setIsModalOpen(false);
+  };
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+    setIsModalOpen(true);
   };
 
   return (
@@ -32,7 +40,7 @@ const CardDeals = ({ offer }) => {
 
             <h6
               className="text-[#5B91E8] underline cursor-pointer text-[12px]"
-              onClick={() => setShowModal(true)}
+              onClick={handleOpenModal}
             >
               Terms &amp; Conditions
             </h6>

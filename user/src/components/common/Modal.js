@@ -1,18 +1,6 @@
 import React, { useEffect } from "react";
 
 const Modal = ({ isVisible, onClose, children }) => {
-  useEffect(() => {
-    if (isVisible) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isVisible]);
-
   if (!isVisible) return null;
 
   const handleClose = (e) => {

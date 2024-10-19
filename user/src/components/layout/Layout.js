@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useData } from "../../context/data";
 
 const Layout = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isModalOpen } = useData();
 
   useEffect(() => {
     if (isModalOpen) {
@@ -13,15 +14,16 @@ const Layout = ({ children }) => {
       document.body.style.paddingRight = "0px";
       document.body.style.overflow = "auto";
     }
+
+    return () => {
+      document.body.style.paddingRight = "0px";
+      document.body.style.overflow = "auto";
+    };
   }, [isModalOpen]);
 
   return (
-    <div
-      className={`flex flex-col min-h-screen ${
-        isModalOpen ? "overflow-hidden" : ""
-      }`}
-    >
-      <Navbar setIsModalOpen={setIsModalOpen} />
+    <div className={`flex flex-col min-h-screen`}>
+      <Navbar />
       <main className="flex-grow mt-[72px]">{children}</main>
       <Footer />
     </div>
