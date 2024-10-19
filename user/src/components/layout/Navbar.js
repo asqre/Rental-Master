@@ -22,7 +22,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const currentPath = window.location.pathname;
-    setActiveNavItem(currentPath);
+    const pathSegment = currentPath.split("/")[1];
+    setActiveNavItem(pathSegment);
   }, []);
 
   const toggleDrawer = (open) => (event) => {
