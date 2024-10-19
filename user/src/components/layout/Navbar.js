@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
-import CButton2 from "../common/CButton2";
 import Logo from "../common/Logo";
 import { Drawer, ThemeProvider, createTheme } from "@mui/material";
 import DrawerList from "./DrawerList";
+import PrimaryButton from "../common/PrimaryButton";
 
 const theme = createTheme();
 
@@ -36,7 +36,9 @@ const Navbar = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <nav className={`bg-white p-4 w-full z-50 shadow-lg fixed top-0 pr-[15px]`}>
+      <nav
+        className={`bg-white p-4 w-full z-50 shadow-lg fixed top-0 pr-[15px]`}
+      >
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <Logo />
 
@@ -65,7 +67,7 @@ const Navbar = () => {
           </ul>
 
           <div className="hidden lg:flex mr-5">
-            <CButton2 to="/login" name="Login" />
+            <PrimaryButton name="Login" to="/login" />
           </div>
 
           <div className="lg:hidden">

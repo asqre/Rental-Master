@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../common/Logo";
-import CButton2 from "../common/CButton2";
+import PrimaryButton from "../common/PrimaryButton";
 
 const DrawerList = ({ navLinks }) => {
   return (
@@ -34,7 +34,7 @@ const DrawerList = ({ navLinks }) => {
           ))}
         </ul>
 
-        <CButton2 to="/login" name="Login" />
+        <PrimaryButton name="Login" to="/login" />
       </div>
     </div>
   );
