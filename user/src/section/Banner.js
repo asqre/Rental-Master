@@ -3,6 +3,7 @@ import { useData } from "../context/data";
 import Slider from "react-slick";
 import DatePicker from "../components/datePicker/DatePicker";
 import toast from "react-hot-toast";
+import PrimaryButton from "../components/common/PrimaryButton";
 
 const Banner = () => {
   const { bannerImages } = useData();
@@ -134,7 +135,9 @@ const Banner = () => {
           >
             Discover the best deals on Cars at our convenient location.
           </h6>
-          <button className="btn btn-primary mt-5">Explore Cars</button>
+          <div className="flex items-start mt-5">
+            <PrimaryButton to="/" name="Explore Cars" />
+          </div>
         </div>
       </div>
 
@@ -165,7 +168,14 @@ const Banner = () => {
           />
         </div>
 
-        <button className="btn btn-secondary" onClick={handleSearch}>
+        <button
+          className="border-2 border-primary rounded-[45px] bg-primary text-white hover:bg-white hover:text-primary text-[14px] flex justify-center items-center"
+          onClick={handleSearch}
+          style={{
+            padding: "7px 20px",
+            transition: "all 0.35s",
+          }}
+        >
           Search
         </button>
       </div>
