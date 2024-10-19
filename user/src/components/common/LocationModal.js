@@ -20,7 +20,7 @@ const LocationModal = ({ isVisible, onClose, children }) => {
     >
       <div className="w-[100vw] h-[100vh] max-w-xl flex items-center">
         <div
-          className="p-4 sm:p-5 relative w-[100vw] sm:w-[80vw] h-[100vh] sm:h-[80vh] overflow-auto custom-scrollbar"
+          className="p-4 sm:p-5 relative w-[100vw] sm:w-[80vw] h-[100vh] sm:h-[80vh]"
           style={{
             backgroundColor: "#F8F8F8",
             borderRadius: "15px",
