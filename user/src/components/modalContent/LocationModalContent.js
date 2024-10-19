@@ -28,7 +28,7 @@ const LocationModalContent = () => {
         />
       </div>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
         {filteredCities.map((city, index) => (
           <CityCard
             key={index}
