@@ -59,33 +59,47 @@ const Banner = () => {
       setIsLoading(true);
       const { pickUpTime, dropOffTime } = searchRide;
 
-      if (
-        !pickUpTime.date ||
-        !pickUpTime.time ||
-        !dropOffTime.date ||
-        !dropOffTime.time
-      ) {
-        toast.error("Please select both pickup and dropoff date and time.");
-        return;
+      if (selectedTab === "daily") {
+        if (
+          !pickUpTime.date ||
+          !pickUpTime.time ||
+          !dropOffTime.date ||
+          !dropOffTime.time
+        ) {
+          toast.error("Please select both pickup and dropoff date and time.");
+          return;
+        }
+
+        const formattedPickUpDate = pickUpTime.date.toDateString();
+        const pickUpDateTime = new Date(
+          `${formattedPickUpDate} ${pickUpTime.time}`
+        );
+
+        const formattedDropOffDate = dropOffTime.date.toDateString();
+        const dropOffDateTime = new Date(
+          `${formattedDropOffDate} ${dropOffTime.time}`
+        );
+
+        if (dropOffDateTime <= pickUpDateTime) {
+          toast.error("Dropoff time must be after pickup time.");
+          return;
+        }
+
+        console.log("Pickup time:", pickUpDateTime);
+        console.log("Dropoff time:", dropOffDateTime);
+      } else if (selectedTab === "monthly") {
+        if (!pickUpTime.date || !pickUpTime.time) {
+          toast.error("Please select pickup date and time.");
+          return;
+        }
+
+        const formattedPickUpDate = pickUpTime.date.toDateString();
+        const pickUpDateTime = new Date(
+          `${formattedPickUpDate} ${pickUpTime.time}`
+        );
+
+        console.log("Pickup time:", pickUpDateTime);
       }
-
-      const formattedPickUpDate = pickUpTime.date.toDateString();
-      const pickUpDateTime = new Date(
-        `${formattedPickUpDate} ${pickUpTime.time}`
-      );
-
-      const formattedDropOffDate = dropOffTime.date.toDateString();
-      const dropOffDateTime = new Date(
-        `${formattedDropOffDate} ${dropOffTime.time}`
-      );
-
-      if (dropOffDateTime <= pickUpDateTime) {
-        toast.error("Dropoff time must be after pickup time.");
-        return;
-      }
-
-      console.log("Pickup time:", pickUpDateTime);
-      console.log("Dropoff time:", dropOffDateTime);
     } catch (error) {
       console.error("Error while searching for rides", error);
       toast.error("An error occurred while searching for rides.");
