@@ -169,7 +169,7 @@ const Banner = () => {
             className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tl-[0.6667rem] ${
               selectedTab === "daily"
                 ? "bg-primary text-white"
-                : "bg-tertiary text-primary"
+                : "bg-grayLight text-primary"
             }`}
             onClick={() => setSelectedTab("daily")}
           >
@@ -179,7 +179,7 @@ const Banner = () => {
             className={`w-[50%] h-full flex justify-center items-center text-center cursor-pointer rounded-tr-[0.6667rem] ${
               selectedTab === "monthly"
                 ? "bg-primary text-white"
-                : "bg-tertiary text-primary"
+                : "bg-grayLight text-primary"
             }`}
             onClick={() => setSelectedTab("monthly")}
           >
