@@ -20,7 +20,7 @@ const CityCard = ({ city, imageUrl, cityUrl }) => {
         alt={`Select ${city}`}
         className="w-full h-full object-cover"
       />
-      <p className="absolute bottom-2 left-1/2 translate-x-[-50%] text-white font-normal px-3 py-1">
+      <p className="absolute bottom-2 left-1/2 translate-x-[-50%] text-white font-normal px-3 py-1 capitalize">
         {city}
       </p>
     </a>

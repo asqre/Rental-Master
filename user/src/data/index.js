@@ -343,91 +343,91 @@ export const monthlyOffersData = [
 
 export const cities = [
   {
-    cityName: "Agra",
+    cityName: "agra",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/039/original/Agra_new.jpg?1558599458",
     cityUrl: "/agra/car-rentals",
   },
   {
-    cityName: "Bangalore",
+    cityName: "bangalore",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/001/original/Bangalore_1cf1aa53741a94edc3532f7b2b583c52.jpg?1558599565",
     cityUrl: "/bangalore/car-rentals",
   },
   {
-    cityName: "Calicut",
+    cityName: "calicut",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/098/original/Calicut-city-icon.jpg?1567059129",
     cityUrl: "/calicut/car-rentals",
   },
   {
-    cityName: "Chandigarh",
+    cityName: "chandigarh",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/024/original/Chandigarh_72374d6c6de8b70d5b4ea5c05c59ba32.jpg?1558599669",
     cityUrl: "/chandigarh/car-rentals",
   },
   {
-    cityName: "Ahmedabad",
+    cityName: "ahmedabad",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/023/original/Ahmedabad_b8d1eb5783c996a077aff887d35e4168.jpg?1558599488",
     cityUrl: "/ahmedabad/car-rentals",
   },
   {
-    cityName: "Agra",
+    cityName: "agra",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/039/original/Agra_new.jpg?1558599458",
     cityUrl: "/agra/car-rentals",
   },
   {
-    cityName: "Bangalore",
+    cityName: "bangalore",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/001/original/Bangalore_1cf1aa53741a94edc3532f7b2b583c52.jpg?1558599565",
     cityUrl: "/bangalore/car-rentals",
   },
   {
-    cityName: "Calicut",
+    cityName: "calicut",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/098/original/Calicut-city-icon.jpg?1567059129",
     cityUrl: "/calicut/car-rentals",
   },
   {
-    cityName: "Chandigarh",
+    cityName: "chandigarh",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/024/original/Chandigarh_72374d6c6de8b70d5b4ea5c05c59ba32.jpg?1558599669",
     cityUrl: "/chandigarh/car-rentals",
   },
   {
-    cityName: "Ahmedabad",
+    cityName: "ahmedabad",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/023/original/Ahmedabad_b8d1eb5783c996a077aff887d35e4168.jpg?1558599488",
     cityUrl: "/ahmedabad/car-rentals",
   },
   {
-    cityName: "Agra",
+    cityName: "agra",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/039/original/Agra_new.jpg?1558599458",
     cityUrl: "/agra/car-rentals",
   },
   {
-    cityName: "Bangalore",
+    cityName: "bangalore",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/001/original/Bangalore_1cf1aa53741a94edc3532f7b2b583c52.jpg?1558599565",
     cityUrl: "/bangalore/car-rentals",
   },
   {
-    cityName: "Calicut",
+    cityName: "calicut",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/098/original/Calicut-city-icon.jpg?1567059129",
     cityUrl: "/calicut/car-rentals",
   },
   {
-    cityName: "Chandigarh",
+    cityName: "chandigarh",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/024/original/Chandigarh_72374d6c6de8b70d5b4ea5c05c59ba32.jpg?1558599669",
     cityUrl: "/chandigarh/car-rentals",
   },
   {
-    cityName: "Ahmedabad",
+    cityName: "ahmedabad",
     imageUrl:
       "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/023/original/Ahmedabad_b8d1eb5783c996a077aff887d35e4168.jpg?1558599488",
     cityUrl: "/ahmedabad/car-rentals",
