@@ -2,11 +2,11 @@ import React from "react";
 import Logo from "../common/Logo";
 import PrimaryButton from "../common/PrimaryButton";
 
-const DrawerList = ({ navLinks }) => {
+const DrawerList = ({ navLinks, city }) => {
   return (
     <div className="bg-white w-[18rem]">
       <div className="flex justify-center items-center h-[73px] border-b border-gray-300">
-        <Logo showName={true} />
+        <Logo showName={true} city={city} />
       </div>
 
       <div className="flex flex-col items-center justify-between h-full">

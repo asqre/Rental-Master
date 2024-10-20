@@ -95,7 +95,7 @@ const Navbar = () => {
           onClose={toggleDrawer(false)}
           className="lg:hidden"
         >
-          <DrawerList navLinks={navLinks} />
+          <DrawerList navLinks={navLinks} city={city}/>
         </Drawer>
       </nav>
     </ThemeProvider>
