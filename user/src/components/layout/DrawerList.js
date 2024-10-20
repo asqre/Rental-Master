@@ -6,7 +6,7 @@ const DrawerList = ({ navLinks }) => {
   return (
     <div className="bg-white w-[18rem]">
       <div className="flex justify-center items-center h-[73px] border-b border-gray-300">
-        <Logo />
+        <Logo showName={true} />
       </div>
 
       <div className="flex flex-col items-center justify-between h-full">

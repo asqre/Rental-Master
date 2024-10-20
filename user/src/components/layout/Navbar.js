@@ -5,11 +5,14 @@ import { Drawer, ThemeProvider, createTheme } from "@mui/material";
 import DrawerList from "./DrawerList";
 import PrimaryButton from "../common/PrimaryButton";
 import { useData } from "../../context/data";
+import CityButton from "../common/CityButton";
+import { useParams } from "react-router-dom";
 
 const theme = createTheme();
 
 const Navbar = () => {
   const { isModalOpen } = useData();
+  const { cityName } = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("");
 
@@ -44,7 +47,7 @@ const Navbar = () => {
           ${isModalOpen ? "lg:pr-[15px]" : "lg:pr-0"}
           `}
       >
-        <div className="flex justify-between items-center max-w-6xl mx-auto">
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
           <Logo />
 
           <ul className="hidden lg:flex justify-center space-x-8">
@@ -71,17 +74,21 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="hidden lg:flex mr-5">
-            <PrimaryButton name="Login" to="/login" />
+          <div className="flex flex-row gap-5 lg:gap-0">
+            <CityButton cityName={cityName} />
+
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-900 focus:outline-none h-8 w-8 hover:bg-gray-100 rounded-md flex items-center justify-center"
+              >
+                <IoMenuOutline className="h-[24px] w-[24px]" />
+              </button>
+            </div>
           </div>
 
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-900 focus:outline-none h-8 w-8 hover:bg-gray-100 rounded-md flex items-center justify-center"
-            >
-              <IoMenuOutline className="h-[24px] w-[24px]" />
-            </button>
+          <div className="hidden lg:flex mr-5">
+            <PrimaryButton name="Login" to="/login" />
           </div>
         </div>
         <Drawer
