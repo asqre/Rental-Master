@@ -23,8 +23,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const currentPath = window.location.pathname;
-    const pathSegment = currentPath.split("/")[1];
-    setActiveNavItem(pathSegment);
+    setActiveNavItem(currentPath.substring(1));
   }, []);
 
   const toggleDrawer = (open) => (event) => {
@@ -95,7 +94,7 @@ const Navbar = () => {
           onClose={toggleDrawer(false)}
           className="lg:hidden"
         >
-          <DrawerList navLinks={navLinks} city={city}/>
+          <DrawerList navLinks={navLinks} city={city} />
         </Drawer>
       </nav>
     </ThemeProvider>
