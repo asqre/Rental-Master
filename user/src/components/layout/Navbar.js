@@ -6,7 +6,6 @@ import DrawerList from "./DrawerList";
 import PrimaryButton from "../common/PrimaryButton";
 import { useData } from "../../context/data";
 import CityButton from "../common/CityButton";
-import { useParams } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -18,7 +17,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Deals", to: `${city}/deals` },
     { label: "Our Fleet", to: `${city}/our-fleet` },
-    { label: "About Us", to: `${city}/our-fleet` },
+    { label: "About Us", to: `${city}/about-us` },
     { label: "Contact Us", to: `${city}/contact-us` },
   ];
 
