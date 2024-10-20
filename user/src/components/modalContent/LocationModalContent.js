@@ -36,7 +36,7 @@ const LocationModalContent = () => {
             <CityCard
               key={index}
               imageUrl={city.imageUrl}
-              cityName={city.cityName}
+              city={city.cityName}
               cityUrl={city.cityUrl}
             />
           ))}

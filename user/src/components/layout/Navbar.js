@@ -11,16 +11,15 @@ import { useParams } from "react-router-dom";
 const theme = createTheme();
 
 const Navbar = () => {
-  const { isModalOpen } = useData();
-  const { cityName } = useParams();
+  const { isModalOpen, city } = useData();
   const [isOpen, setIsOpen] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState("");
 
   const navLinks = [
-    { label: "Deals", to: "deals" },
-    { label: "Our Fleet", to: "our-fleet" },
-    { label: "About Us", to: "about-us" },
-    { label: "Contact Us", to: "contact-us" },
+    { label: "Deals", to: `${city}/deals` },
+    { label: "Our Fleet", to: `${city}/our-fleet` },
+    { label: "About Us", to: `${city}/our-fleet` },
+    { label: "Contact Us", to: `${city}/contact-us` },
   ];
 
   useEffect(() => {
@@ -48,7 +47,7 @@ const Navbar = () => {
           `}
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <Logo />
+          <Logo city={city} />
 
           <ul className="hidden lg:flex justify-center space-x-8">
             {navLinks.map((link, index) => (
@@ -75,7 +74,7 @@ const Navbar = () => {
           </ul>
 
           <div className="flex flex-row gap-5 lg:gap-0">
-            <CityButton cityName={cityName} />
+            <CityButton city={city} />
 
             <div className="lg:hidden">
               <button

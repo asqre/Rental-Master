@@ -2,7 +2,7 @@ import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsArrowUpRightSquare } from "react-icons/bs";
 
-const CityButton = ({cityName}) => {
+const CityButton = ({city}) => {
   return (
     <button
       className="flex flex-row gap-2 items-center justify-between text-[14px] border-2 border-primary hover:bg-primary hover:text-white rounded-lg"
@@ -14,7 +14,7 @@ const CityButton = ({cityName}) => {
       }}
     >
       <IoLocationOutline />
-      <span className="capitalize">{cityName}</span>
+      <span className="capitalize">{city}</span>
       <BsArrowUpRightSquare />
     </button>
   );

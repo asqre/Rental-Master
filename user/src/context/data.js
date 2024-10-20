@@ -11,6 +11,7 @@ const DataProvider = ({ children }) => {
     return storedCity ? storedCity : null;
   });
   const [isModalOpen, setIsModalOpen] = useState(!city);
+  const [isLocationModalOpen, setIsLocationModalOpen] = useState(!city);
   const [dataLoading, setDataLoading] = useState(true);
   const [bannerImages, setBannerImages] = useState([]);
   const [companyName, setCompanyName] = useState("Rental Master");
@@ -54,6 +55,8 @@ const DataProvider = ({ children }) => {
     setIsModalOpen,
     city,
     setCity,
+    isLocationModalOpen,
+    setIsLocationModalOpen,
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import LoginSignUp from "./pages/signup/LoginSignUp";
@@ -14,14 +14,7 @@ import LocationModalContent from "./components/modalContent/LocationModalContent
 import CityPage from "./pages/CityPage";
 
 const App = () => {
-  const { city } = useData();
-  const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (!city) {
-      setIsLocationModalOpen(true);
-    }
-  }, [city]);
+  const { isLocationModalOpen, setIsLocationModalOpen } = useData();
 
   const handleCloseLocationModal = () => {
     setIsLocationModalOpen(false);
@@ -31,12 +24,12 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:cityName/car-rentals" element={<CityPage />} />
+        <Route path="/:city/car-rentals" element={<CityPage />} />
         <Route path="/login" element={<LoginSignUp />} />
-        <Route path="/deals" element={<Deals />} />
-        <Route path="/our-fleet" element={<Fleets />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/:city/deals" element={<Deals />} />
+        <Route path="/:city/our-fleet" element={<Fleets />} />
+        <Route path="/:city/about-us" element={<AboutUs />} />
+        <Route path="/:city/contact-us" element={<ContactUs />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
