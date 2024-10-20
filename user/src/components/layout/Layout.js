@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   return (
     <div className={`flex flex-col min-h-screen`}>
       <Navbar />
-      <main className="flex-grow mt-[72px]">{children}</main>
+      <main className="flex-grow mt-[72px] mb-[30vh] md:mb-[40vh]">{children}</main>
       <Footer />
     </div>
   );

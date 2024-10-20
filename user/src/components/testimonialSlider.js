@@ -8,15 +8,15 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Product Manager",
     content: "This product has completely transformed how our team works. The efficiency gains are remarkable.",
-    avatar: "/api/placeholder/40/40",
-    rating: 5
+    avatar: "",
+    rating: 4.5
   },
   {
     id: 2,
     name: "Michael Chen",
     role: "Software Engineer",
     content: "The intuitive interface and powerful features make this tool indispensable for our daily operations.",
-    avatar: "/api/placeholder/40/40",
+    avatar: "",
     rating: 4
   },
   {
@@ -24,16 +24,16 @@ const testimonials = [
     name: "Emma Davis",
     role: "Marketing Director",
     content: "I've never seen such amazing customer support. The team goes above and beyond to help.",
-    avatar: "/api/placeholder/40/40",
-    rating: 5
+    avatar: "",
+    rating: 3.5
   },
   {
     id: 4,
     name: "Alex Thompson",
     role: "UX Designer",
     content: "The attention to detail and user experience is outstanding. Highly recommended!",
-    avatar: "/api/placeholder/40/40",
-    rating: 4
+    avatar: "",
+    rating: 0.5
   }
 ];
 

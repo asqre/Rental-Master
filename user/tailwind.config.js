@@ -12,6 +12,7 @@ module.exports = {
         background: 'var(--color-background)',
         backgroundGray: 'var(--color-backgroundGray)',
         gray: 'var(--color-gray)',
+        grayLight: 'var(--color-grayLight)'
       },
     },
   },
