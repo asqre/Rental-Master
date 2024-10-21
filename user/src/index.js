@@ -9,17 +9,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <DataProvider>
-        <ChakraProvider>
-          <Toaster /> 
-          <App />
-        </ChakraProvider>
-      </DataProvider>
+      <QueryClientProvider client={queryClient}>
+        <DataProvider>
+          <ChakraProvider>
+            <Toaster />
+            <App />
+          </ChakraProvider>
+        </DataProvider>
+      </QueryClientProvider>
     </React.StrictMode>
   </BrowserRouter>
 );
