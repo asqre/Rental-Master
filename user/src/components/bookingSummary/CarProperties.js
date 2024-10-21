@@ -4,7 +4,7 @@ import Container from "./Container";
 const CarProperties = () => {
   return (
     <Container name="Maruti">
-      <div className="flex flex-row w-[100%] h-[100%] gap-5">
+      <div className="flex flex-row w-[100%] h-[100%] gap-5 p-[1rem]">
         <div className="w-[50%] h-[100%]">
           <img
             src="https://app.mychoize.com/IDDRIVE.LIVEBRANDImage/BrandImage/CELERIO_20Jun2023175432.png"

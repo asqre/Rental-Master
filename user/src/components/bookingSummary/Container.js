@@ -18,7 +18,6 @@ const Container = ({ name, children }) => {
 
       <div
         style={{
-          padding: "1rem",
           boxShadow: "0 4px 4px rgba(0,0,0,.08)",
           borderRadius: "0px 0px 8px 8px",
         }}
