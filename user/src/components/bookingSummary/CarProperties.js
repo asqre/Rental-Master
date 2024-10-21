@@ -4,8 +4,8 @@ import Container from "./Container";
 const CarProperties = () => {
   return (
     <Container name="Maruti">
-      <div className="flex flex-row w-[100%] h-[100%] gap-5 p-[1rem]">
-        <div className="w-[50%] h-[100%]">
+      <div className="flex flex-col lg:flex-row w-[100%] h-[100%] gap-5 p-[1rem]">
+        <div className="w-[100%] lg:w-[50%] h-[100%]">
           <img
             src="https://app.mychoize.com/IDDRIVE.LIVEBRANDImage/BrandImage/CELERIO_20Jun2023175432.png"
             alt="maruti"
@@ -13,7 +13,7 @@ const CarProperties = () => {
           />
         </div>
 
-        <div className="flex flex-col w-[50%] h-[100%] gap-[14px]">
+        <div className="flex flex-col w-[100%] lg:w-[50%] h-[100%] gap-[14px]">
           <h6 className="text-[14px] text-primary uppercase">Super Economy</h6>
 
           <div className="flex flex-row justify-between">
