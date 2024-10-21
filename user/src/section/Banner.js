@@ -119,19 +119,19 @@ const Banner = () => {
               alt="Banner Images"
               height={724}
               width={1400}
-              className="object-cover h-[300px] md:h-[762px]"
+              className="object-cover h-[80vh] md:h-[762px]"
             />
           ))}
         </Slider>
       ) : (
-        <div className="h-[300px] md:h-[762px] bg-slate-400" />
+        <div className="h-[80vh] md:h-[762px] bg-slate-400" />
       )}
 
       <div
-        className="absolute top-[2rem] md:top-[10rem] md:left-[5%] lg:left-[10%] flex flex-col text-center items-center
-                  md:items-start md:text-left w-full md:w-auto"
+        className="absolute top-[8rem] md:top-[10rem] md:left-[5%] lg:left-[10%] flex flex-col text-center items-center
+                  md:items-start md:text-left w-full md:w-auto h-[55vh] md:h-auto"
       >
-        <div>
+        <div className="flex-grow">
           <h1
             className="text-center md:text-left"
             style={{
@@ -151,9 +151,10 @@ const Banner = () => {
           >
             Discover the best deals on Cars at our convenient location.
           </h6>
-          <div className="flex items-start mt-5">
-            <PrimaryButton to="/" name="Explore Cars" />
-          </div>
+        </div>
+
+        <div className="flex items-start mt-5">
+          <PrimaryButton to="/" name="Explore Cars" />
         </div>
       </div>
 
