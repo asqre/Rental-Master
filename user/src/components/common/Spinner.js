@@ -3,7 +3,7 @@ import React from "react";
 const Spinner = ({ isLoading }) => {
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-slate-900 bg-opacity-50 ${
         isLoading ? "block" : "hidden"
       }`}
     >
