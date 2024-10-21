@@ -213,3 +213,16 @@ body {
   }
 }
 
+/* Moving Car CSS */
+@keyframes carMove {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 95%;
+  }
+}
+
+.animate-carMove {
+  animation: carMove 3s linear infinite;
+}
