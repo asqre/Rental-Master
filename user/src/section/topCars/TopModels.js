@@ -23,47 +23,22 @@ const TopModels = () => {
       {
         breakpoint: 1536,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
         },
       },
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
       {
         breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -74,13 +49,13 @@ const TopModels = () => {
 
   return (
     <section
-      className="flex flex-col mx-auto gap-10 bg-tertiary "
+      className="flex flex-col gap-10 bg-tertiary"
       style={{
         padding: "5rem 0",
       }}
     >
       <h3 className="text-center">Top Rented Cars</h3>
-      <div className="w-[85%] sm:w-[50%] md:w-[85%] lg:w-[60%] xl:w-[50%] 2xl:w-[85%] m-auto">
+      <div className="w-2/3 sm:w-3/4 m-auto">
         <Slider {...settings}>
           {topCarModels.map((model, index) => {
             return (
