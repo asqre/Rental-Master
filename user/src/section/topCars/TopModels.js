@@ -56,7 +56,7 @@ const TopModels = () => {
     >
       <h3 className="text-center">Top Rented Cars</h3>
       <div className="w-2/3 sm:w-3/4 m-auto">
-        <Slider {...settings}>
+        <Slider {...settings} className="top-model-slider">
           {topCarModels.map((model, index) => {
             return (
               <ModelCard
