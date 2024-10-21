@@ -163,30 +163,12 @@ body {
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
-
-    /* @screen sm {
-      line-height: 51px;
-    }
-
-    @screen lg {
-      line-height: 96px;
-    } */
   }
 
   h6 {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
-/* 
-    @screen sm {
-      font-size: 20px;
-      line-height: 40px;
-    }
-
-    @screen lg {
-      font-size: 24px;
-      line-height: 46px;
-    } */
   }
 }
 

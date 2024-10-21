@@ -12,6 +12,7 @@ import { useData } from "./context/data";
 import LocationModal from "./components/common/LocationModal";
 import LocationModalContent from "./components/modalContent/LocationModalContent";
 import CityPage from "./pages/CityPage";
+import BookingSummary from "./pages/BookingSummary";
 
 const App = () => {
   const { isLocationModalOpen, setIsLocationModalOpen } = useData();
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/:city/our-fleet" element={<Fleets />} />
         <Route path="/:city/about-us" element={<AboutUs />} />
         <Route path="/:city/contact-us" element={<ContactUs />} />
+        <Route path="/booking-summary" element={<BookingSummary />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
