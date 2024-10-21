@@ -8,7 +8,7 @@ import Layout from "../components/layout/Layout";
 const BookingSummary = () => {
   return (
     <Layout>
-      <div className="flex flex-col lg:flex-row gap-5 w-[100%] h-[100%] p-10">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-5 w-[100%] h-[100%] p-5 lg:p-10">
         <div className="flex flex-col gap-10 w-[100%] lg:w-[70%]">
           <CarProperties />
           <BookingTime />
