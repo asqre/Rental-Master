@@ -5,11 +5,11 @@ import car from "../../assets/icon/sport-car.png";
 const BookingTime = () => {
   return (
     <Container name="Booking Time">
-      <div className="flex flex-col gap-2 p-[1rem] px-6 relative">
+      <div className="flex flex-col gap-2 p-[1rem] sm:px-6 relative">
         <h6 className="text-gray">Pickup Time</h6>
 
         <div className="flex flex-row justify-between">
-          <h6 className="text-secondary">
+          <h6 className="text-secondary w-[100px]">
             <span>Tue, 22 Oct 2024 </span>
             <span>09:30 AM</span>
           </h6>
@@ -19,11 +19,11 @@ const BookingTime = () => {
 
             <img
               src={car}
-              className="absolute top-[-12px] w-[50px] h-[45px] object-contain animate-carMove"
+              className="absolute top-[7px] w-[50px] h-[45px] object-contain animate-carMove"
             />
           </div>
 
-          <h6 className="text-secondary">
+          <h6 className="text-secondary w-[100px]">
             <span>Fri, 25 Oct 2024 </span>
             <span>06:30 PM</span>
           </h6>
