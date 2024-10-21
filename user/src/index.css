@@ -224,5 +224,5 @@ body {
 }
 
 .animate-carMove {
-  animation: carMove 3s linear infinite;
+  animation: carMove 5s linear infinite;
 }
