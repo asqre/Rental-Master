@@ -19,6 +19,8 @@
   --color-backgroundGray:#f9f9f9;
   --color-gray: #8c84a4; 
   --color-grayLight: #e4e4ea;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
 }
 
 body {

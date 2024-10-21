@@ -1,6 +1,7 @@
 import React from "react";
 import roadMap from "../assets/roadMap.png";
-import verticalRoadMap from "../assets/verticalRoadMap.svg";
+import verticalRoadMap from "../assets/verticalRoadMap.png"
+
 
 function RoadMap() {
   return (
@@ -29,18 +30,19 @@ function RoadMap() {
         </p>
       </div>
 
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full relative">
         <img 
           src={roadMap} 
           alt="Steps to book a self-drive car" 
           className="hidden md:inline-block 
-            w-full 
-            max-w-6xl 
+            w-[80%]
+          
             object-contain 
             px-4 sm:px-6 md:px-8 
             hover:scale-105 
             transition-transform duration-300"
         />
+        
         <img 
           src={verticalRoadMap} 
           alt="Steps to book a self-drive car" 
@@ -52,6 +54,7 @@ function RoadMap() {
             hover:scale-105 
             transition-transform duration-300"
         />
+        {/* <RoadmapText /> */}
       </div>
     </div>
   );
