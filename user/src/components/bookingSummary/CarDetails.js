@@ -134,7 +134,7 @@ const CarDetails = () => {
   return (
     <Container name="Car Details">
       <div className="flex flex-col w-[100%] h-[100%] ">
-        <div className="flex flex-row justify-between p-[1rem] px-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 p-[1rem] px-6">
           <h6
             className="flex flex-row items-center gap-1"
             style={{
@@ -177,7 +177,7 @@ const CarDetails = () => {
         </div>
 
         <div className="flex flex-row justify-between bg-tertiary p-[1rem] px-6">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2">
             <h6
               className="flex flex-row items-center gap-2"
               style={{
@@ -209,7 +209,7 @@ const CarDetails = () => {
             </h6>
           </div>
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2">
             <h6 className="text-secondary">Included</h6>
             <h6 className="text-secondary">Included</h6>
             <h6 className="text-secondary">Not Included</h6>
