@@ -9,7 +9,7 @@ import Spinner from "../common/Spinner";
 const Checkout = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [order, setOrder] = useState({
-    amount: 500,
+    amount: 11188.16*100,
     currency: "INR",
     receipt: "qwsaq1",
   });
