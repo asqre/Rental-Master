@@ -5,7 +5,7 @@ export const NavItem = ({ SelectedIcon, name, isSelected, path }) => {
   return (
     <Link
       className={`flex h-[53.59px] items-center cursor-pointer w-full rounded-[0.5rem] py-[0.675rem] px-[1rem] ${
-        isSelected === name ? "bg-tertiary" : "bg-transparent"
+        isSelected === name ? "bg-white" : "bg-transparent"
       }`}
       to={`${path}`}
       style={{

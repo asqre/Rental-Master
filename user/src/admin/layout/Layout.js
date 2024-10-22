@@ -5,7 +5,7 @@ import SideNav from "./SideNav";
 
 const Layout = () => {
   return (
-    <div className="flex flex-row h-screen w-screen p-[1rem]">
+    <div className="flex flex-row h-screen w-screen p-[1rem] bg-adminBackground">
       {/* Left layout */}
       <div className="h-[100%]">
         <SideNav />
