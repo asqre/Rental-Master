@@ -72,6 +72,7 @@ const Offers = () => {
           {offerDetails.offerType === "regular" && (
             <div className="flex-grow">
               <InputField
+                type="date"
                 label="Valid To"
                 placeholder="Type here"
                 id="validto"
