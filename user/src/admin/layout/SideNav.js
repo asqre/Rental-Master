@@ -4,6 +4,12 @@ import { HiOutlineLogout } from "react-icons/hi";
 import { useLocation, useNavigate } from "react-router-dom";
 import { NavItem } from "./NavItem";
 import Logo from "../../components/common/Logo";
+import { FaList } from "react-icons/fa6";
+import { FaTable, FaUsers, FaCar, FaGlobe } from "react-icons/fa";
+import { TbBrandCodesandbox } from "react-icons/tb";
+import { IoCarSportSharp } from "react-icons/io5";
+import { BiSolidOffer } from "react-icons/bi";
+import { MdAdminPanelSettings } from "react-icons/md";
 
 const SideNav = ({ onClose }) => {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
@@ -14,21 +20,21 @@ const SideNav = ({ onClose }) => {
   const menuItems = [
     { name: "Dashboard", path: "/admin/dashboard", icon: IoHome },
     { type: "text", name: "Manage Booking" },
-    { name: "Bookings", path: "/admin/bookings", icon: IoMail },
-    { name: "Booking History", path: "/admin/booking-history", icon: IoGift },
-    { name: "Verify Users", path: "/admin/verify-users", icon: IoGift },
+    { name: "Bookings", path: "/admin/bookings", icon: FaList },
+    { name: "Booking History", path: "/admin/booking-history", icon: FaTable },
+    { name: "Verify Users", path: "/admin/verify-users", icon: FaUsers },
     { type: "text", name: "Manage Services" },
-    { name: "Brands", path: "/admin/brands", icon: IoSettings },
-    { name: "Body Types", path: "/admin/body-types", icon: IoSettings },
-    { name: "Cars", path: "/admin/cars", icon: IoSettings },
-    { name: "Offers", path: "/admin/offers", icon: IoSettings },
+    { name: "Brands", path: "/admin/brands", icon: TbBrandCodesandbox },
+    { name: "Body Types", path: "/admin/body-types", icon: FaCar },
+    { name: "Cars", path: "/admin/cars", icon: IoCarSportSharp },
+    { name: "Offers", path: "/admin/offers", icon: BiSolidOffer },
     { type: "text", name: "Site Management" },
     {
       name: "Admin Management",
       path: "/admin/admin-management",
-      icon: IoSettings,
+      icon: MdAdminPanelSettings,
     },
-    { name: "Social Media", path: "/admin/social-media", icon: IoSettings },
+    { name: "Social Media", path: "/admin/social-media", icon: FaGlobe },
     { name: "Settings", path: "/admin/settings", icon: IoSettings },
     { name: "Logout", path: "/logout", icon: HiOutlineLogout },
   ];
