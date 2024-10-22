@@ -21,7 +21,7 @@ const TextArea = ({ label, placeholder, id, value, onChange }) => {
           value={value}
           type="text"
           placeholder={placeholder}
-          className="w-full p-4 rounded-lg border border-[#CCCCCC] focus:outline-none focus:border-2 focus:border-primary"
+          className="w-full p-4 rounded-lg border border-[#CCCCCC] focus:border-secondary focus:ring-secondary"
           onChange={onChange}
         />
       </div>
