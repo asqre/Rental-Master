@@ -7,14 +7,12 @@ const Layout = () => {
   return (
     <div className="flex flex-row h-screen w-screen p-[1rem]">
       {/* Left layout */}
-      <div className="h-screen bg-red-300" style={{
-        background: "red"
-      }}>
+      <div className="h-[100%]">
         <SideNav />
       </div>
 
       {/* Main content */}
-      <div className="flex flex-col flex-grow h-screen w-full bg-red-300">
+      <div className="flex flex-col flex-grow h-[100%] w-full p-[24px]">
         <Routes>
           {routes.map(
             ({ layout, pages }) =>
