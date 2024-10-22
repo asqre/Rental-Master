@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useData } from "../../context/data";
 
-const Logo = ({ showName, city }) => {
+const Logo = ({ to, showName, city }) => {
   const { companyName } = useData();
   return (
     <Link
-      to={`/${city}/car-rentals`}
+      to={to ? "/admin/dashboard" : `/${city}/car-rentals`}
       className="flex flex-row space-x-2 items-center justify-center"
     >
       <img
