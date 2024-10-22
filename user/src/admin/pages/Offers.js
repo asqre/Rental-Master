@@ -5,6 +5,7 @@ import { offerType } from "../data";
 import TextArea from "../components/common/TextArea";
 import ImageField from "../components/common/ImageField";
 import TermsAndConditionField from "../components/common/TermsAndConditionField";
+import Button from "../components/common/Button";
 
 const Offers = () => {
   const [offerDetails, setOfferDetails] = useState({
@@ -32,7 +33,7 @@ const Offers = () => {
 
   return (
     <div className="w-full h-full bg-white rounded-[1rem] p-[2rem]">
-      <div className="flex flex-col gap-5 w-full h-full">
+      <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-3">
         <h5 className="mb-5">Create Offer</h5>
 
         <RadioField
@@ -84,6 +85,10 @@ const Offers = () => {
         <ImageField label="Upload Image" />
 
         <TermsAndConditionField label="Terms and Conditions" />
+
+        <div className="flex justify-end mb-5">
+          <Button name="Create Offer" />
+        </div>
       </div>
     </div>
   );
