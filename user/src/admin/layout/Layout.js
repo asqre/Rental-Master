@@ -40,7 +40,7 @@ const Layout = () => {
         </div>
 
         {/* Main content */}
-        <div className="flex flex-col flex-grow pt-[2rem] h-[100%] w-full">
+        <div className="flex flex-col flex-grow pt-[2rem] sm:p-0 h-[100%] w-full">
           <Routes>
             {routes.map(
               ({ layout, pages }) =>
