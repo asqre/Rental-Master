@@ -24,6 +24,7 @@ const Layout = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="flex flex-row gap-7 h-screen w-screen p-[1rem] bg-adminBackground">
+        {/* Drawer Icon */}
         <div className="absolute left-[27px] sm:hidden">
           <button
             onClick={toggleDrawer(true)}
@@ -39,7 +40,7 @@ const Layout = () => {
         </div>
 
         {/* Main content */}
-        <div className="flex flex-col flex-grow h-[100%] w-full">
+        <div className="flex flex-col flex-grow pt-[2rem] h-[100%] w-full">
           <Routes>
             {routes.map(
               ({ layout, pages }) =>
