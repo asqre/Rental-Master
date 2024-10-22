@@ -72,7 +72,7 @@ const TermsAndConditionField = ({ label, id, value }) => {
           placeholder="Enter terms and conditions (press Enter for new point)"
         />
 
-        <h6 className="absolute bottom-2 right-2 text-tertiary">
+        <h6 className="absolute bottom-2 right-2 text-gray">
           Press Enter for new point
         </h6>
       </div>
