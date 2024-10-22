@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 
-const ImageField = ({ label, img, imgUrl, onChange }) => {
-  const [imagePreview, setImagePreview] = useState(null);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setImagePreview(URL.createObjectURL(file));
-    }
-  };
-
+const ImageField = ({ label, onChange, img, imgUrl }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
       <div
@@ -25,15 +16,15 @@ const ImageField = ({ label, img, imgUrl, onChange }) => {
       </div>
       <div className="border-2 border-dashed border-gray-300 rounded-lg p-6">
         <div className="flex flex-col items-center">
-          {imagePreview ? (
+          {imgUrl ? (
             <div className="relative w-full">
               <img
-                src={imagePreview}
+                src={imgUrl}
                 alt="Offer preview"
                 className="w-full h-48 object-cover rounded-lg"
               />
               <button
-                onClick={() => setImagePreview(null)}
+                onClick={() => onChange({ target: { files: [] } })}
                 className="absolute top-2 right-2 bg-white rounded-md px-3 py-1 text-sm shadow-sm text-primary hover:bg-tertiary"
               >
                 Change Image
@@ -55,15 +46,13 @@ const ImageField = ({ label, img, imgUrl, onChange }) => {
                     d="M12 4v16m8-8H4"
                   />
                 </svg>
-                <h6 className="text-primary">
-                  Click to upload image
-                </h6>
+                <h6 className="text-primary">Click to upload image</h6>
               </div>
               <input
                 type="file"
                 className="hidden"
                 accept="image/*"
-                onChange={handleImageChange}
+                onChange={onChange}
               />
             </label>
           )}
