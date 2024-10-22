@@ -13,8 +13,10 @@ import LocationModal from "./components/common/LocationModal";
 import LocationModalContent from "./components/modalContent/LocationModalContent";
 import CityPage from "./pages/CityPage";
 import BookingSummary from "./pages/BookingSummary";
+import AdminDashboard from "./admin/pages/AdminDashboard";
 
 const App = () => {
+  const user = { role: "admin" };
   const { isLocationModalOpen, setIsLocationModalOpen } = useData();
 
   const handleCloseLocationModal = () => {
@@ -24,6 +26,7 @@ const App = () => {
   return (
     <>
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/:city/car-rentals" element={<CityPage />} />
         <Route path="/login" element={<LoginSignUp />} />
@@ -34,6 +37,11 @@ const App = () => {
         <Route path="/booking-summary" element={<BookingSummary />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+        {/* Admin Routes */}
+        {user.role === "admin" && (
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        )}
       </Routes>
 
       <LocationModal
