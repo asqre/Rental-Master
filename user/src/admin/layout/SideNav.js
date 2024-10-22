@@ -40,7 +40,7 @@ const SideNav = () => {
 
   return (
     <div className="flex flex-col w-[250px] h-full rounded-[1rem]">
-      <div className="h-[4.875rem] px-[24px] py-[32px] flex items-center justify-center">
+      <div className="h-[4.875rem] px-[10px] py-[32px] flex items-center justify-center">
         <Logo to="/" showName={true} />
       </div>
 
