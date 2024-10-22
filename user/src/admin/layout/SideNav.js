@@ -31,18 +31,19 @@ const SideNav = () => {
   ];
 
   useEffect(() => {
-    const currentPath = location.pathname.split("/")[2];
-    const capitalizedPath =
-      currentPath.charAt(0).toUpperCase() + currentPath.slice(1);
-
-    setIsSelected(capitalizedPath);
-  }, [location.pathname]);
+    const selectedItem = menuItems.find((item) =>
+      location.pathname.includes(item.path)
+    );
+    if (selectedItem) {
+      setIsSelected(selectedItem.name);
+    }
+  }, [location.pathname, menuItems]);
 
   return (
     <>
       <div className="flex flex-col w-[250px] h-full">
         <div className="h-[4.875rem] px-[24px] py-[32px] flex items-center justify-center">
-          <Logo to="true" />
+          <Logo to="true" showName={true} />
         </div>
 
         <hr className="mx-[24px] mt-0 mb-5" />
