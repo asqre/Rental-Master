@@ -58,6 +58,11 @@ const Layout = () => {
         open={isOpen}
         onClose={toggleDrawer(false)}
         className="sm:hidden bg-adminBackground"
+        sx={{
+          "& .MuiDrawer-paper": {
+            backgroundColor: "var(--color-adminBackground)",
+          },
+        }}
       >
         <SideNav />
       </Drawer>
