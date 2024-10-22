@@ -13,12 +13,15 @@ const SideNav = () => {
 
   const menuItems = [
     { name: "Dashboard", path: "/admin/dashboard", icon: IoHome },
+    { type: "text", name: "Manage Booking" },
     { name: "Bookings", path: "/admin/bookings", icon: IoMail },
     { name: "Booking History", path: "/admin/booking-history", icon: IoGift },
     { name: "Verify Users", path: "/admin/verify-users", icon: IoGift },
+    { type: "text", name: "Manage Services" },
     { name: "Brands", path: "/admin/brands", icon: IoSettings },
     { name: "Body Types", path: "/admin/body-types", icon: IoSettings },
     { name: "Cars", path: "/admin/cars", icon: IoSettings },
+    { type: "text", name: "Site Management" },
     {
       name: "Admin Management",
       path: "/admin/admin-management",
@@ -48,15 +51,28 @@ const SideNav = () => {
 
       <div className="ml-[16px]">
         <nav className="flex flex-col w-full max-h-[calc(100vh-10rem)] overflow-y-auto custom-scrollbar pr-[16px]">
-          {menuItems.map((item) => (
-            <NavItem
-              key={item.name}
-              name={item.name}
-              SelectedIcon={item.icon}
-              isSelected={isSelected}
-              path={item.path}
-            />
-          ))}
+          {menuItems.map((item) =>
+            item.type === "text" ? (
+              <h6
+                key={item.name}
+                className="mt-3 mb-1 font-bold text-xs uppercase pl-[1.5rem] ml-[0.5rem]"
+                style={{
+                  lineHeight: "1.25",
+                  opacity: 0.6,
+                }}
+              >
+                {item.name}
+              </h6>
+            ) : (
+              <NavItem
+                key={item.name}
+                name={item.name}
+                SelectedIcon={item.icon}
+                isSelected={isSelected}
+                path={item.path}
+              />
+            )
+          )}
         </nav>
       </div>
     </div>
