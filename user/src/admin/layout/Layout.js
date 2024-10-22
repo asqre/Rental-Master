@@ -64,7 +64,7 @@ const Layout = () => {
           },
         }}
       >
-        <SideNav />
+        <SideNav onClose={toggleDrawer(false)} />
       </Drawer>
     </ThemeProvider>
   );

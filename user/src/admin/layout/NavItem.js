@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const NavItem = ({ SelectedIcon, name, isSelected, path }) => {
+export const NavItem = ({ SelectedIcon, name, isSelected, path, onClick }) => {
   return (
     <Link
       className={`flex h-[53.59px] items-center cursor-pointer w-full rounded-[0.5rem] py-[0.675rem] px-[1rem] ${
@@ -12,6 +12,7 @@ export const NavItem = ({ SelectedIcon, name, isSelected, path }) => {
         boxShadow:
           isSelected === name ? "0 20px 27px 0 rgba(0, 0, 0, 0.05)" : "",
       }}
+      onClick={onClick}
     >
       <div>
         <div

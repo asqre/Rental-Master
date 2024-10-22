@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { NavItem } from "./NavItem";
 import Logo from "../../components/common/Logo";
 
-const SideNav = () => {
+const SideNav = ({ onClose }) => {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
   const navigate = useNavigate();
   const [isSelected, setIsSelected] = useState("Dashboard");
@@ -70,6 +70,7 @@ const SideNav = () => {
                 SelectedIcon={item.icon}
                 isSelected={isSelected}
                 path={item.path}
+                onClick={onClose}
               />
             )
           )}
