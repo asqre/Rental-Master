@@ -5,14 +5,14 @@ import SideNav from "./SideNav";
 
 const Layout = () => {
   return (
-    <div className="flex flex-row h-screen w-screen p-[1rem] bg-adminBackground">
+    <div className="flex flex-row gap-7 h-screen w-screen p-[1rem] bg-adminBackground">
       {/* Left layout */}
       <div className="h-[100%]">
         <SideNav />
       </div>
 
       {/* Main content */}
-      <div className="flex flex-col flex-grow h-[100%] w-full p-[24px]">
+      <div className="flex flex-col flex-grow h-[100%] w-full">
         <Routes>
           {routes.map(
             ({ layout, pages }) =>
