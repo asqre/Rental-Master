@@ -73,6 +73,16 @@ const Offers = () => {
         ...prev,
         img: imgUrl,
       }));
+
+      setOfferDetails({
+        offerType: offerDetails.offerType,
+        couponDiscount: "",
+        description: "",
+        couponName: "",
+        validto: "",
+        img: null,
+      });
+      setImg(null);
     } catch (error) {
       toast.dismiss();
       console.error("Error submitting the offer: ", error);
