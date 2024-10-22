@@ -46,8 +46,8 @@ const SideNav = () => {
 
       <hr className="mx-[24px] mt-0 mb-5" />
 
-      <div className="mx-[16px]">
-        <nav className="flex flex-col w-full max-h-[calc(100vh-10rem)] overflow-y-auto custom-scrollbar">
+      <div className="ml-[16px]">
+        <nav className="flex flex-col w-full max-h-[calc(100vh-10rem)] overflow-y-auto custom-scrollbar pr-[16px]">
           {menuItems.map((item) => (
             <NavItem
               key={item.name}
