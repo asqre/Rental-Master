@@ -5,6 +5,7 @@ import BookingHistory from "./pages/BookingHistory";
 import Brands from "./pages/Brands";
 import Cars from "./pages/Cars";
 import Dashboard from "./pages/Dashboard";
+import Offers from "./pages/Offers";
 import Setting from "./pages/Setting";
 import SocialManagement from "./pages/SocialManagement";
 import VerifyUser from "./pages/VerifyUser";
@@ -47,6 +48,11 @@ export const routes = [
         name: "Cars",
         path: "/cars",
         element: <Cars />,
+      },
+      {
+        name: "Offers",
+        path: "/offers",
+        element: <Offers />,
       },
       {
         name: "Admins/ Users",

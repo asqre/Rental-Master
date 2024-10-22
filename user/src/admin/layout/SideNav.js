@@ -21,6 +21,7 @@ const SideNav = ({ onClose }) => {
     { name: "Brands", path: "/admin/brands", icon: IoSettings },
     { name: "Body Types", path: "/admin/body-types", icon: IoSettings },
     { name: "Cars", path: "/admin/cars", icon: IoSettings },
+    { name: "Offers", path: "/admin/offers", icon: IoSettings },
     { type: "text", name: "Site Management" },
     {
       name: "Admin Management",
