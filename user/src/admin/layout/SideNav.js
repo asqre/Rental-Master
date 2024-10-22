@@ -9,20 +9,34 @@ import Logo from "../../components/common/Logo";
 const SideNav = () => {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
   const navigate = useNavigate();
-  const [isSelected, setIsSelected] = useState('Dashboard');
+  const [isSelected, setIsSelected] = useState("Dashboard");
   const location = useLocation();
 
   const menuItems = [
     { name: "Dashboard", path: "/admin/dashboard", icon: IoHome },
-    { name: "Envelopes", path: "/admin/envelopes", icon: IoMail },
-    { name: "Prizes", path: "/admin/prizes", icon: IoGift },
-    { name: "Setting", path: "/admin/setting", icon: IoSettings },
+    { name: "Bookings", path: "/admin/bookings", icon: IoMail },
+    { name: "Booking History", path: "/admin/booking-history", icon: IoGift },
+    { name: "Verify Users", path: "/admin/verify-users", icon: IoGift },
+    { name: "Brands", path: "/admin/brands", icon: IoSettings },
+    { name: "Body Types", path: "/admin/body-types", icon: IoSettings },
+    { name: "Cars", path: "/admin/cars", icon: IoSettings },
+    {
+      name: "Admin Management",
+      path: "/admin/admin-management",
+      icon: IoSettings,
+    },
+    { name: "Social Media", path: "/admin/social-media", icon: IoSettings },
+    { name: "Settings", path: "/admin/settings", icon: IoSettings },
+    { name: "Logout", path: "/logout", icon: HiOutlineLogout },
   ];
 
-//   useEffect(() => {
-//     const currentPath = location.pathname.split("/")[2];
-//     setIsSelected(currentPath);
-//   }, [location.pathname]);
+  useEffect(() => {
+    const currentPath = location.pathname.split("/")[2];
+    const capitalizedPath =
+      currentPath.charAt(0).toUpperCase() + currentPath.slice(1);
+
+    setIsSelected(capitalizedPath);
+  }, [location.pathname]);
 
   return (
     <>
@@ -41,6 +55,7 @@ const SideNav = () => {
                 name={item.name}
                 SelectedIcon={item.icon}
                 isSelected={isSelected}
+                path={item.path}
               />
             ))}
           </div>

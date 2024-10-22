@@ -13,7 +13,7 @@ import LocationModal from "./components/common/LocationModal";
 import LocationModalContent from "./components/modalContent/LocationModalContent";
 import CityPage from "./pages/CityPage";
 import BookingSummary from "./pages/BookingSummary";
-import AdminDashboard from "./admin/pages/AdminDashboard";
+import Layout from "./admin/layout/Layout";
 
 const App = () => {
   const user = { role: "admin" };
@@ -40,7 +40,7 @@ const App = () => {
 
         {/* Admin Routes */}
         {user.role === "admin" && (
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/*" element={<Layout />} />
         )}
       </Routes>
 
