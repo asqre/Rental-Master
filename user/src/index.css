@@ -234,3 +234,16 @@ body {
 .terms-content ul {
   list-style-type: disc;
 }
+
+
+/* OTP verification page css */
+.react-tel-input .form-control {
+  @apply !w-full py-6 !text-base;
+}
+
+.opt-container {
+  @apply flex justify-between gap-2;
+}
+.opt-container input {
+  @apply !mr-0 flex-1 py-5 outline-none;
+}

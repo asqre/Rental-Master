@@ -14,6 +14,7 @@ import LocationModalContent from "./components/modalContent/LocationModalContent
 import CityPage from "./pages/CityPage";
 import BookingSummary from "./pages/BookingSummary";
 import Layout from "./admin/layout/Layout";
+import OtpVerification from "./pages/signup/OtpVerification";
 import FilteredCars from "./pages/FilteredCars";
 import CarDetailsPage from "./pages/CarDetailsPage";
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/:city/car-rentals" element={<CityPage />} />
         <Route path="/login" element={<LoginSignUp />} />
+        <Route path="/otp-verification" element={<OtpVerification />} />
         <Route path="/:city/deals" element={<Deals />} />
         <Route path="/:city/our-fleet" element={<Fleets />} />
         <Route path="/:city/cars" element={<FilteredCars />} />
