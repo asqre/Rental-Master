@@ -224,6 +224,7 @@ const Offers = () => {
             name="Create Offer"
             disabled={isButtonDisabled}
             onClick={handleSubmit}
+            isLoading={isLoading}
           />
         </div>
       </div>
