@@ -23,7 +23,7 @@ const Layout = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="flex flex-row gap-7 h-screen w-screen p-[1rem] bg-adminBackground">
+      <div className="flex flex-row gap-7 h-screen w-screen pt-[1rem] sm:p-[1rem] bg-adminBackground">
         {/* Drawer Icon */}
         <div className="absolute left-[27px] sm:hidden">
           <button
