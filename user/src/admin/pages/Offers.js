@@ -124,28 +124,29 @@ const Offers = () => {
         const snapshot = await uploadBytes(storageRef, img);
         imgUrl = await getDownloadURL(snapshot.ref);
       }
+
+      const payload = {
+        ...offerDetails,
+        img: imgUrl,
+      };
+
+      console.log("Offer submitted successfully:", payload);
+
       setOfferDetails((prev) => ({
         ...prev,
-        img: imgUrl,
-      }));
-
-      console.log("offerDetails", offerDetails);
-
-      setOfferDetails({
-        offerType: offerDetails.offerType,
         couponDiscount: "",
         description: "",
         couponName: "",
         validto: "",
         img: null,
-      });
+      }));
       setImg(null);
     } catch (error) {
       toast.dismiss();
       console.error("Error submitting the offer: ", error);
     } finally {
       toast.dismiss();
-      toast.success("Offers created successfully");
+      toast.success("Offer created successfully");
       setIsButtonDisabled(false);
       setIsLoading(false);
     }
