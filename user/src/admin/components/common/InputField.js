@@ -20,7 +20,7 @@ const InputField = ({ label, placeholder, id, value, onChange, type }) => {
           value={value}
           type={type ? type : "text"}
           placeholder={placeholder}
-          className="w-full h-14 p-4 rounded-lg border border-[#CCCCCC] focus:border-secondary focus:ring-secondary"
+          className="w-full h-14 p-4 rounded-lg border border-[#CCCCCC] focus:outline-none focus:border-primary focus:ring-primary"
           onChange={onChange}
         />
       </div>

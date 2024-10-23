@@ -68,7 +68,7 @@ const TermsAndConditionField = ({ label, id, value }) => {
           onChange={handleTermsChange}
           onKeyDown={handleKeyDown}
           rows={10}
-          className="mt-1 block w-full rounded-lg border-gray shadow-sm focus:border-secondary focus:ring-secondary sm:text-sm p-2 border font-mono"
+          className="mt-1 block w-full rounded-lg border-gray shadow-sm focus:border-primary focus:ring-primary sm:text-sm p-2 border font-mono"
           placeholder="Enter terms and conditions (press Enter for new point)"
         />
 
