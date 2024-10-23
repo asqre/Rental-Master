@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputField from "../components/common/InputField";
 import RadioField from "../components/common/RadioField";
 import { defaultTerms, offerType } from "../data";
@@ -40,7 +40,7 @@ const Offers = () => {
 
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const onRadioChange = (e) => {
     setOfferDetails({
@@ -80,6 +80,37 @@ const Offers = () => {
     }
   };
 
+  const validateForm = () => {
+    const {
+      offerType,
+      couponDiscount,
+      description,
+      couponName,
+      img,
+      terms,
+      validto,
+    } = offerDetails;
+
+    if (
+      !description ||
+      !couponName ||
+      !img ||
+      !couponDiscount ||
+      Number(couponDiscount) <= 0 ||
+      !terms ||
+      terms === "<p><br></p>" ||
+      (offerType === "regular" && !validto)
+    ) {
+      return true;
+    }
+
+    return false;
+  };
+
+  useEffect(() => {
+    setIsButtonDisabled(validateForm());
+  }, [offerDetails]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsButtonDisabled(true);
@@ -97,6 +128,8 @@ const Offers = () => {
         ...prev,
         img: imgUrl,
       }));
+
+      console.log("offerDetails", offerDetails);
 
       setOfferDetails({
         offerType: offerDetails.offerType,
@@ -185,15 +218,13 @@ const Offers = () => {
           onChange={handleTermsChange}
         />
 
-        <div className="flex justify-end my-10">
+        <div className="flex justify-end mt-10 mb-5">
           <Button
             name="Create Offer"
             disabled={isButtonDisabled}
             onClick={handleSubmit}
           />
         </div>
-
-        <div dangerouslySetInnerHTML={{ __html: offerDetails.terms }} />
       </div>
     </div>
   );
