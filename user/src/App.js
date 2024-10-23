@@ -14,6 +14,7 @@ import LocationModalContent from "./components/modalContent/LocationModalContent
 import CityPage from "./pages/CityPage";
 import BookingSummary from "./pages/BookingSummary";
 import Layout from "./admin/layout/Layout";
+import FilteredCars from "./pages/FilteredCars";
 
 const App = () => {
   const user = { role: "admin" };
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/login" element={<LoginSignUp />} />
         <Route path="/:city/deals" element={<Deals />} />
         <Route path="/:city/our-fleet" element={<Fleets />} />
+        <Route path="/:city/cars" element={<FilteredCars />} />
         <Route path="/:city/about-us" element={<AboutUs />} />
         <Route path="/:city/contact-us" element={<ContactUs />} />
         <Route path="/booking-summary" element={<BookingSummary />} />

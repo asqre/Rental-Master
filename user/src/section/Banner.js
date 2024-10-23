@@ -5,11 +5,13 @@ import DatePicker from "../components/datePicker/DatePicker";
 import toast from "react-hot-toast";
 import PrimaryButton from "../components/common/PrimaryButton";
 import Button from "../components/common/Button";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
-  const { bannerImages } = useData();
+  const { bannerImages, city } = useData();
   const [isLoading, setIsLoading] = useState(false);
   const [selectedTab, setSelectedTab] = useState("daily");
+  const navigate = useNavigate();
   const [searchRide, setSearchRide] = useState({
     pickUpTime: {
       date: null,
@@ -105,7 +107,9 @@ const Banner = () => {
       toast.error("An error occurred while searching for rides.");
     } finally {
       setIsLoading(false);
+      navigate(`/${city}/cars`);
     }
+  
   };
 
   return (
