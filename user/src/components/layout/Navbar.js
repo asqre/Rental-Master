@@ -71,8 +71,10 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex flex-row gap-5 lg:gap-0">
+          <div className="flex flex-row gap-5">
             <CityButton city={city} />
+
+            <PrimaryButton name="Admin" to="/admin/dashboard" />
 
             <div className="lg:hidden">
               <button
