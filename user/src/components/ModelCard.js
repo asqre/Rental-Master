@@ -1,11 +1,20 @@
 import React from "react";
 import { FaCar } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useData } from "../context/data";
+import { useNavigate } from "react-router-dom";
 
 const ModelCard = (props) => {
+  const {city} = useData();
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+
+     navigate(`/${city}/our-fleet/${props.name}`)
+  }
   return (
-    <div className="flex flex-col border rounded-2xl w-[100%] h-[100%]">
-      <div className="h-[70%] w-full">
+    <div className={`flex flex-col border rounded-2xl w-[100%] h-[100%] ${props.className}`}>
+      <div className="h-[70%] w-full ">
         <img
           src={props.img}
           alt={props.name}
@@ -20,7 +29,7 @@ const ModelCard = (props) => {
         <div className="flex flex-row justify-between text-secondary">
           <div className="flex flex-row gap-2 justify-center items-center">
             <span>
-              <FaCar size={18} />
+              <img src="https://www.mychoize.com/assets/img/mini_car.svg" alt="car" />
             </span>
             <h6>{props.model}</h6>
           </div>
@@ -29,15 +38,15 @@ const ModelCard = (props) => {
         </div>
 
         <div className="flex flex-row justify-end">
-          <a
-            href={props.url}
+          <button
+            onClick={handleNavigation}
             className="flex flex-row gap-2 items-center text-[12px] font-normal text-primary"
           >
             <span>View Details</span>
             <span>
               <FaArrowRightLong />
             </span>
-          </a>
+          </button>
         </div>
       </div>
     </div>

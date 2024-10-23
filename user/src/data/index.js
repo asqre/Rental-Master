@@ -31,6 +31,191 @@ export const topCarModels = [
   },
 ];
 
+
+export const topCarModels2 = [
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+  {
+    name: "Scorpio",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_Scorpio.jpg",
+  },
+  {
+    name: "TUV 300",
+    model: "Mahindra",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Mahindra_XUV_300.jpg",
+  },
+  {
+    name: "Creta",
+    model: "Hyundai",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Hyundai_Creta.jpg",
+  },
+  {
+    name: "Toyota",
+    model: "Innova Crysta",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Toyota_Innova_Crysta.jpg",
+  },
+  {
+    name: "Ciaz",
+    model: "Maruti",
+    url: "/booking-summary",
+    img: "https://www.mychoize.com/mychoize-live/current/files/fleets/Maruti_Ciaz.jpg",
+  },
+  
+];
+
 export const featureCardData = [
   {
     id: 1,
