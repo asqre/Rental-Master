@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import InputField from "../components/common/InputField";
 import RadioField from "../components/common/RadioField";
-import { offerType } from "../data";
+import { defaultTerms, offerType } from "../data";
 import TextArea from "../components/common/TextArea";
 import ImageField from "../components/common/ImageField";
-import TermsAndConditionField from "../components/common/TermsAndConditionField";
 import Button from "../components/common/Button";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { storage } from "../../config/firebase";
 import toast from "react-hot-toast";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const Offers = () => {
   const [offerDetails, setOfferDetails] = useState({
@@ -20,7 +21,23 @@ const Offers = () => {
     couponName: "DAILY15",
     validto: "2024-12-31",
     img: null,
+    terms: `<ul>${defaultTerms
+      .map((term) => `<li>${term}</li>`)
+      .join("")}</ul>`,
   });
+
+  const modules = {
+    toolbar: [
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+    ],
+  };
+
   const [img, setImg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -36,6 +53,13 @@ const Offers = () => {
     setOfferDetails({
       ...offerDetails,
       [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleTermsChange = (value) => {
+    setOfferDetails({
+      ...offerDetails,
+      terms: value,
     });
   };
 
@@ -154,15 +178,22 @@ const Offers = () => {
           imgUrl={offerDetails.img}
         />
 
-        <TermsAndConditionField label="Terms and Conditions" />
+        <ReactQuill
+          theme="snow"
+          value={offerDetails.terms}
+          modules={modules}
+          onChange={handleTermsChange}
+        />
 
-        <div className="flex justify-end mb-5">
+        <div className="flex justify-end my-10">
           <Button
             name="Create Offer"
             disabled={isButtonDisabled}
             onClick={handleSubmit}
           />
         </div>
+
+        <div dangerouslySetInnerHTML={{ __html: offerDetails.terms }} />
       </div>
     </div>
   );
