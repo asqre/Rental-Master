@@ -19,7 +19,7 @@ const Offers = () => {
     description:
       "Flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs 3000.",
     couponName: "DAILY15",
-    validto: "2024-12-31",
+    validto: "",
     img: null,
     terms: `<ul>${defaultTerms
       .map((term) => `<li>${term}</li>`)

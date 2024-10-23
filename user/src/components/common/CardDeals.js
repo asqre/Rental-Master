@@ -59,13 +59,10 @@ const CardDeals = ({ offer }) => {
           </h5>
 
           <div className="max-h-60 overflow-y-auto px-4 py-2 border border-gray-200 rounded-md custom-scrollbar">
-            <ul className="list-disc space-y-2 pl-5">
-              {offer.terms.map((term, index) => (
-                <li key={index}>
-                  <h6 className="text-[12px] text-gray">{term}</h6>
-                </li>
-              ))}
-            </ul>
+            <div
+              className="terms-content space-y-2 pl-5 text-[12px] text-gray"
+              dangerouslySetInnerHTML={{ __html: offer.terms }}
+            />
           </div>
 
           <div className="flex justify-end space-x-4 mt-6">

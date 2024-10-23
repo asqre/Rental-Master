@@ -95,16 +95,8 @@ export const dailyOffersData = [
     validity: "2024-12-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer is valid only on Daily Rentals bookings made through the MyChoize website and IOS/Android app.",
-      "Offer is valid for bookings till 31st October’24.",
-      "Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000 .",
-      "Discount is applicable only on rental amount and not on the security deposit.",
-      "Discount amount would be automatically calculated once customer enters promo code.",
-      "Customer cannot club 2 offers in one single transaction.",
-      "MyChoize has right to amend/withdraw offer anytime without prior intimation.",
-      "In case of any dispute, decision of MyChoize will be final and binding.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 2,
@@ -115,11 +107,8 @@ export const dailyOffersData = [
     validity: "2024-11-30",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 7000.",
-      "Applicable for weekly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 3,
@@ -130,11 +119,8 @@ export const dailyOffersData = [
     validity: "2024-10-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 12000.",
-      "Applicable for monthly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 1,
@@ -145,16 +131,8 @@ export const dailyOffersData = [
     validity: "2024-12-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer is valid only on Daily Rentals bookings made through the MyChoize website and IOS/Android app.",
-      "Offer is valid for bookings till 31st October’24.",
-      "Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000 .",
-      "Discount is applicable only on rental amount and not on the security deposit.",
-      "Discount amount would be automatically calculated once customer enters promo code.",
-      "Customer cannot club 2 offers in one single transaction.",
-      "MyChoize has right to amend/withdraw offer anytime without prior intimation.",
-      "In case of any dispute, decision of MyChoize will be final and binding.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 2,
@@ -165,11 +143,8 @@ export const dailyOffersData = [
     validity: "2024-11-30",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 7000.",
-      "Applicable for weekly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 3,
@@ -180,11 +155,8 @@ export const dailyOffersData = [
     validity: "2024-10-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 12000.",
-      "Applicable for monthly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 1,
@@ -195,16 +167,8 @@ export const dailyOffersData = [
     validity: "2024-12-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer is valid only on Daily Rentals bookings made through the MyChoize website and IOS/Android app.",
-      "Offer is valid for bookings till 31st October’24.",
-      "Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000 .",
-      "Discount is applicable only on rental amount and not on the security deposit.",
-      "Discount amount would be automatically calculated once customer enters promo code.",
-      "Customer cannot club 2 offers in one single transaction.",
-      "MyChoize has right to amend/withdraw offer anytime without prior intimation.",
-      "In case of any dispute, decision of MyChoize will be final and binding.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 2,
@@ -215,11 +179,8 @@ export const dailyOffersData = [
     validity: "2024-11-30",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 7000.",
-      "Applicable for weekly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 3,
@@ -230,11 +191,8 @@ export const dailyOffersData = [
     validity: "2024-10-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 12000.",
-      "Applicable for monthly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 1,
@@ -245,16 +203,8 @@ export const dailyOffersData = [
     validity: "2024-12-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer is valid only on Daily Rentals bookings made through the MyChoize website and IOS/Android app.",
-      "Offer is valid for bookings till 31st October’24.",
-      "Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000 .",
-      "Discount is applicable only on rental amount and not on the security deposit.",
-      "Discount amount would be automatically calculated once customer enters promo code.",
-      "Customer cannot club 2 offers in one single transaction.",
-      "MyChoize has right to amend/withdraw offer anytime without prior intimation.",
-      "In case of any dispute, decision of MyChoize will be final and binding.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 2,
@@ -265,11 +215,8 @@ export const dailyOffersData = [
     validity: "2024-11-30",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 7000.",
-      "Applicable for weekly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 3,
@@ -280,11 +227,8 @@ export const dailyOffersData = [
     validity: "2024-10-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 12000.",
-      "Applicable for monthly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
 ];
 
@@ -298,16 +242,8 @@ export const monthlyOffersData = [
     validity: "2024-12-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer is valid only on Daily Rentals bookings made through the MyChoize website and IOS/Android app.",
-      "Offer is valid for bookings till 31st October’24.",
-      "Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000 .",
-      "Discount is applicable only on rental amount and not on the security deposit.",
-      "Discount amount would be automatically calculated once customer enters promo code.",
-      "Customer cannot club 2 offers in one single transaction.",
-      "MyChoize has right to amend/withdraw offer anytime without prior intimation.",
-      "In case of any dispute, decision of MyChoize will be final and binding.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 2,
@@ -318,11 +254,8 @@ export const monthlyOffersData = [
     validity: "2024-11-30",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 7000.",
-      "Applicable for weekly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
   {
     id: 3,
@@ -333,11 +266,8 @@ export const monthlyOffersData = [
     validity: "2024-10-31",
     img: "https://www.mychoize.com/mychoize-live/current/files/deals/241018032341.jpg",
     bookingUrl: "/",
-    terms: [
-      "Offer valid only on bookings above Rs 12000.",
-      "Applicable for monthly rentals only.",
-      "Cannot be combined with other offers.",
-    ],
+    terms:
+      "<ul><li>Offer is valid only on Daily Rentals bookings made through the company_name website and IOS/Android app.</li><li>Offer is valid for bookings till 31st October’24.</li><li>Customer can get flat 15% off on Daily Rentals. Minimum Rental Amount should be Rs.3,000.</li><li>Discount is applicable only on rental amount and not on the security deposit.</li><li>Discount amount would be automatically calculated once customer enters promo code.</li><li>Customer cannot club 2 offers in one single transaction.</li><li>company_name has right to amend/withdraw offer anytime without prior intimation.</li><li>In case of any dispute, decision of company_name will be final and binding.</li></ul>",
   },
 ];
 

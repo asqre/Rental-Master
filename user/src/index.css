@@ -229,3 +229,8 @@ body {
 .animate-carMove {
   animation: carMove 5s linear infinite;
 }
+
+/* Terms and condition content */
+.terms-content ul {
+  list-style-type: disc;
+}
