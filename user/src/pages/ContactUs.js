@@ -1,12 +1,3 @@
-// import React from "react";
-// import Layout from "../components/layout/Layout";
-
-// const ContactUs = () => {
-//   return <Layout>ContactUsComponent</Layout>;
-// };
-
-// export default ContactUs;
-
 import React, { useState } from "react";
 import Layout from "../components/layout/Layout";
 import { HiLocationMarker } from "react-icons/hi";
@@ -24,7 +15,7 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
+
     console.log("Form submitted:", formData);
   };
 
@@ -38,7 +29,6 @@ const ContactUs = () => {
   return (
     <Layout NoEmail={true}>
       <div className="min-h-screen bg-gray-50">
-        {/* Header Section */}
         <div className="bg-secondary text-white py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
@@ -48,10 +38,8 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* Contact Information Cards */}
         <div className="container mx-auto px-4 -mt-8 text-primary">
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Address Card */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <HiLocationMarker className="text-primary w-6 h-6 mr-2" />
@@ -66,7 +54,6 @@ const ContactUs = () => {
               </p>
             </div>
 
-            {/* Phone Card */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <BsTelephone className="text-primary w-6 h-6 mr-2" />
@@ -79,7 +66,6 @@ const ContactUs = () => {
               </p>
             </div>
 
-            {/* Email Card */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <BsEnvelope className="text-primary w-6 h-6 mr-2" />
@@ -94,7 +80,6 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* Contact Form Section */}
         <div className="container mx-auto px-4 py-16 flex flex-col lg:flex-row gap-5 text-primary">
           <div className="bg-white rounded-lg shadow-lg p-8 w-full lg:w-[60%] order-2 lg:order-1">
             <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
