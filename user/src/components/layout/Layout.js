@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useData } from "../../context/data";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, NoEmail }) => {
   const { isModalOpen } = useData();
 
   useEffect(() => {
@@ -24,8 +24,14 @@ const Layout = ({ children }) => {
   return (
     <div className={`flex flex-col min-h-screen`}>
       <Navbar />
-      <main className="flex-grow mt-[72px] mb-[30vh] md:mb-[40vh]">{children}</main>
-      <Footer />
+      <main
+        className={`flex-grow mt-[72px] ${
+          NoEmail ? "mb-10" : "mb-[30vh] md:mb-[40vh]"
+        }`}
+      >
+        {children}
+      </main>
+      <Footer NoEmail={NoEmail} />
     </div>
   );
 };

@@ -8,19 +8,18 @@ const About = () => {
       className="flex flex-col gap-[32px] md:flex-row w-full mx-auto px-[5%] md:mx-0 mb-10 py-[5rem]"
     >
       <div className="md:w-[50%]">
-        <img src={aboutImg} alt="about us" />
+        <img src={aboutImg} alt="about us" className="w-full h-full object-contain" />
       </div>
 
       <div className="flex flex-col gap-[14px] sm:gap-[20px] md:gap-[48px] md:w-[50%]">
         <h2>
-          <span className="text-[#222222]">About</span>
-          <br />
+          <span className="text-[#222222]">About </span>
           <span className="text-[#1961FD]">Us</span>
           <span className="text-[#222222]">.</span>
         </h2>
 
         <div className="py-4">
-          <h6 className="max-w-[700px]">
+          <h6 className="max-w-[700px] text-primary text-sm">
             At Rental Master, we offer a convenient and reliable car rental
             service tailored to meet your travel needs. Whether you're planning
             a weekend getaway, a business trip, or just need a vehicle for

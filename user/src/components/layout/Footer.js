@@ -10,9 +10,9 @@ import {
 } from "react-icons/fa";
 import mailImage from "../../assets/mailImage.png";
 
-const Footer = () => {
+const Footer = ({ NoEmail }) => {
   return (
-    <footer className="bg-secondary pt-[28vh] md:pt-[20vh] pb-8 relative ">
+    <footer className={`bg-secondary ${NoEmail ? "pt-[5vh]" : "pt-[28vh] md:pt-[20vh]"} pb-8 relative `}>
       <div className="w-[80vw] mx-auto px-4 relative">
         <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-12">
           <div className="space-y-6">
@@ -135,38 +135,39 @@ const Footer = () => {
         </div>
       </div>
 
-     
-      <div className="absolute -top-[20vh] md:-top-[30vh] lg:-top-[40vh] left-[5vw] md:left-[10vw] w-[90vw] md:w-[80vw] h-[40vh] lg:h-[50vh]  bg-grayLight z-10 rounded-3xl flex flex-col md:flex-row">
-      <div className="w-full md:w-1/3 lg:w-1/2 h-1/2 md:h-full flex items-center justify-center">
-        <img
-          src={mailImage}
-          alt="Subscribe illustration"
-          className="max-w-full max-h-full object-contain p-4 md:p-0"
-        />
-      </div>
-
-      <div className="w-full md:w-2/3 lg-1/2 h-2/3 md:h-full flex flex-col items-center md:items-start justify-center space-y-6 px-4 md:px-8">
-        <div className="text-center text-primary md:text-left">
-          <div className="text-lg md:text-xl font-semibold ">
-            Would you like to receive
+      {!NoEmail && (
+        <div className="absolute -top-[20vh] md:-top-[30vh] lg:-top-[40vh] left-[5vw] md:left-[10vw] w-[90vw] md:w-[80vw] h-[40vh] lg:h-[50vh]  bg-grayLight z-10 rounded-3xl flex flex-col md:flex-row">
+          <div className="w-full md:w-1/3 lg:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+            <img
+              src={mailImage}
+              alt="Subscribe illustration"
+              className="max-w-full max-h-full object-contain p-4 md:p-0"
+            />
           </div>
-          <div className="mt-2 text-2xl md:text-3xl lg:text-4xl font-bold">
-            special offers by email?
+
+          <div className="w-full md:w-2/3 lg-1/2 h-2/3 md:h-full flex flex-col items-center md:items-start justify-center space-y-6 px-4 md:px-8">
+            <div className="text-center text-primary md:text-left">
+              <div className="text-lg md:text-xl font-semibold ">
+                Would you like to receive
+              </div>
+              <div className="mt-2 text-2xl md:text-3xl lg:text-4xl font-bold">
+                special offers by email?
+              </div>
+            </div>
+
+            <div className="relative w-full max-w-md">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 pr-24 md:pr-32 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
+              />
+              <button className="absolute right-1 top-1 px-4 md:px-6 py-2 bg-primary text-white rounded-full hover:bg-blue-700 transition-colors text-sm md:text-base">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
-
-        <div className="relative w-full max-w-md">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-full px-4 py-3 pr-24 md:pr-32 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
-          />
-          <button className="absolute right-1 top-1 px-4 md:px-6 py-2 bg-primary text-white rounded-full hover:bg-blue-700 transition-colors text-sm md:text-base">
-            Subscribe
-          </button>
-        </div>
-      </div>
-    </div>
+      )}
     </footer>
   );
 };
