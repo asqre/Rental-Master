@@ -49,7 +49,7 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Information Cards */}
-        <div className="container mx-auto px-4 -mt-8">
+        <div className="container mx-auto px-4 -mt-8 text-primary">
           <div className="grid md:grid-cols-3 gap-6">
             {/* Address Card */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -95,7 +95,7 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="container mx-auto px-4 py-16 flex flex-col lg:flex-row gap-5 ">
+        <div className="container mx-auto px-4 py-16 flex flex-col lg:flex-row gap-5 text-primary">
           <div className="bg-white rounded-lg shadow-lg p-8 w-full lg:w-[60%] order-2 lg:order-1">
             <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
             <form onSubmit={handleSubmit}>

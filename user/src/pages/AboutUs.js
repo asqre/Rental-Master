@@ -7,7 +7,7 @@ const AboutUs = () => {
   const {city} = useData();
   return (
     <Layout NoEmail={true}>
-      <div className="px-[3%] md:px-[8%] lg:px-[15%] xl:px-[20%] py-[70px]">
+      <div className="px-[5vw] md:px-[10vw] lg:px-[15vw] xl:px-[20vw] 2xl:px-[25vw] py-[70px]">
         <div className="flex justify-center items-center rounded-xl shadow-md bg-secondary h-[200px] text-white">
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="text-4xl font-semibold">About Us</div>
