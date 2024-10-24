@@ -93,12 +93,14 @@ const CarCard = (props) => {
                 </div>
               </div>
 
-              <div className="-mt-5">
-                <Button name="Enquire Now" />
-              </div>
-
-              <div className="flex flex-col items-end">
-                <PrimaryButton name="Book Now" to={`/${city}/booking-summary`} />
+              <div className="flex flex-col items-end gap-2">
+                <div className="flex gap-3">
+                  <Button name="Enquire Now" />
+                  <PrimaryButton
+                    name="Book Now"
+                    to={`/${city}/booking-summary`}
+                  />
+                </div>
                 <span className="text-xs text-gray-500 mt-1">
                   Free cancellation
                 </span>
