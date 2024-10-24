@@ -3,12 +3,13 @@ import { HiStar, HiUsers, HiCog } from "react-icons/hi";
 import { FaGasPump } from "react-icons/fa";
 import Button from "./Button";
 import PrimaryButton from "./PrimaryButton";
+import { useData } from "../../context/data";
 
 const CarCard = (props) => {
+  const { city } = useData();
   return (
     <div className="h-full bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-200 border border-gray-100 text-primary p-2">
       <div className="flex flex-col h-full">
-   
         <div className="relative h-48 sm:h-40 bg-tertiary rounded-lg">
           {props.isPromoted && (
             <span className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
@@ -22,9 +23,7 @@ const CarCard = (props) => {
           />
         </div>
 
-      
         <div className="flex flex-col flex-1 p-4">
-      
           <div className="flex justify-between items-start mb-3">
             <div>
               <h3 className="text-lg font-semibold text-gray-800">
@@ -40,7 +39,6 @@ const CarCard = (props) => {
             </div>
           </div>
 
-       
           <div className="grid grid-cols-2 gap-3 mb-4">
             <div className="flex items-center gap-2">
               <HiUsers className="w-4 h-4 text-gray-400" />
@@ -76,10 +74,8 @@ const CarCard = (props) => {
             </div>
           </div>
 
-     
           <div className="border-t border-gray-100 pt-4 mt-auto">
             <div className="flex items-center justify-between">
-       
               <div>
                 {props.price.original !== props.price.discounted && (
                   <span className="text-sm text-gray-400 line-through">
@@ -101,9 +97,8 @@ const CarCard = (props) => {
                 <Button name="Enquire Now" />
               </div>
 
-           
               <div className="flex flex-col items-end">
-                <PrimaryButton name="Book Now" />
+                <PrimaryButton name="Book Now" to={`/${city}//booking-summary`} />
                 <span className="text-xs text-gray-500 mt-1">
                   Free cancellation
                 </span>
