@@ -98,7 +98,7 @@ const CarCard = (props) => {
               </div>
 
               <div className="flex flex-col items-end">
-                <PrimaryButton name="Book Now" to={`/${city}//booking-summary`} />
+                <PrimaryButton name="Book Now" to={`/${city}/booking-summary`} />
                 <span className="text-xs text-gray-500 mt-1">
                   Free cancellation
                 </span>
