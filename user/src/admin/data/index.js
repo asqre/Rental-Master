@@ -67,7 +67,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/camry.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Spacious and comfortable sedan with advanced safety features."
   },
   {
@@ -88,7 +88,7 @@ export const allCars = [
     camera360: "No",
     homeDelivery: "No",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/city.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Fuel-efficient sedan, keyeal for city drives."
   },
   {
@@ -109,7 +109,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/creta.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Modern SUV with spacious interiors and high-tech features."
   },
   {
@@ -130,7 +130,7 @@ export const allCars = [
     camera360: "No",
     homeDelivery: "No",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/swift.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Compact and economical hatchback, perfect for city commutes."
   },
   {
@@ -151,7 +151,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/endeavour.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Powerful SUV with off-road capability and premium interiors."
   },
   {
@@ -172,7 +172,7 @@ export const allCars = [
     camera360: "No",
     homeDelivery: "No",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/seltos.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Stylish SUV with robust performance and safety features."
   },
   {
@@ -193,7 +193,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/3series.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Luxury sedan with premium interiors and top-notch performance."
   },
   {
@@ -214,7 +214,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/fortuner.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Reliable SUV with rugged performance and spacious seating."
   },
   {
@@ -235,7 +235,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/a4.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Premium sedan with cutting-edge technology and performance."
   },
   {
@@ -256,7 +256,7 @@ export const allCars = [
     camera360: "Yes",
     homeDelivery: "Yes",
     airBags: "Yes",
-    frontImageUrl: "https://example.com/images/gle.jpg",
+    frontImageUrl: "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
     description: "Luxury SUV with spacious interiors and advanced driving aids."
   }
 ];
