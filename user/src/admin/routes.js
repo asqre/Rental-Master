@@ -56,6 +56,11 @@ export const routes = [
         element: <AddCar />,
       },
       {
+        name: "Edit Car",
+        path: "/edit-car",
+        element: <AddCar />,
+      },
+      {
         name: "Offers",
         path: "/offers",
         element: <Offers />,

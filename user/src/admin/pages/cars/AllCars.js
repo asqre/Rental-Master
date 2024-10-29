@@ -43,7 +43,7 @@ const AllCars = () => {
             <Button
               name="Edit"
               onClick={() =>
-                navigate("/admin/add-car", { state: { carData: recrod } })
+                navigate("/admin/edit-car", { state: { carData: recrod } })
               }
             />
 
