@@ -6,8 +6,15 @@ import RadioField from "../../components/common/RadioField";
 import ImageField from "../../components/common/ImageField";
 import TextArea from "../../components/common/TextArea";
 import Button from "../../components/common/Button";
+import { generateYears } from "../../utils";
 
 const Cars = () => {
+  const years = generateYears();
+  
+  const formattedYears = years.map((year) => {
+    return { label: year, value: year };
+  });
+
   return (
     <div className="w-full h-full bg-white rounded-[1rem] py-[2rem] pl-[2rem]">
       <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
@@ -25,12 +32,11 @@ const Cars = () => {
           </div>
 
           <div className="flex-grow">
-            <InputField
-              label="Car Model"
-              placeholder="Type here"
+            <SelectField
+              label="Select Model"
+              placeholder="Select Model"
+              items={formattedYears}
               id="carModel"
-              // value={offerDetails.couponName}
-              // onChange={onInputChange}
             />
           </div>
         </div>
