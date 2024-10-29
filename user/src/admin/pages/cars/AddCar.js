@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import InputField from "../../components/common/InputField";
 import SelectField from "../../components/common/SelectField";
 import { bodyTypes, brands, yesNo, fuel, transmission } from "../../data";
@@ -8,15 +8,133 @@ import TextArea from "../../components/common/TextArea";
 import Button from "../../components/common/Button";
 import { generateYears } from "../../utils";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { v4 as uuidv4 } from "uuid";
+import { storage } from "../../../config/firebase";
 
 const AddCar = () => {
   const navigate = useNavigate();
   const years = generateYears();
+  const [img, setImg] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [carDetails, setCarDetails] = useState({
+    carName: "",
+    carModel: "",
+    brand: "",
+    bodyType: "",
+    transmission: "",
+    fuel: "",
+    seatingCapacity: "",
+    carRegNo: "",
+    kmsDriven: "",
+    pricePerHour: "",
+    fasTag: "",
+    sunRoof: "",
+    cruiseControl: "",
+    camera360: "",
+    homeDelivery: "",
+    airBags: "",
+    description: "",
+    frontImageUrl: null,
+  });
+
+  const onRadioChange = (e) => {
+    setCarDetails({
+      ...carDetails,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const onInputChange = (e) => {
+    setCarDetails({
+      ...carDetails,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const onSelectChange = (id, value) => {
+    setCarDetails({
+      ...carDetails,
+      [id]: value,
+    });
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setCarDetails({
+        ...carDetails,
+        frontImageUrl: URL.createObjectURL(file),
+      });
+      setImg(file);
+    } else {
+      setCarDetails({
+        ...carDetails,
+        frontImageUrl: "",
+      });
+      setImg(null);
+    }
+  };
 
   const formattedYears = years.map((year) => {
     return { label: year, value: year };
   });
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!carDetails.carName) newErrors.carName = "Car Name is required";
+    if (!carDetails.carModel) newErrors.carModel = "Model is required";
+    if (!carDetails.brand) newErrors.brand = "Brand is required";
+    if (!carDetails.bodyType) newErrors.bodyType = "Body Type is required";
+    if (!carDetails.transmission)
+      newErrors.transmission = "Transmission is required";
+    if (!carDetails.carRegNo)
+      newErrors.carRegNo = "Registration Number is required";
+    if (!carDetails.pricePerHour)
+      newErrors.pricePerHour = "Price per Hour is required";
+    if (!carDetails.frontImageUrl)
+      newErrors.frontImageUrl = "Front Image is required";
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  useEffect(() => {
+    setIsButtonDisabled(!validateForm());
+  }, [carDetails]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsButtonDisabled(true);
+    setIsLoading(true);
+    toast.loading("Please wait...");
+
+    try {
+      let imgUrl = "";
+      if (img) {
+        const storageRef = ref(storage, `cars/${uuidv4()}_${img.name}`);
+        const snapshot = await uploadBytes(storageRef, img);
+        imgUrl = await getDownloadURL(snapshot.ref);
+      }
+
+      const payload = {
+        ...carDetails,
+        frontImageUrl: imgUrl,
+      };
+
+      navigate(-1);
+      console.log("Car added successfully:", payload);
+    } catch (error) {
+      toast.dismiss();
+      console.error("Error adding the car: ", error);
+    } finally {
+      toast.dismiss();
+      toast.success("Car added successfully");
+      setIsButtonDisabled(false);
+      setIsLoading(false);
+    }
+  };
   return (
     <div className="w-full h-full bg-white rounded-[1rem] py-[2rem] pl-[2rem]">
       <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
@@ -31,8 +149,8 @@ const AddCar = () => {
               label="Car Name"
               placeholder="Type here"
               id="carName"
-              // value={offerDetails.couponName}
-              // onChange={onInputChange}
+              value={carDetails.carName}
+              onChange={onInputChange}
             />
           </div>
 
@@ -42,6 +160,8 @@ const AddCar = () => {
               placeholder="Select Model"
               items={formattedYears}
               id="carModel"
+              value={carDetails.carModel}
+              onChange={onSelectChange}
             />
           </div>
         </div>
@@ -52,8 +172,9 @@ const AddCar = () => {
               label="Select Brand"
               placeholder="Select Brand"
               items={brands}
-              // onChange={onTimeChange}
-              // selectedValue={selectedTime}
+              id="brand"
+              value={carDetails.brand}
+              onChange={onSelectChange}
             />
           </div>
 
@@ -62,8 +183,9 @@ const AddCar = () => {
               label="Select Body Types"
               placeholder="Select Body Types"
               items={bodyTypes}
-              // onChange={onTimeChange}
-              // selectedValue={selectedTime}
+              id="bodyType"
+              value={carDetails.bodyType}
+              onChange={onSelectChange}
             />
           </div>
 
@@ -72,8 +194,9 @@ const AddCar = () => {
               label="Select Transmission"
               placeholder="Select Transmission"
               items={transmission}
-              // onChange={onTimeChange}
-              // selectedValue={selectedTime}
+              id="transmission"
+              value={carDetails.transmission}
+              onChange={onSelectChange}
             />
           </div>
         </div>
@@ -85,19 +208,21 @@ const AddCar = () => {
               placeholder="Select Fuel"
               items={fuel}
               notRequired="true"
-              // onChange={onTimeChange}
-              // selectedValue={selectedTime}
+              id="fuel"
+              value={carDetails.fuel}
+              onChange={onSelectChange}
             />
           </div>
 
           <div className="flex-grow">
             <InputField
+              type="number"
               label="Seating Capacity"
               placeholder="Type here"
               id="seatingCapacity"
               notRequired="true"
-              // value={offerDetails.couponName}
-              // onChange={onInputChange}
+              value={carDetails.seatingCapacity}
+              onChange={onInputChange}
             />
           </div>
 
@@ -106,8 +231,8 @@ const AddCar = () => {
               label="Car Reg No"
               placeholder="Type here"
               id="carRegNo"
-              // value={offerDetails.couponName}
-              // onChange={onInputChange}
+              value={carDetails.carRegNo}
+              onChange={onInputChange}
             />
           </div>
         </div>
@@ -115,22 +240,24 @@ const AddCar = () => {
         <div className="flex flex-col md:flex-row gap-5 w-full">
           <div className="flex-grow">
             <InputField
+              type="number"
               label="Kms Driven"
               placeholder="Type here"
-              id="seatingCapacity"
+              id="kmsDriven"
               notRequired="true"
-              // value={offerDetails.couponName}
-              // onChange={onInputChange}
+              value={carDetails.kmsDriven}
+              onChange={onInputChange}
             />
           </div>
 
           <div className="flex-grow">
             <InputField
+              type="number"
               label="Price per Hour"
               placeholder="Type here"
-              id="seatingCapacity"
-              // value={offerDetails.couponName}
-              // onChange={onInputChange}
+              id="pricePerHour"
+              value={carDetails.pricePerHour}
+              onChange={onInputChange}
             />
           </div>
 
@@ -139,8 +266,9 @@ const AddCar = () => {
               label="FasTag"
               options={yesNo}
               notRequired="true"
-              // onChange={onRadioChange}
-              // checked={offerDetails.offerType}
+              onChange={onRadioChange}
+              checked={carDetails.fasTag}
+              name="fasTag"
             />
           </div>
         </div>
@@ -151,8 +279,9 @@ const AddCar = () => {
               label="Sun Roof"
               options={yesNo}
               notRequired="true"
-              // onChange={onRadioChange}
-              // checked={offerDetails.offerType}
+              onChange={onRadioChange}
+              checked={carDetails.sunRoof}
+              name="sunRoof"
             />
           </div>
 
@@ -161,8 +290,9 @@ const AddCar = () => {
               label="Cruise Control"
               options={yesNo}
               notRequired="true"
-              // onChange={onRadioChange}
-              // checked={offerDetails.offerType}
+              onChange={onRadioChange}
+              checked={carDetails.cruiseControl}
+              name="cruiseControl"
             />
           </div>
 
@@ -171,8 +301,9 @@ const AddCar = () => {
               label="360 Camera"
               options={yesNo}
               notRequired="true"
-              // onChange={onRadioChange}
-              // checked={offerDetails.offerType}
+              onChange={onRadioChange}
+              checked={carDetails.camera360}
+              name="camera360"
             />
           </div>
 
@@ -181,8 +312,9 @@ const AddCar = () => {
               label="Home Delivery"
               options={yesNo}
               notRequired="true"
-              // onChange={onRadioChange}
-              // checked={offerDetails.offerType}
+              onChange={onRadioChange}
+              checked={carDetails.homeDelivery}
+              name="homeDelivery"
             />
           </div>
 
@@ -191,17 +323,18 @@ const AddCar = () => {
               label="Air Bags"
               options={yesNo}
               notRequired="true"
-              // onChange={onRadioChange}
-              // checked={offerDetails.offerType}
+              onChange={onRadioChange}
+              checked={carDetails.airBags}
+              name="airBags"
             />
           </div>
         </div>
 
         <ImageField
           label="Upload Car Front Image"
-          // onChange={handleImageChange}
-          // img={img}
-          // imgUrl={offerDetails.img}
+          onChange={handleImageChange}
+          img={img}
+          imgUrl={carDetails.frontImageUrl}
         />
 
         <TextArea
@@ -209,16 +342,16 @@ const AddCar = () => {
           placeholder="Type here"
           id="description"
           notRequired="true"
-          // value={offerDetails.description}
-          // onChange={onInputChange}
+          value={carDetails.description}
+          onChange={onInputChange}
         />
 
         <div className="flex justify-end mb-5">
           <Button
             name="Submit"
-            // disabled={isButtonDisabled}
-            // onClick={handleSubmit}
-            // isLoading={isLoading}
+            disabled={isButtonDisabled}
+            onClick={handleSubmit}
+            isLoading={isLoading}
           />
         </div>
       </div>

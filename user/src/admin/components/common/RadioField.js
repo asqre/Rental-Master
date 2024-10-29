@@ -1,6 +1,13 @@
 import React from "react";
 
-const RadioField = ({ label, options, onChange, checked, notRequired }) => {
+const RadioField = ({
+  label,
+  options,
+  onChange,
+  checked,
+  notRequired,
+  name,
+}) => {
   return (
     <div className="flex flex-col space-y-[8px]">
       {label && (
@@ -32,6 +39,7 @@ const RadioField = ({ label, options, onChange, checked, notRequired }) => {
           >
             <input
               type="radio"
+              name={name}
               value={option.value}
               className="cursor-pointer"
               checked={checked === option.value}
