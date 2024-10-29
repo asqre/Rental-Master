@@ -22,31 +22,25 @@ const AddCar = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [carDetails, setCarDetails] = useState({
-    carName: "",
-    carModel: "",
-    brand: "",
-    bodyType: "",
-    transmission: "",
-    fuel: "",
-    seatingCapacity: "",
-    carRegNo: "",
-    kmsDriven: "",
-    pricePerHour: "",
-    fasTag: "",
-    sunRoof: "",
-    cruiseControl: "",
-    camera360: "",
-    homeDelivery: "",
-    airBags: "",
-    description: "",
-    frontImageUrl: null,
+    carName: carData?.carName || "",
+    carModel: carData?.carModel || "",
+    brand: carData?.brand || "",
+    bodyType: carData?.bodyType || "",
+    transmission: carData?.transmission || "",
+    fuel: carData?.fuel || "",
+    seatingCapacity: carData?.seatingCapacity || "",
+    carRegNo: carData?.carRegNo || "",
+    kmsDriven: carData?.kmsDriven || "",
+    pricePerHour: carData?.pricePerHour || "",
+    fasTag: carData?.fasTag || "",
+    sunRoof: carData?.sunRoof || "",
+    cruiseControl: carData?.cruiseControl || "",
+    camera360: carData?.camera360 || "",
+    homeDelivery: carData?.homeDelivery || "",
+    airBags: carData?.airBags || "",
+    description: carData?.description || "",
+    frontImageUrl: carData?.frontImageUrl || "",
   });
-
-  useEffect(() => {
-    if (carData) {
-      setCarDetails(carData);
-    }
-  }, [carData]);
 
   const onRadioChange = (e) => {
     setCarDetails({
