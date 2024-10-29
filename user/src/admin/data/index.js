@@ -50,7 +50,7 @@ export const yesNo = [
 
 export const allCars = [
   {
-    id: 1,
+    key: 1,
     carName: "Toyota Camry",
     carModel: "2021",
     brand: "Toyota",
@@ -71,7 +71,7 @@ export const allCars = [
     description: "Spacious and comfortable sedan with advanced safety features."
   },
   {
-    id: 2,
+    key: 2,
     carName: "Honda City",
     carModel: "2020",
     brand: "Honda",
@@ -89,10 +89,10 @@ export const allCars = [
     homeDelivery: "No",
     airBags: "Yes",
     frontImageUrl: "https://example.com/images/city.jpg",
-    description: "Fuel-efficient sedan, ideal for city drives."
+    description: "Fuel-efficient sedan, keyeal for city drives."
   },
   {
-    id: 3,
+    key: 3,
     carName: "Hyundai Creta",
     carModel: "2022",
     brand: "Hyundai",
@@ -113,7 +113,7 @@ export const allCars = [
     description: "Modern SUV with spacious interiors and high-tech features."
   },
   {
-    id: 4,
+    key: 4,
     carName: "Maruti Suzuki Swift",
     carModel: "2019",
     brand: "Maruti Suzuki",
@@ -134,7 +134,7 @@ export const allCars = [
     description: "Compact and economical hatchback, perfect for city commutes."
   },
   {
-    id: 5,
+    key: 5,
     carName: "Ford Endeavour",
     carModel: "2021",
     brand: "Ford",
@@ -155,7 +155,7 @@ export const allCars = [
     description: "Powerful SUV with off-road capability and premium interiors."
   },
   {
-    id: 6,
+    key: 6,
     carName: "Kia Seltos",
     carModel: "2021",
     brand: "Kia",
@@ -176,7 +176,7 @@ export const allCars = [
     description: "Stylish SUV with robust performance and safety features."
   },
   {
-    id: 7,
+    key: 7,
     carName: "BMW 3 Series",
     carModel: "2022",
     brand: "BMW",
@@ -197,7 +197,7 @@ export const allCars = [
     description: "Luxury sedan with premium interiors and top-notch performance."
   },
   {
-    id: 8,
+    key: 8,
     carName: "Toyota Fortuner",
     carModel: "2020",
     brand: "Toyota",
@@ -218,7 +218,7 @@ export const allCars = [
     description: "Reliable SUV with rugged performance and spacious seating."
   },
   {
-    id: 9,
+    key: 9,
     carName: "Audi A4",
     carModel: "2022",
     brand: "Audi",
@@ -239,7 +239,7 @@ export const allCars = [
     description: "Premium sedan with cutting-edge technology and performance."
   },
   {
-    id: 10,
+    key: 10,
     carName: "Mercedes-Benz GLE",
     carModel: "2021",
     brand: "Mercedes-Benz",

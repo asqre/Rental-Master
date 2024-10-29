@@ -10,7 +10,7 @@ import { generateYears } from "../../utils";
 
 const Cars = () => {
   const years = generateYears();
-  
+
   const formattedYears = years.map((year) => {
     return { label: year, value: year };
   });

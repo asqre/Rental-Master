@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import Button from "../../components/common/Button";
 import { Table } from "antd";
 import { allCars } from "../../data";
+import SearchBar from "../../components/common/SearchBar";
 
 const AllCars = () => {
   const [data, setData] = useState(allCars);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredData = data.filter((car) => {
+    return (
+      car.carName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      car.carModel.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      car.carRegNo.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  });
 
   const columns = [
     {
@@ -28,19 +38,9 @@ const AllCars = () => {
       render: (_, recrod) => {
         return (
           <div className="flex flex-row gap-5">
-            <Button
-              name="Edit"
-              onClick={() => {
-                // Navigate to edit car page
-              }}
-            />
+            <Button name="Edit" onClick={() => {}} />
 
-            <Button
-              name="Delete"
-              onClick={() => {
-                // Navigate to book car page
-              }}
-            />
+            <Button name="Delete" onClick={() => {}} />
           </div>
         );
       },
@@ -55,7 +55,25 @@ const AllCars = () => {
           <Button name="Add Car" />
         </div>
 
-        <Table bordered dataSource={data} columns={columns} />
+        <div className="flex justify-end pr-3">
+          <SearchBar
+            placeholder="Search Car"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+
+        <Table
+          bordered
+          dataSource={filteredData}
+          columns={columns}
+          pagination={{
+            pageSize: 5,
+          }}
+          scroll={{
+            x: 400,
+          }}
+        />
       </div>
     </div>
   );
