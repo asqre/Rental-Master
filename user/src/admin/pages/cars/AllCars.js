@@ -12,13 +12,24 @@ const AllCars = () => {
   const [data, setData] = useState(allCars);
   const [searchQuery, setSearchQuery] = useState("");
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+  const [carToDelete, setCarToDelete] = useState(null);
 
-  const handleOpenDeleteModal = () => {
+  const handleOpenDeleteModal = (record) => {
+    setCarToDelete(record);
     setIsDeleteModalVisible(true);
   };
 
   const handleCloseDeleteModal = () => {
     setIsDeleteModalVisible(false);
+    setCarToDelete(null);
+  };
+
+  const handleDeleteCar = () => {
+    if (carToDelete) {
+      const updatedData = data.filter((car) => car.key !== carToDelete.key);
+      setData(updatedData);
+      handleCloseDeleteModal();
+    }
   };
 
   const filteredData = data.filter((car) => {
@@ -58,7 +69,10 @@ const AllCars = () => {
               }
             />
 
-            <Button name="Delete" onClick={handleOpenDeleteModal} />
+            <Button
+              name="Delete"
+              onClick={() => handleOpenDeleteModal(recrod)}
+            />
           </div>
         );
       },
@@ -97,7 +111,7 @@ const AllCars = () => {
       </div>
 
       <Modal isVisible={isDeleteModalVisible} onClose={handleCloseDeleteModal}>
-        <DeleteContent />
+        <DeleteContent handleDelete={handleDeleteCar} carName={carToDelete?.carName}/>
       </Modal>
     </>
   );
