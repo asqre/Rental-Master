@@ -1,7 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/common/Button";
+import { Table } from "antd";
+import { allCars } from "../../data";
 
 const AllCars = () => {
+  const [data, setData] = useState(allCars);
+
+  const columns = [
+    {
+      title: "Car Name",
+      dataIndex: "carName",
+      width: "25%",
+    },
+    {
+      title: "Model",
+      dataIndex: "carModel",
+      width: "15%",
+    },
+    {
+      title: "Car Reg. No.",
+      dataIndex: "carRegNo",
+      width: "20%",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+      render: (_, recrod) => {
+        return (
+          <div className="flex flex-row gap-5">
+            <Button
+              name="Edit"
+              onClick={() => {
+                // Navigate to edit car page
+              }}
+            />
+
+            <Button
+              name="Delete"
+              onClick={() => {
+                // Navigate to book car page
+              }}
+            />
+          </div>
+        );
+      },
+    },
+  ];
+
   return (
     <div className="w-full h-full bg-white rounded-[1rem] py-[2rem] pl-[2rem]">
       <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
@@ -10,7 +55,7 @@ const AllCars = () => {
           <Button name="Add Car" />
         </div>
 
-        
+        <Table bordered dataSource={data} columns={columns} />
       </div>
     </div>
   );
