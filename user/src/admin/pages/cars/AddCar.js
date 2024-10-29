@@ -7,13 +7,15 @@ import ImageField from "../../components/common/ImageField";
 import TextArea from "../../components/common/TextArea";
 import Button from "../../components/common/Button";
 import { generateYears } from "../../utils";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { storage } from "../../../config/firebase";
 
 const AddCar = () => {
+  const location = useLocation();
+  const carData = location.state?.carData || null;
   const navigate = useNavigate();
   const years = generateYears();
   const [img, setImg] = useState(null);
@@ -39,6 +41,12 @@ const AddCar = () => {
     description: "",
     frontImageUrl: null,
   });
+
+  useEffect(() => {
+    if (carData) {
+      setCarDetails(carData);
+    }
+  }, [carData]);
 
   const onRadioChange = (e) => {
     setCarDetails({
@@ -139,7 +147,7 @@ const AddCar = () => {
     <div className="w-full h-full bg-white rounded-[1rem] py-[2rem] pl-[2rem]">
       <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
         <div className="flex flex-row justify-between mb-10">
-          <h5>Add Car</h5>
+          <h5>{carData ? "Edit Car" : "Add Car"}</h5>
           <Button name="Back" onClick={() => navigate(-1)} />
         </div>
 

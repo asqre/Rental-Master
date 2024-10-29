@@ -40,7 +40,12 @@ const AllCars = () => {
       render: (_, recrod) => {
         return (
           <div className="flex flex-row gap-5">
-            <Button name="Edit" onClick={() => {}} />
+            <Button
+              name="Edit"
+              onClick={() =>
+                navigate("/admin/add-car", { state: { carData: recrod } })
+              }
+            />
 
             <Button name="Delete" onClick={() => {}} />
           </div>
