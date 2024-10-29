@@ -4,11 +4,22 @@ import { Table } from "antd";
 import { allCars } from "../../data";
 import SearchBar from "../../components/common/SearchBar";
 import { useNavigate } from "react-router-dom";
+import Modal from "../../components/common/Modal";
+import DeleteContent from "../../components/modalContent/DeleteContent";
 
 const AllCars = () => {
   const navigate = useNavigate();
   const [data, setData] = useState(allCars);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+
+  const handleOpenDeleteModal = () => {
+    setIsDeleteModalVisible(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalVisible(false);
+  };
 
   const filteredData = data.filter((car) => {
     return (
@@ -47,7 +58,7 @@ const AllCars = () => {
               }
             />
 
-            <Button name="Delete" onClick={() => {}} />
+            <Button name="Delete" onClick={handleOpenDeleteModal} />
           </div>
         );
       },
@@ -55,34 +66,40 @@ const AllCars = () => {
   ];
 
   return (
-    <div className="w-full h-full bg-white rounded-[1rem] py-[2rem] pl-[2rem]">
-      <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
-        <div className="flex flex-row justify-between mb-10">
-          <h5>Cars</h5>
-          <Button name="Add Car" onClick={() => navigate("/admin/add-car")} />
-        </div>
+    <>
+      <div className="w-full h-full bg-white rounded-[1rem] py-[2rem] pl-[2rem]">
+        <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
+          <div className="flex flex-row justify-between mb-10">
+            <h5>Cars</h5>
+            <Button name="Add Car" onClick={() => navigate("/admin/add-car")} />
+          </div>
 
-        <div className="flex justify-end pr-3">
-          <SearchBar
-            placeholder="Search Car"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+          <div className="flex justify-end pr-3">
+            <SearchBar
+              placeholder="Search Car"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
+          <Table
+            bordered
+            dataSource={filteredData}
+            columns={columns}
+            pagination={{
+              pageSize: 5,
+            }}
+            scroll={{
+              x: 400,
+            }}
           />
         </div>
-
-        <Table
-          bordered
-          dataSource={filteredData}
-          columns={columns}
-          pagination={{
-            pageSize: 5,
-          }}
-          scroll={{
-            x: 400,
-          }}
-        />
       </div>
-    </div>
+
+      <Modal isVisible={isDeleteModalVisible} onClose={handleCloseDeleteModal}>
+        <DeleteContent />
+      </Modal>
+    </>
   );
 };
 
