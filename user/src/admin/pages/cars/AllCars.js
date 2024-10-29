@@ -3,8 +3,10 @@ import Button from "../../components/common/Button";
 import { Table } from "antd";
 import { allCars } from "../../data";
 import SearchBar from "../../components/common/SearchBar";
+import { useNavigate } from "react-router-dom";
 
 const AllCars = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState(allCars);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -52,7 +54,7 @@ const AllCars = () => {
       <div className="flex flex-col gap-5 w-full h-full overflow-y-auto custom-scrollbar pr-[2rem]">
         <div className="flex flex-row justify-between mb-10">
           <h5>Cars</h5>
-          <Button name="Add Car" />
+          <Button name="Add Car" onClick={() => navigate("/admin/add-car")} />
         </div>
 
         <div className="flex justify-end pr-3">
