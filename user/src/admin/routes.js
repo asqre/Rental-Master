@@ -3,7 +3,8 @@ import BodyTypes from "./pages/BodyTypes";
 import Booking from "./pages/Booking";
 import BookingHistory from "./pages/BookingHistory";
 import Brands from "./pages/Brands";
-import Cars from "./pages/Cars";
+import AllCars from "./pages/cars/AllCars";
+import AddCar from "./pages/cars/AddCar";
 import Dashboard from "./pages/Dashboard";
 import Offers from "./pages/Offers";
 import Setting from "./pages/Setting";
@@ -45,9 +46,14 @@ export const routes = [
         element: <BodyTypes />,
       },
       {
-        name: "Cars",
+        name: "All Cars",
+        path: "/all-cars",
+        element: <AllCars />,
+      },
+      {
+        name: "Add Car",
         path: "/add-car",
-        element: <Cars />,
+        element: <AddCar />,
       },
       {
         name: "Offers",

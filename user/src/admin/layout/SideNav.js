@@ -26,7 +26,7 @@ const SideNav = ({ onClose }) => {
     { type: "text", name: "Manage Services" },
     { name: "Brands", path: "/admin/brands", icon: TbBrandCodesandbox },
     { name: "Body Types", path: "/admin/body-types", icon: FaCar },
-    { name: "Cars", path: "/admin/add-car", icon: IoCarSportSharp },
+    { name: "Cars", path: "/admin/all-cars", icon: IoCarSportSharp },
     { name: "Offers", path: "/admin/offers", icon: BiSolidOffer },
     { type: "text", name: "Site Management" },
     {

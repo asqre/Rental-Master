@@ -1,11 +1,11 @@
 import React from "react";
-import InputField from "../components/common/InputField";
-import SelectField from "../components/common/SelectField";
-import { bodyTypes, brands, yesNo, fuel, transmission } from "../data";
-import RadioField from "../components/common/RadioField";
-import ImageField from "../components/common/ImageField";
-import TextArea from "../components/common/TextArea";
-import Button from "../components/common/Button";
+import InputField from "../../components/common/InputField";
+import SelectField from "../../components/common/SelectField";
+import { bodyTypes, brands, yesNo, fuel, transmission } from "../../data";
+import RadioField from "../../components/common/RadioField";
+import ImageField from "../../components/common/ImageField";
+import TextArea from "../../components/common/TextArea";
+import Button from "../../components/common/Button";
 
 const Cars = () => {
   return (
