@@ -13,3 +13,15 @@ export const defaultTerms = [
   "company_name has right to amend/withdraw offer anytime without prior intimation.",
   "In case of any dispute, decision of company_name will be final and binding.",
 ];
+
+export const brands = [
+  { label: "Honda", value: "Honda" },
+  { label: "Nissan", value: "Nissan" },
+  { label: "Hyundai", value: "Hyundai" },
+  { label: "TOYOTA", value: "TOYOTA" },
+  { label: "Kia", value: "Kia" },
+  { label: "TATA", value: "TATA" },
+  { label: "Maruti Suzuki", value: "Maruti Suzuki" },
+  { label: "Volkswagen", value: "Volkswagen" },
+  { label: "Audi", value: "Audi" },
+];

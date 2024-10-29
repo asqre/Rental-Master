@@ -1,10 +1,10 @@
 import React from "react";
 
-const InputField = ({ label, placeholder, id, value, onChange, type }) => {
+const InputField = ({ label, placeholder, id, value, onChange, type, notRequired }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
       <div
-        className="required-input"
+        className={`${!notRequired && "required-input"}`}
         style={{
           fontFamily: "Noto Sans",
           fontWeight: 600,

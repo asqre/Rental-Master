@@ -1,9 +1,10 @@
 import React from "react";
 
-const TextArea = ({ label, placeholder, id, value, onChange }) => {
+const TextArea = ({ label, placeholder, id, value, onChange, notRequired }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
-      <div className="required-input"
+      <div
+        className={`${!notRequired && "required-input"}`}
         style={{
           fontFamily: "Noto Sans",
           fontWeight: 600,

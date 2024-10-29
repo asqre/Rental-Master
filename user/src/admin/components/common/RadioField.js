@@ -1,11 +1,11 @@
 import React from "react";
 
-const RadioField = ({ label, options, onChange, checked }) => {
+const RadioField = ({ label, options, onChange, checked, notRequired }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
       {label && (
         <div
-          className="required-input"
+          className={`${!notRequired && "required-input"}`}
           style={{
             fontFamily: "Noto Sans",
             fontWeight: 600,
