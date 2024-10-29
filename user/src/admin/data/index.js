@@ -25,3 +25,25 @@ export const brands = [
   { label: "Volkswagen", value: "Volkswagen" },
   { label: "Audi", value: "Audi" },
 ];
+
+export const bodyTypes = [
+  { label: "Sedan", value: "Sedan" },
+  { label: "Hatchback", value: "Hatchback" },
+  { label: "SUV", value: "SUV" },
+  { label: "Compact SUV", value: "Compact SUV" },
+];
+
+export const transmission = [
+  { label: "Automatic", value: "Automatic" },
+  { label: "Manual", value: "Manual" },
+];
+
+export const fuel = [
+  { label: "Petrol", value: "Petrol" },
+  { label: "Diesel", value: "Diesel" },
+];
+
+export const yesNo = [
+  { label: "Yes", value: "Yes" },
+  { label: "No", value: "No" },
+];
