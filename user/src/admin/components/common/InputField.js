@@ -4,6 +4,7 @@ const InputField = ({ label, placeholder, id, value, onChange, type }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
       <div
+        className="required-input"
         style={{
           fontFamily: "Noto Sans",
           fontWeight: 600,

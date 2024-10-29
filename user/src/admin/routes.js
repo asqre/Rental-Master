@@ -46,7 +46,7 @@ export const routes = [
       },
       {
         name: "Cars",
-        path: "/cars",
+        path: "/add-car",
         element: <Cars />,
       },
       {

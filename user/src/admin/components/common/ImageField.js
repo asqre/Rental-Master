@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ImageField = ({ label, onChange, img, imgUrl }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
-      <div
+      <div className="required-input"
         style={{
           fontFamily: "Noto Sans",
           fontWeight: 600,

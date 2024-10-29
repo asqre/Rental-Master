@@ -3,7 +3,7 @@ import React from "react";
 const TextArea = ({ label, placeholder, id, value, onChange }) => {
   return (
     <div className="flex flex-col space-y-[8px]">
-      <div
+      <div className="required-input"
         style={{
           fontFamily: "Noto Sans",
           fontWeight: 600,
