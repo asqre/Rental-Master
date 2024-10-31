@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import Button from "../../components/common/Button";
 import { Table } from "antd";
-import { allCars } from "../../data";
 import SearchBar from "../../components/common/SearchBar";
 import { useNavigate } from "react-router-dom";
 import Modal from "../../components/common/Modal";
 import DeleteContent from "../../components/modalContent/DeleteContent";
+import { useSelector } from "react-redux";
 
 const AllCars = () => {
   const navigate = useNavigate();
-  const [data, setData] = useState(allCars);
+  const carData = useSelector((state) => state.carReducer.allCars);
+  const [data, setData] = useState(carData);
   const [searchQuery, setSearchQuery] = useState("");
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
   const [carToDelete, setCarToDelete] = useState(null);
@@ -111,7 +112,10 @@ const AllCars = () => {
       </div>
 
       <Modal isVisible={isDeleteModalVisible} onClose={handleCloseDeleteModal}>
-        <DeleteContent handleDelete={handleDeleteCar} carName={carToDelete?.carName}/>
+        <DeleteContent
+          handleDelete={handleDeleteCar}
+          carName={carToDelete?.carName}
+        />
       </Modal>
     </>
   );
