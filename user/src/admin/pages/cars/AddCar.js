@@ -13,7 +13,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { storage } from "../../../config/firebase";
 import { useDispatch } from "react-redux";
-import { addCar, updateCar } from "../../../features/cars/CarSlice";
+import { addCar, updateCar } from "../../../features/cars/carSlice";
 
 const AddCar = () => {
   const dispatch = useDispatch();

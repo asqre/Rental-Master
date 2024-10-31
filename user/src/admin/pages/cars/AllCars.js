@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Modal from "../../components/common/Modal";
 import DeleteContent from "../../components/modalContent/DeleteContent";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteCar } from "../../../features/cars/CarSlice";
+import { deleteCar } from "../../../features/cars/carSlice";
 
 const AllCars = () => {
   const navigate = useNavigate();
