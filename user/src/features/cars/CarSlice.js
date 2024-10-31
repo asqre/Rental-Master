@@ -17,7 +17,7 @@ export const carSlice = createSlice({
 
     deleteCar: (state, action) => {
       state.allCars = state.allCars.filter(
-        (currCar, index) => index !== action.payload
+        (currCar, index) => currCar.key !== action.payload
       );
     },
 

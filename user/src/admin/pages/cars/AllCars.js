@@ -5,12 +5,13 @@ import SearchBar from "../../components/common/SearchBar";
 import { useNavigate } from "react-router-dom";
 import Modal from "../../components/common/Modal";
 import DeleteContent from "../../components/modalContent/DeleteContent";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteCar } from "../../../features/cars/CarSlice";
 
 const AllCars = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const carData = useSelector((state) => state.carReducer.allCars);
-  const [data, setData] = useState(carData);
   const [searchQuery, setSearchQuery] = useState("");
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
   const [carToDelete, setCarToDelete] = useState(null);
@@ -27,13 +28,12 @@ const AllCars = () => {
 
   const handleDeleteCar = () => {
     if (carToDelete) {
-      const updatedData = data.filter((car) => car.key !== carToDelete.key);
-      setData(updatedData);
+      dispatch(deleteCar(carToDelete.key));
       handleCloseDeleteModal();
     }
   };
 
-  const filteredData = data.filter((car) => {
+  const filteredData = carData.filter((car) => {
     return (
       car.carName.toLowerCase().includes(searchQuery.toLowerCase()) ||
       car.carModel.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -60,19 +60,19 @@ const AllCars = () => {
     {
       title: "Action",
       dataIndex: "action",
-      render: (_, recrod) => {
+      render: (_, record) => {
         return (
           <div className="flex flex-row gap-5">
             <Button
               name="Edit"
               onClick={() =>
-                navigate("/admin/edit-car", { state: { carData: recrod } })
+                navigate("/admin/edit-car", { state: { carData: record } })
               }
             />
 
             <Button
               name="Delete"
-              onClick={() => handleOpenDeleteModal(recrod)}
+              onClick={() => handleOpenDeleteModal(record)}
             />
           </div>
         );
