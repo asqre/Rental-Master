@@ -51,5 +51,13 @@ export const carSlice = createSlice({
   },
 });
 
-export const { addCar, deleteCar, updateCar } = carSlice.actions;
+export const {
+  addCar,
+  deleteCar,
+  updateCar,
+  fetchCarDataStart,
+  fetchCarDataSuccess,
+  fetchCarDataFailure,
+} = carSlice.actions;
+
 export default carSlice.reducer;
