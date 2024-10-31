@@ -12,8 +12,11 @@ import toast from "react-hot-toast";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { storage } from "../../../config/firebase";
+import { useDispatch } from "react-redux";
+import { addCar, updateCar } from "../../../features/cars/CarSlice";
 
 const AddCar = () => {
+  const dispatch = useDispatch();
   const location = useLocation();
   const carData = location.state?.carData || null;
   const navigate = useNavigate();
@@ -113,7 +116,7 @@ const AddCar = () => {
     toast.loading("Please wait...");
 
     try {
-      let imgUrl = "";
+      let imgUrl = carDetails.frontImageUrl;
       if (img) {
         const storageRef = ref(storage, `cars/${uuidv4()}_${img.name}`);
         const snapshot = await uploadBytes(storageRef, img);
@@ -124,6 +127,14 @@ const AddCar = () => {
         ...carDetails,
         frontImageUrl: imgUrl,
       };
+
+      if (carData) {
+        dispatch(updateCar({ ...payload, key: carData.key }));
+        toast.success("Car updated successfully!");
+      } else {
+        dispatch(addCar(payload));
+        toast.success("Car added successfully!");
+      }
 
       navigate(-1);
       console.log("Car added successfully:", payload);

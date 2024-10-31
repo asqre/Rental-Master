@@ -22,10 +22,15 @@ export const carSlice = createSlice({
     },
 
     updateCar: (state, action) => {
-      const car = state.allCars.find((car) => car.id === action.payload.carId);
-      if (car) {
-        car.carName = action.payload.carName;
-        car.carImage = action.payload.carImage;
+      const index = state.allCars.findIndex(
+        (currCar) => currCar.key === action.payload.key
+      );
+
+      if (index !== -1) {
+        state.allCars[index] = {
+          ...state.allCars[index],
+          ...action.payload,
+        };
       }
     },
 
