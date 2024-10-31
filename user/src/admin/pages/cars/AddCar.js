@@ -53,9 +53,10 @@ const AddCar = () => {
   };
 
   const onInputChange = (e) => {
+    const { id, value } = e.target;
     setCarDetails({
       ...carDetails,
-      [e.target.id]: e.target.value,
+      [id]: id === "carRegNo" ? value.toUpperCase() : value,
     });
   };
 
