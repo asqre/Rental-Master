@@ -3,6 +3,7 @@ import carReducer from "../features/cars/carSlice";
 
 export const store = configureStore({
   reducer: {
-    carReducer: carReducer,
+    cars: carReducer,
+    offers: "",
   },
 });

@@ -11,7 +11,7 @@ import { deleteCar } from "../../../features/cars/carSlice";
 const AllCars = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const carData = useSelector((state) => state.carReducer.allCars);
+  const carData = useSelector((state) => state.cars.allCars);
   const [searchQuery, setSearchQuery] = useState("");
   const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
   const [carToDelete, setCarToDelete] = useState(null);
